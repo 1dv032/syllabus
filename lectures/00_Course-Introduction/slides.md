@@ -25,7 +25,7 @@ Note:
   * "Systemadministration I (1DV031)" or equivalent
 
 
-http://kursplan.lnu.se/kursplaner/kursplan-1DV031-1.pdf
+http://kursplan.lnu.se/kursplaner/kursplan-1DV032-1.pdf
 
 
 ---
