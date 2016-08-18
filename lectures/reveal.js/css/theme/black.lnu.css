@@ -1,0 +1,243 @@
+﻿/**
+ * Black.lnu theme for reveal.js.
+ *
+ */
+
+ section.has-light-background, section.has-light-background h1, section.has-light-background h2, section.has-light-background h3, section.has-light-background h4, section.has-light-background h5, section.has-light-background h6 {
+   color: #000; }
+
+ /*********************************************
+  * GLOBAL STYLES
+  *********************************************/
+ body {
+   background: #000;
+   background-color: #000; }
+.reveal {
+    font-size: 42px;
+}
+
+    .reveal .slides {
+        text-align: left;
+        line-height: 1.5;
+    }
+
+        .reveal .slides .center {
+            text-align: center;
+        }
+
+.reveal pre {
+    text-indent:0;
+}
+
+pre.lnu-code {
+  margin-right: 40%;
+  width: 60%;
+
+}
+
+.lnu-lectureSafe {
+    position: absolute;
+    left: 0 px;
+    top: 0 px;
+    z-index: 1000;
+    display: none;
+}
+
+.lnu-course-management td{
+  border-bottom: 0px !important ;
+  padding: 0px !important ;
+
+}
+.lnu-course-management thead {
+  display: none;
+}
+
+.reveal .lnu-lecture {
+  margin-left: 20px;
+  margin-top: 40px;
+}
+
+.reveal .pingo-qr {
+  position: relative;
+  top: 0px;
+  width: 100px;
+  height: 100px;
+}
+
+.reveal .pingo-sc li:before{
+  content: counter(count-me, upper-alpha) ". ";
+}
+
+.lnu li {
+    /*padding-left: 1em;*/
+    text-indent: -1em;
+    margin: 0 0 .5em 0;
+}
+
+.lnu-font-size-80 li {
+    font-size: 80%;
+}
+
+.lnu-margin-right-30 li {
+  margin-right: 30%;
+}
+
+.lnu ul {
+    list-style: none;
+    padding: 0;
+}
+
+    .lnu ul li:before {
+        content: "\2713\0020";
+        color: #eba056;
+        font-weight: bold;
+    }
+
+    .lnu ul ul {
+        list-style: none;
+        padding: 0;
+        margin-left: 2em;
+        font-size: 80%;
+    }
+
+        .lnu ul ul li:before {
+            content: "\2610\0020";
+            color: #98C807;
+            font-weight: bold;
+        }
+
+        .lnu ul ul ul {
+            list-style: none;
+            padding: 0;
+            margin-left: 1em;
+            font-size: 80%;
+        }
+
+            .lnu ul ul ul li:before {
+                content: "\0bb\0020";
+                color: #cfb220;
+                font-weight: bold;
+            }
+
+    .lnu ul, ol {
+        list-style-type: none;
+        padding: 0;
+        margin-left: 1em;
+        font-size: 80%;
+    }
+
+.lnu ol li {
+    list-style-type: none;
+    counter-increment: count-me;
+}
+
+  .lnu ol li:before {
+      content: counter(count-me) ". ";
+      color: #98C807;
+      font-weight: bold;
+  }
+
+.lnu .table {
+    display: table;
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+.lnu .table-cell {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: left;
+}
+
+.lnu .width-100 {
+    width: 100%;
+}
+
+.lnu-intro div.slide-background.present {
+    background-color: #fff500;
+    background-image: linear-gradient(#fff500,#cfb220);
+}
+
+.lnu-intro h1,
+.lnu-intro h3 {
+    color: #333;
+}
+
+.reveal .lnu-footer {
+    border-top: 1px solid #333;
+    text-align: left;
+    position: relative;
+    top: 200px;
+}
+
+    .reveal .lnu-footer img {
+        background: none;
+        border: none;
+        box-shadow: none;
+        margin-top: 10px !important;
+    }
+
+        .reveal .lnu-footer img:nth-of-type(2) {
+            position: absolute;
+            right: 0;
+        }
+
+.lnu-cc div.slide-background.present {
+    background-color: #628104;
+    background-image: linear-gradient(#628104,#455819);
+}
+
+.lnu-cc p,
+.lnu-cc ul {
+    font-size: 60%;
+}
+
+.lnu img.grayscale {
+    filter: gray; /* IE6-9 */
+    filter: grayscale(1); /* Firefox 35+ */
+    -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+}
+
+.lnu .lnu-first-word {
+    color: #98C807;
+    font-weight: bold;
+    padding-left: 1em;
+}
+
+.lnu .no-text-transform {
+    text-transform: none;
+}
+
+.lnu .text-gray {
+    color: gray;
+}
+
+.lnu .source {
+    text-align: left;
+    font-size: 70%;
+    margin-left:100px;
+    color: #2C76A8;
+}
+
+.noborderimages img {
+    border: none !important;
+    background: none !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+}
+
+.pingo-chart{
+  display: none;
+
+  background: rgb(255, 255, 255);
+  background: rgba(255, 255, 255, .7);
+  padding-top: 20px !important;
+  width: 900px
+}
+
+.chart-input{
+  color: #000000;
+}
+.chart-input:focus {
+  outline: none !important;
+}
