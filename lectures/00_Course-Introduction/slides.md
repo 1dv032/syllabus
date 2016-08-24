@@ -28,6 +28,84 @@ Note:
 http://kursplan.lnu.se/kursplaner/kursplan-1DV032-1.pdf
 
 
+--
+<!-- Goals -->
+## After the course you should understand:
+<!-- {_style="font-size: 140%"} -->
+* different virtualization technologies
+* different service models
+* appropriate operation of applications
+* install and manage server operating systems and applications
+* monitoring in a production environment
+
+<!-- {_class="lnu-margin-right-30"} -->
+Note:
+Course Goals <br />
+Taken from the course Syllabus <br />
+
+
+--
+## Approach
+* The course is divided into two parts
+  * Part 1: Recap and Service Models
+  * Part 2: Application operations
+* Scheduled activities
+  * 2-3 Lectures
+  * 1 Seminars (part 1)
+  * 3-4 Peer Introductions
+  * 2x1h/week tutoring (part 2)
+  * 3 examination assignments
+    * 1 seminar
+    * 1 written examination (part 1)
+    * 1 oral hearings (part 2)
+
+<!-- {_style="font-size: 90%"} -->
+Note:
+Divided the goals into 2 parts<br />
+First part are more theoretical <br />
+Last part very practical & hands on
+
+
+--
+<!-- Part 1 -->
+## Part 1 - Recap and Service Models
+
+Course week 1 - 4
+
+Goals:
+* different virtualization technologies
+* different service models
+* appropriate operation of applications
+
+<!-- {_style="margin-right: 25%"} -->
+Todo:
+* 1 lecture - Recap of 1DV031
+* 2 peer instruction
+* 1 seminar (oral examination)
+* 1 examination assignment (written examination)
+
+<!-- {_style="font-size: 75%"} -->
+Note:
+
+
+--
+## Part 2 - Application operations
+
+Course week 4 - 9
+
+Goals:
+* install and manage server operating systems and applications
+* monitoring in a production environment
+
+<!-- {_class="lnu-margin-right-30"} -->
+Todo:
+* 1-2 lectures
+* ```x``` exercises
+* 1 examination assignment
+* 1 oral hearing
+* 2 x 1h tutoring/week
+
+
 ---
 <!-- Literature -->
 ## Literature
