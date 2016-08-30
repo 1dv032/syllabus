@@ -15,3 +15,5 @@ Next article is a academic one taken from the International Conference of Cloud,
 
 [Cloud Computing Security and Privacy Issues](http://www.cepis.org/index.jsp?p=641&n=825&a=4758&) -
 This article take a deeper look at the issues that rises with cloud computing. The article is written by The Council of European Professional Informatics Societies (CEPIS) which is a non-profit organization seeking to improve and promote a high standard among informatics professionals.
+
+more to come...
