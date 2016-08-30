@@ -11,8 +11,6 @@ The following articles (some of the academic) is trying to describe the definiti
 
 This article is a white paper written by the cloud company Rackspace. It gives you the definition of the cloud and different cloud services. It also gives a couple of use cases.
 
-[Cloud Computing: Issues & challenges](http://s3.amazonaws.com/academia.edu.documents/34528442/26.pdf?AWSAccessKeyId=AKIAJ56TQJRTWSMTNPEA&Expires=1472130711&Signature=VVKXNurGmyrC0b92S19ZDn36pVg%3D&response-content-disposition=inline%3B%20filename%3DCloud_Computing_Issues_and_Challenges.pdf)
-Next article is a academic one taken from the International Conference of Cloud, Big Data and thrust, 2013. This article will give a more detailed description and definition of the cloud and it services but also discuss the challenges when moving to the cloud.
 
 [Cloud Computing Security and Privacy Issues](http://www.cepis.org/index.jsp?p=641&n=825&a=4758&)
 This article take a deeper look at the issues that rises with cloud computing. The article is written by The Council of European Professional Informatics Societies (CEPIS) which is a non-profit organization seeking to improve and promote a high standard among informatics professionals.
