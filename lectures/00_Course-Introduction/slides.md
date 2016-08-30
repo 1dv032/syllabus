@@ -81,8 +81,8 @@ Goals:
 Todo:
 * 1 lecture - Recap of 1DV031
 * 2 peer instruction
-* 1 seminar (oral examination)
-* 1 examination assignment (written examination)
+* 1 seminar (oral examination) Deadline 13/9
+* 1 examination assignment (written examination) Deadline 25/9
 
 <!-- {_style="font-size: 75%"} -->
 Note:
@@ -101,8 +101,8 @@ Goals:
 Todo:
 * 1-2 lectures
 * ```x``` exercises
-* 1 examination assignment
-* 1 oral hearing
+* 1 examination assignment Deadline 27/10
+* 1 oral hearing Deadline 27/10
 * 2 x 1h tutoring/week
 
 
