@@ -2,7 +2,7 @@
 <!-- .slide: data-state="lnu-cc" -->
 ## License for this work
 
-This work is produced by Jacob Lindehoff for the course System Administration I (1DV031) at Linnaeus University.
+This work is produced by Jacob Lindehoff for the course System Administration II (1DV032) at Linnaeus University.
 All content in this work excluding photographs, icons, picture of course literature and Linnaeus University logotype and symbol, is licensed under a [![Creative Commons License](https://i.creativecommons.org/l/by/4.0/80x15.png) <!-- {_style="margin: 0px"} --> Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/)  
 
 #### You are free to
@@ -15,4 +15,4 @@ All content in this work excluding photographs, icons, picture of course literat
 
 If you change the content do not use the photographs, icons, picture of the course literature or Linnaeus University logotype and symbol in your new work!
 
-At all times you must give credit to: ”Linnaeus university – System Administration I (1DV031)” with the link https://coursepress.lnu.se/kurs/systemadministrationi/ and to the Creative Common-license above.
+At all times you must give credit to: ”Linnaeus university – System Administration II (1DV032)” with the link https://coursepress.lnu.se/kurs/systemadministrationii/ and to the Creative Common-license above.
