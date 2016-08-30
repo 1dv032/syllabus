@@ -12,4 +12,4 @@ Course introduction
 
 ## Resources
 - [HTML-presentation](https://cdn.rawgit.com/1dv032/syllabus/master/lectures/00_Course-Introduction/index.html#/)
-- [Recording](#) 2016-08-30, 13.15 (Youtube)
+- [Recording](https://www.youtube.com/watch?v=2IzGYY2_1No) 2016-08-30, 13.15 (Youtube)

@@ -14,4 +14,4 @@
 
 ### Resources
 - [HTML-presentation](https://cdn.rawgit.com/1dv032/syllabus/master/lectures/part_1/01_Recap/index.html#/)
-- [Recording](#) 2016-08-30, 13.15 (Youtube)
+- [Recording](https://www.youtube.com/watch?v=R14j3ptDXKQ) 2016-08-30, 13.15 (Youtube)
