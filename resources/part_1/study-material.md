@@ -1,7 +1,7 @@
 ## Cloud computing and cloud services
 Cloud computing is the evolution of different technologies that have come together to change an organizations approach for building IT infrastructure or handling their software. There is nothing new in any of the technologies, it is all about how all this came together and how it is accessible to all of us under the name of cloud computing. The cloud is were you go to use technology when you need it, for as long as you need it.
 
-The following articles (some of the academic) is trying to describe the definition of the cloud, the different ways you can categorize it and different cloud service that are available. §
+The following articles (some of the academic) is trying to describe the definition of the cloud, the different ways you can categorize it and different cloud service that are available.
 
 ## Articles
 [Understanding the Cloud Computing Stack: SaaS, PaaS, IaaS](https://support.rackspace.com/white-paper/understanding-the-cloud-computing-stack-saas-paas-iaas/) -
