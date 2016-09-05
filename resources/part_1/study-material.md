@@ -1,6 +1,3 @@
-In the works...
-
-
 ## Cloud computing and cloud services
 Cloud computing is the evolution of different technologies that have come together to change an organizations approach for building IT infrastructure or handling their software. There is nothing new in any of the technologies, it is all about how all this came together and how it is accessible to all of us under the name of cloud computing. The cloud is were you go to use technology when you need it, for as long as you need it.
 
@@ -16,4 +13,7 @@ Next article is a academic one taken from the International Conference of Cloud,
 [Cloud Computing Security and Privacy Issues](http://www.cepis.org/index.jsp?p=641&n=825&a=4758&) -
 This article take a deeper look at the issues that rises with cloud computing. The article is written by The Council of European Professional Informatics Societies (CEPIS) which is a non-profit organization seeking to improve and promote a high standard among informatics professionals.
 
-more to come...
+## Web Application Architecture
+[Introduction to containers and Docker](https://github.com/CS-LNU-Learning-Objects/web-application-architecture/blob/master/containers.md)
+[Continuous Integration](https://github.com/CS-LNU-Learning-Objects/web-application-architecture/blob/master/continuous.md)
+[Introduction to microservices](https://github.com/CS-LNU-Learning-Objects/web-application-architecture/blob/master/microservices.md)
