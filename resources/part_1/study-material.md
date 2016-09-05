@@ -14,6 +14,8 @@ Next article is a academic one taken from the International Conference of Cloud,
 This article take a deeper look at the issues that rises with cloud computing. The article is written by The Council of European Professional Informatics Societies (CEPIS) which is a non-profit organization seeking to improve and promote a high standard among informatics professionals.
 
 ## Web Application Architecture
-[Introduction to containers and Docker](https://github.com/CS-LNU-Learning-Objects/web-application-architecture/blob/master/containers.md)
-[Continuous Integration](https://github.com/CS-LNU-Learning-Objects/web-application-architecture/blob/master/continuous.md)
-[Introduction to microservices](https://github.com/CS-LNU-Learning-Objects/web-application-architecture/blob/master/microservices.md)
+[Introduction to containers and Docker](https://github.com/CS-LNU-Learning-Objects/web-application-architecture/blob/master/containers.md)<br />
+
+[Continuous Integration](https://github.com/CS-LNU-Learning-Objects/web-application-architecture/blob/master/continuous.md)<br />
+
+[Introduction to microservices](https://github.com/CS-LNU-Learning-Objects/web-application-architecture/blob/master/microservices.md)<br />
