@@ -6,8 +6,8 @@ The examination will be in the form of an oral examination and will be divided i
 ### Documentation
 Your documentation should be done in the Wiki that comes with your examination GitHub repo.
 In should, at least, contain the following parts:
-1. Work Diary - What have you done today? Which problems did you try to solve and how did you solve them. Every day that you have worked with the assignment should have an entry in the diary.
-2. How to test your solution - The assignment is divided into four different part and you need to document how we can try these different parts
+1. Work Diary - What have you done today? Which problems did you try to solve and how did you solve them. Every day that you have worked with the assignment should have an entry in the diary, it should also include how much time was spent on the specific task.
+2. How to test your solution - The assignment is divided into four different part and you need to document how we can try these different parts.
 3. Time report - How much time have you spent on solving the assignment, it should be divided in different categories.
 
 
