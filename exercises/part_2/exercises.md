@@ -1,7 +1,3 @@
-## Getting started with Vagrant
-If you are not familiar with Vagrant you should run through there [Get Started Guide](https://www.vagrantup.com/docs/getting-started/).
-Once you have completed that you can move on to the next exercise.
-
 ## Setup a Ruby on Rails application with Vagrant for development
 In this exercise you should create a vagrant-file where you set up a new Ruby on Rails application. All the steps should be defined in scripts and should be executed when running the `vagrant up`-command. The script should:
 
