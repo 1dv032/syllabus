@@ -6,10 +6,9 @@ The examination will be in the form of an oral examination and will be divided i
 ### Documentation
 Your documentation should be done in the Wiki that comes with your examination GitHub repo.
 In should, at least, contain the following parts:
-1. Work Diary - What have you done today? Which problems did you try to solve and how did you solve them. Every day that you have worked with the assignment should have an entry in the diary, it should also include how much time was spent on the specific task.
-2. How to test your solution - The assignment is divided into four different part and you need to document how we can try these different parts.
-3. Time report - How much time have you spent on solving the assignment, it should be divided in different categories.
-
+1. **Work Diary** - What have you done today? Which problems did you try to solve and how did you solve them. Every day that you have worked with the assignment should have an entry in the diary, it should also include how much time was spent on the specific task.
+2. **How to test your solution** - The assignment is divided into four different part and you need to document how we can try these different parts.
+3. **Time report** - How much time have you spent on solving the assignment, it should be divided in different categories.
 
 
 ## Sirius Cybernetics Corporation - Mission Statement
@@ -22,7 +21,7 @@ After searching long for the perfect solution they come the the conclusion that 
 ### Your assignment
 You are the first employee in the newly created development team, your colleagues will begin in 5 weeks. Your assignment is to get the Hours system working in development and pre-production environments before the rest of the team starts. The assignment is divided into 4 parts:
 
-1. **Vagrant Demo version**
+1. **Vagrant Demo version** -
   To be able to show of the Hour application the project manager wants an easy way to demo and try the application. This will also be use by your colleagues, when they start, to get to know the application.
 
   Part 1 requirements:
@@ -30,9 +29,9 @@ You are the first employee in the newly created development team, your colleague
   * using vagrant to provision the required underlaying systems
   * should be created with as little as possible manual work `vagrant up`
 
-2. **Docker Development version**
+2. **Docker Development version** -
   T.B.A
-3. **Docker Production version**
+3. **Docker Production version** -
   T.B.A
-4. **Application monitoring**
+4. **Application monitoring** -
   T.B.A
