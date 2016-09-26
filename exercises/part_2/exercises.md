@@ -1,10 +1,10 @@
-## Setup the application with Vagrant for development
+## Setup a Ruby on Rails application with Vagrant for development
 
-## Development process
 
-## Containerization
 
-## Moving to staging
+## Containerization of an application
+
+## Moving to staging/production
 
 ## Testing the application
 
