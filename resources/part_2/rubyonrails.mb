@@ -92,9 +92,9 @@ When running a RoR application taken from a open repository you will probably en
 
 The rails framework comes with a built in web server called webrick. This server is OK for handling smaller applications but in many cases you want to run a dedicated Ruby server. There are many to choose from. Here is a list:
 
-* Passanger
-* Unicorn
-* Thin
+* [Passenger](https://www.phusionpassenger.com/)
+* [Unicorn](https://unicorn.bogomips.org/)
+* [Thin](http://code.macournoyer.com/thin/)
 
 In this text we are using the built in server. You start the server with the command
 
