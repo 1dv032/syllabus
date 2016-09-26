@@ -17,14 +17,17 @@ First of all go through the ["getting started" from vagrants documentation](http
 ## Containerization of an application
 
 ### To Be
+Using docker/docker-compose to set up a rails application with a postgreSQL...
 
 ## Moving to staging/production
 
 ### To Be
+Running the rails application in production...
 
 ## Testing the application
 
 ### To Be
+Create containers if test successful...
 
 ## Setting up monitoring
 
