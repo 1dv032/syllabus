@@ -1,7 +1,7 @@
 ## Setup a Ruby on Rails application with Vagrant for development
 In this exercise you should create a vagrant-file where you set up a new Ruby on Rails application. All the steps should be defined in scripts and should be executed when running the `vagrant up`-command. The script should:
 
-* Defining a Ubuntu 16.04 LTS as base image
+* Defining a [Ubuntu 14.04 LTS as base image](https://atlas.hashicorp.com/ubuntu)
 * Install ruby version 2.3.1
 * Install rails version 4.1.x
 * Create a [new rails project ](http://guides.rubyonrails.org/command_line.html#rails-new)
