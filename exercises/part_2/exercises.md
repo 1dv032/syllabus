@@ -8,7 +8,7 @@ In this exercise you should create a vagrant-file where you set up a new Ruby on
 * Bundle all the gems
 * Generate [a scaffold application](http://guides.rubyonrails.org/command_line.html#rails-generate)
 * Create and migrate the database (use the default sqlite3 configuration)
-* Start the server and make the application visible through http://localhost:8080
+* The developer should only run `vagrant up` then `vagrant ssh` and start the rails server
 
 
 ### How to do this?
@@ -17,12 +17,12 @@ First of all go through the ["getting started" from vagrants documentation](http
 ## Containerization of an application
 
 ### To Be
-Using docker/docker-compose to set up a rails application with a postgreSQL...
+Using docker/docker-compose to set up a node application for a developer...
 
 ## Moving to staging/production
 
 ### To Be
-Running the rails application in production...
+Running the xxxxxxx application in production...
 
 ## Testing the application
 
