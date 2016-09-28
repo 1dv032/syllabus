@@ -5,3 +5,7 @@ This text gives a short introduction to the Ruby on Rails web application framew
 * [Ruby on Rails documentation](http://rubyonrails.org/)
 * [Rails for Zombies](http://railsforzombies.org/)
 * [Codecademy](https://www.codecademy.com/learn/learn-rails)
+
+## Docker
+* ["Get Started with Docker"](https://docs.docker.com/engine/getstarted/)
+* ["Learn by example"](https://docs.docker.com/engine/tutorials/#/learn-by-example)

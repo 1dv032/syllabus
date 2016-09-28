@@ -19,6 +19,10 @@ First of all go through the ["getting started" from vagrants documentation](http
 ### To Be
 Using docker/docker-compose to set up a node application for a developer...
 
+### How to do this?
+First of all go through the ["Get Started with Docker"](https://docs.docker.com/engine/getstarted/). This will guide your through the installation of Docker and how to start working with it. The ["Learn by example"](https://docs.docker.com/engine/tutorials/#/learn-by-example) is also a good resource to learn more about how Docker works.  
+
+
 ## Moving to staging/production
 
 ### To Be
