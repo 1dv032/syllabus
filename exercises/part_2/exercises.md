@@ -18,10 +18,10 @@ First of all go through the ["getting started" from vagrants documentation](http
 https://github.com/1dv032/exercise-vagrant-ror
 
 ## 2. Containerization of an node.js dev setup
-You will find this exercise and its instruction (the readme-file) in an own repo: https://github.com/1dv032/excercise-docker-nodejs-dev
+You will find this exercise and its instruction (the readme-file) in an own repo: https://github.com/1dv032/exercise-docker-nodejs-dev
 
-
-## 3. Docker compose
+## 3. Docker compose with and RoR application
+You will find this exercise and its instruction (the readme-file) in an own repo: https://github.com/1dv032/exercise-docker-compose-ror-dev
 
 ## 4. Moving to staging/production
 
