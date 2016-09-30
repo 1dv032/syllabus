@@ -1,4 +1,4 @@
-## Setup a Ruby on Rails application with Vagrant for development
+## 1. Setup a Ruby on Rails application with Vagrant for development
 In this exercise you should create a vagrant-file where you set up a new Ruby on Rails application. All the steps should be defined in scripts and should be executed when running the `vagrant up`-command. The script should:
 
 * Defining a [Ubuntu 14.04 LTS as base image](https://atlas.hashicorp.com/ubuntu)
@@ -17,22 +17,22 @@ First of all go through the ["getting started" from vagrants documentation](http
 ### Solution proposal
 https://github.com/1dv032/exercise-vagrant-ror
 
-## Containerization of an node.js dev setup
+## 2. Containerization of an node.js dev setup
 You will find this exercise and its instruction (the readme-file) in an own repo: https://github.com/1dv032/excercise-docker-nodejs-dev
 
 
-## Docker compose
+## 3. Docker compose
 
-## Moving to staging/production
+## 4. Moving to staging/production
 
 ### To Be
 Running the xxxxxxx application in production...
 
-## Testing the application
+## 5. Testing the application
 
 ### To Be
 Create containers if test successful...
 
-## Setting up monitoring
+## 6. Setting up monitoring
 
 ### To Be
