@@ -30,7 +30,9 @@ You are the first employee in the newly created development team, your colleague
   * should be created with as little as possible manual work `vagrant up`
 
 2. **Docker Development version** -
-  T.B.A
+  In this step you should dockerize the Hour application. The setup should fit the developers in the team so don't focus on production yet even if we want the two setups look the same in the end.
+  You should analyze the application and see what part will go into the different containers. The solution should be a couple of containers defined in dockerfiles and put together in a docker-compose-file.
+
 3. **Docker Production version** -
   T.B.A
 4. **Application monitoring** -
