@@ -20,6 +20,9 @@ https://github.com/1dv032/exercise-vagrant-ror
 ## 2. Containerization of an node.js dev setup
 You will find this exercise and its instruction (the readme-file) in an own repo: https://github.com/1dv032/exercise-docker-nodejs-dev
 
+### Solution proposal
+https://github.com/1dv032/solution-exercise-docker-nodejs-dev
+
 ## 3. Docker compose with and RoR application
 You will find this exercise and its instruction (the readme-file) in an own repo: https://github.com/1dv032/exercise-docker-compose-ror-dev
 
