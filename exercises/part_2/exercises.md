@@ -32,11 +32,9 @@ https://github.com/1dv032/solution-exercise-docker-compose-ror-dev
 ## 4. Moving to staging/production - node.js and a reversed proxy 
 You will find this exercise and its instruction (the readme-file) in an own repo: https://github.com/1dv032/exercise-docker-nodejs-prod
 
-## 5. Testing the application
+### Solution proposal
+https://github.com/1dv032/solution-exercise-docker-nodejs-prod
 
-### To Be
-Create containers if test successful...
-
-## 6. Setting up monitoring
+## 5. Setting up monitoring
 
 ### To Be
