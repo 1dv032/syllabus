@@ -20,3 +20,5 @@ rake assets:precompile RAILS_ENV=production
 ```
 This will minify all css and javascript and compile if using SASS/LESS/Coffeescript. The generated inks will also be rewritten and point to these files. Check the source code of the running application. Be sure to restart the application.
 
+## config/environments
+The RoR-framework has different files for different envireonments. It could be a good idea to see the content in production.rb. One thing to observe is the flag config.force_ssl which is default set to ture. That means that the application will redirect all calls to port 80 to port 443. That could be problem if we are handling the HTTPS in the reversed proxy and use plain HTTP internal. 
