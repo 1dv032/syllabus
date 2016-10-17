@@ -1,6 +1,6 @@
 The Ruby on rails applications could be running with different environment flags. Development, test and production is the mot common one. In this text we should have a quick look on what to think about when running your Ruby on rails application in production.
 
-# Install just the production gems
+## Install just the production gems
 When developing we need gems that help us in the developing process. Stuff like tests, debugging won´t be needed in the production server and we try to hold our application as slim as possible. To ensure that you just install the "production gems" run the command `bundle install --without development test` that will exclude the test and development specific gems.
 
 ## Secrets
