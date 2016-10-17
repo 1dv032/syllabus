@@ -36,8 +36,8 @@ You are the first employee in the newly created development team, your colleague
 3. **Docker Production version** -
   In this step you should try to take the dockerized Hour Application to production. The whole application should have a reversed proxy in-front that forces the users to rung HTTPS. If the user visits the site through port 80 a redirect to port 443 should be done. For now the solution could work with self-signed certificates.
 
-  The application should run in production mode meaning that the rails environment should be production, including setting the required for running a rails application in production. For more information about this you can red this resource [Rails in production](#).
-  
+  The application should run in production mode meaning that the rails environment should be production, including setting the required for running a rails application in production. For more information about this you can red this resource [Rails in production](https://github.com/1dv032/syllabus/blob/master/resources/part_2/rubyonrails_production.md).
+
   Following point is not mandatory but *could* affect the grades on this examination:
   - Configure support for Redis which should be used for caching.
   - Don´t use the rails frameworks built in web server - Use a app server like passenger, unicorn, puma…
