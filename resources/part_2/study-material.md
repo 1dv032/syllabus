@@ -9,3 +9,8 @@ This text gives a short introduction to the Ruby on Rails web application framew
 ## Docker
 * ["Get Started with Docker"](https://docs.docker.com/engine/getstarted/)
 * ["Learn by example"](https://docs.docker.com/engine/tutorials/#/learn-by-example)
+
+## Monitoring Docker
+* https://www.datadoghq.com/blog/the-docker-monitoring-problem/
+
+This is a series of articles about monitoring docker containsers. It also gives a background of docker containers, montoring metrics and so on. Keep in mind that it is written by DataDog a company selling monitoring software. The fourth part is more about a use case for their product so read it more casual.
