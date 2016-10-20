@@ -19,7 +19,7 @@ After searching long for the perfect solution they come the the conclusion that 
 
 
 ### Your assignment
-You are the first employee in the newly created development team, your colleagues will begin in 5 weeks. Your assignment is to get the Hours system working in development and pre-production environments before the rest of the team starts. The assignment is divided into 4 parts:
+You are the first employee in the newly created development team, your colleagues will begin in 5 weeks. Your assignment is to get the Hours system working in development and pre-production environments before the rest of the team starts. The assignment is divided into 3 parts:
 
 1. **Vagrant Demo version** -
   To be able to show of the Hour application the project manager wants an easy way to demo and try the application. This will also be use by your colleagues, when they start, to get to know the application.
@@ -34,7 +34,7 @@ You are the first employee in the newly created development team, your colleague
   You should analyze the application and see what part will go into the different containers. The solution should be a couple of containers defined in dockerfiles and put together in a docker-compose-file.
 
 3. **Docker Production version** -
-  In this step you should try to take the dockerized Hour Application to production. The whole application should have a reversed proxy in-front that forces the users to rung HTTPS. If the user visits the site through port 80 a redirect to port 443 should be done. For now the solution could work with self-signed certificates.
+  In this last step you should try to take the dockerized Hour Application to production. The whole application should have a reversed proxy in-front that forces the users to rung HTTPS. If the user visits the site through port 80 a redirect to port 443 should be done. For now the solution could work with self-signed certificates.
 
   The application should run in production mode meaning that the rails environment should be production, including setting the required for running a rails application in production. For more information about this you can red this resource [Rails in production](https://github.com/1dv032/syllabus/blob/master/resources/part_2/rubyonrails_production.md).
 
@@ -43,6 +43,3 @@ You are the first employee in the newly created development team, your colleague
   - Don´t use the rails frameworks built in web server - Use a app server like passenger, unicorn, puma…
   - Let your reverse proxy handle all the static resources so that request to these don´t goes through the rails framework.
   - Implement a system for handling log volumes through docker.
-
-4. **Application monitoring** -
-  T.B.A
