@@ -47,12 +47,11 @@ Taken from the course Syllabus <br />
 --
 ## Approach
 * The course is divided into two parts
-  * Part 1: Recap and Service Models
+  * Part 1: Virtualization and Service Models
   * Part 2: Application operations
 * Scheduled activities
-  * 2-3 Lectures
+  * 5-6 Lectures
   * 1 Seminars (part 1)
-  * 3-4 Peer Introductions
   * 2x1h/week tutoring (part 2)
   * 3 examination assignments
     * 1 seminar
@@ -79,9 +78,8 @@ Goals:
 
 <!-- {_style="margin-right: 25%"} -->
 Todo:
-* 1 lecture - Recap of 1DV031
-* 2 peer instruction
-* 1 seminar (oral examination) Deadline 13/9
+* 3 lecture - Recap of 1DV031, Virtualization, Service Models
+* 1 seminar (oral examination) Deadline 14/9
 * 1 examination assignment (written examination) Deadline 25/9
 
 <!-- {_style="font-size: 75%"} -->
@@ -99,23 +97,23 @@ Goals:
 
 <!-- {_class="lnu-margin-right-30"} -->
 Todo:
-* 1-2 lectures
-* ```x``` exercises
-* 1 examination assignment Deadline 27/10
-* 1 oral hearing Deadline 27/10
+* 3 lectures - Docker, Application Platforms
+* 4-5 exercises
+* 1 examination assignment Deadline 26/10
+* 1 oral hearing Deadline 26/10
 * 2 x 1h tutoring/week
 
 
 ---
 <!-- Literature -->
 ## Literature
-* The Practice of System and Network Administration
+* [The Practice of System and Network Administration - Third Edition](http://www.adlibris.com/se/organisationer/product.aspx?isbn=0321919165)
   * Limoncelli, Thomas A.; Hogan , Christina J.; Chalup, Strata R.
   * Addison ­Wesley Professional
   * Recommended
-  * ISBN: 9780321492661
+  * ISBN: 0321919165
 
-![The Practice of System and Network Administration](http://image.bokus.com/images2/9780321492661_200)
+![The Practice of System and Network Administration - Third Edition](http://www.adlibris.com/se/organisationer/covers/M/0/32/0321919165.jpg)
 Note:
 Not mandatory but recommended<br />
 
