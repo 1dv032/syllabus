@@ -18,17 +18,6 @@ Note:
 These are the topics for todays lecture.
 
 
---
-# Interact with students
-* How to get feedback from distance students?
-* How to ask questions?
-* Did the student understand the lecture?
-
-![Pingo QR code](images/pingo-qr.png) [http://pingo.upb.de/](http://pingo.upb.de/)
-
-<!-- {_class="pingo-qr" style="top:220px"} -->
-
-
 ---
 ## OS Installation - Pre Installation
 ### Things to consider
@@ -156,32 +145,6 @@ cd        enable     history   printf    test
 
 
 --
-<!-- {_data-transition="fade-in fade-out"} -->
-## What do you prefer, GUI or CLI?
-1. GUI
-2. CLI
-
-<!-- {_class="pingo-sc" style="font-size:140%"} -->
-
-
-![Pingo QR code](images/pingo-qr.png) [http://pingo.upb.de/930192](http://pingo.upb.de/864730)
-
-<!-- {_class="pingo-qr" style="top:150px"} -->
-
-
---
-<!-- {_data-transition="fade-in fade-out"} -->
-## What do you prefer, GUI or CLI?
-
-![chart](#)
-
-<!-- {_class="pingo-chart"} -->
-
-{Paste Handler}
-<!-- {_class="chart-input" contenteditable="true" onpaste="handlepaste(this, event)"} -->
-
-
---
 ## Post Setup
 * Install drivers, Chip-set
 * Computer name
@@ -192,6 +155,35 @@ cd        enable     history   printf    test
 
 
 ---
+## DHCP
+Dynamic Host Configuration Protocol
+* Bootstrap Protocol (BOOTP)
+* Centralized management of IP addresses
+* Can help with IP address conflicts
+
+![DHCP overview](images/dhcp-overview.png)
+<!-- {_style="width: 60%"} -->
+
+
+--
+## DHCP – Terminology
+* Scope
+* Exclusion range
+* Address pool
+* Lease
+* Reservation
+
+<!-- {_style="font-size: 100%"} -->
+
+Note:
+DHCP-terminologi:
+Scope: Det IP-adressområde som DHCP-serven tilldelar IP-adresser ifrån
+Exclusion range: IP-adresser i scopet som inte delas ut
+Address pool: Lagrar de IP-adresserna som finns i scopet förutom de som är specificerade i exclusion range
+Lease: Är den tid en DHCP-klient kan använda sig av den tilldelade IP-adressen
+Reservation: Används för att skapa en permanent IP-adress lease
+
+--
 ## DNS - Domain Name System
 * Create user-friendly names:
   * Servers
@@ -359,22 +351,18 @@ example.org.    IN      SOA      ns1.example.org. admin.example.org. (
                         604800          ; Expire
                         300             ; Negative Response TTL
                 )
-
 ; DNS Servers
                 IN      NS      ns1.example.org.
                 IN      NS      ns2.example.org.
-
 ; MX Records
                 IN      MX 10   mx.example.org.
                 IN      MX 20   mail.example.org.
 
                 IN      A       192.168.1.1
-
 ; Machine Names
 ns1             IN      A       192.168.1.2
 ns2             IN      A       192.168.1.3
 mail            IN      A       192.168.1.5
-
 ; Aliases
 www             IN      CNAME   example.org.
 ```
@@ -412,36 +400,6 @@ Ett stort TTL-värde kommer att minska medeltiden för en sökprocess i din zon 
 
 
 --
-## DHCP
-Dynamic Host Configuration Protocol
-* Bootstrap Protocol (BOOTP)
-* Centralized management of IP addresses
-* Can help with IP address conflicts
-
-![DHCP overview](images/dhcp-overview.png)
-<!-- {_style="width: 60%"} -->
-
-
---
-## DHCP – Terminology
-* Scope
-* Exclusion range
-* Address pool
-* Lease
-* Reservation
-
-<!-- {_style="font-size: 100%"} -->
-
-Note:
-DHCP-terminologi:
-Scope: Det IP-adressområde som DHCP-serven tilldelar IP-adresser ifrån
-Exclusion range: IP-adresser i scopet som inte delas ut
-Address pool: Lagrar de IP-adresserna som finns i scopet förutom de som är specificerade i exclusion range
-Lease: Är den tid en DHCP-klient kan använda sig av den tilldelade IP-adressen
-Reservation: Används för att skapa en permanent IP-adress lease
-
-
---
 ## DNS - Use cases
 * Public
   * Set up the Name Server
@@ -457,70 +415,9 @@ Reservation: Används för att skapa en permanent IP-adress lease
   * Create records for internal devices
 
 
-
----
-<!-- {_data-transition="fade-in fade-out"} -->
-## Which protocols are involved when you try to get a web page?
-<!-- {_style="font-size:140%"} -->
-1. DNS
-2. SMTP
-3. UDP
-4. HTTP/HTTPS
-5. TCP
-6. IP
-
-<!-- {_class="pingo-sc" style="font-size:100%"} -->
-
-
-![Pingo QR code](images/pingo-qr.png) [http://pingo.upb.de/864730](http://pingo.upb.de/864730)
-
-<!-- {_class="pingo-qr" style="top:0px"} -->
-
-
---
-<!-- {_data-transition="fade-in fade-out"} -->
-## Which protocols are involved when you try to get a web page?
-<!-- {_style="font-size:140%"} -->
-![chart](#)
-
-<!-- {_class="pingo-chart"} -->
-
-{Paste Handler}
-<!-- {_class="chart-input" contenteditable="true" onpaste="handlepaste(this, event)"} -->
-
-
 --
 ### What happens when we try to visit a website
 www.google.com
-
-
----
-<!-- {_data-transition="fade-in fade-out"} -->
-## In what language does a Web server communicate?
-
-1. English
-2. Internet Protocol
-3. Hypertext Transfer Protocol
-4. Binary
-
-<!-- {_class="pingo-sc" style="font-size:100%"} -->
-
-
-![Pingo QR code](images/pingo-qr.png) [http://pingo.upb.de/864730](http://pingo.upb.de/864730)
-
-<!-- {_class="pingo-qr" style="top:0px"} -->
-
-
---
-<!-- {_data-transition="fade-in fade-out"} -->
-## In what language does a Web server communicate?
-
-![chart](#)
-
-<!-- {_class="pingo-chart"} -->
-
-{Paste Handler}
-<!-- {_class="chart-input" contenteditable="true" onpaste="handlepaste(this, event)"} -->
 
 
 --
