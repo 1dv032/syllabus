@@ -3,7 +3,7 @@
 For this examination you are expected to produce a written report of between 800-1000 words. Report should be delivered to the course email address, 1dv032@lnu.se, as a **PDF no later than 26/9 08:00.**
 Please note that the report should be written in Swedish or English. The report will go through a peer-review after finishing. This means you also should do a review of a other students paper.
 
-##Content of the report
+## Content of the report
 The starting point for the report is the work already done for the seminar. At the seminar you presented your findings about cloud services. In the report you will act as an cloud advisor and try to analyze some scenarios and determine which kind of service will fit. You should consider pro and cons and make a good motivation of you choice.
 Throughout the report you should use references to justify you findings.
 
