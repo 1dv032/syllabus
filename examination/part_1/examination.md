@@ -16,16 +16,12 @@ Three different software development companies have contacted you for a recommen
 
 **Company B** - Swedish University, handling mail, courses, student result, student list
 
-**Company C** - Is a law firm that need help with mail, calendar, booking appointments and administration works
+**Company C** - Developing Web based games with dynamic data in databases, subscription based. The company is using Continuous Integration with DevOps culture
 
-**Company D** - Developing Web based games with dynamic data in databases, subscription based. The company is using Continuous Integration with DevOps culture
-
-The customer doesn't always think about everything, it's you job to find these things and point them out to the customer. Here are some topics that the customer might have forgotten:
+The customer doesn't always think about everything, it's you job to find these things and point them out to the customer. Here are some topics you at least should thing about when you make your proposal:
 
 * Security
-* Performance
 * Scalability
-* Availability
 * Localization
 
 ### Part 2
