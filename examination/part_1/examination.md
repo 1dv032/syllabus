@@ -7,7 +7,7 @@ Please note that the report should be written in Swedish or English. The report 
 The starting point for the report is the work already done for the seminar. At the seminar you presented your findings about cloud services. In the report you will act as an cloud advisor and try to analyze some scenarios and determine which kind of service will fit. You should consider pro and cons and make a good motivation of you choice.
 Throughout the report you should use references to justify you findings, you can find more information about this at the [university library](https://lnu.se/en/library/Writing-and-referencing/referencing/) ([Swe](https://lnu.se/ub/skriva-och-referera/skriva-referenser/)).
 ### Part 1
-The last part will be your recommendation and motivation to each of the scenario. It should be well grounded in the theory.
+In the first part will be your recommendation and motivation to each of the scenario. It should be well grounded in the theory.
 
 **Scenarios** <br />
 Three different software development companies have contacted you for a recommendation. All company have everything in-house of today but are considering moving into "the cloud":
@@ -30,6 +30,7 @@ The customer doesn't always think about everything, it's you job to find these t
 
 ### Part 2
 In the second part of the report you should find an academic article/paper, within the cloud computing area, and summarize it.
+The purpose of this part is to find relevant information and summarize it to your peers.
 
 ## Some tips
 Spell check! And if possible grammar check!
