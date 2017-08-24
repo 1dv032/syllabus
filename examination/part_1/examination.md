@@ -5,26 +5,20 @@ Please note that the report should be written in Swedish or English. The report 
 
 ## Content of the report
 The starting point for the report is the work already done for the seminar. At the seminar you presented your findings about cloud services. In the report you will act as an cloud advisor and try to analyze some scenarios and determine which kind of service will fit. You should consider pro and cons and make a good motivation of you choice.
-Throughout the report you should use references to justify you findings.
+Throughout the report you should use references to justify you findings, you can find more information about this at the [university library](https://lnu.se/en/library/Writing-and-referencing/referencing/) ([Swe](https://lnu.se/ub/skriva-och-referera/skriva-referenser/)).
+### Part 1
+The last part will be your recommendation and motivation to each of the scenario. It should be well grounded in the theory.
 
-* The first part should be a theory part where you, in text, describe the different cloud service, their characteristics and give example of services/applications under each type.
+**Scenarios** <br />
+Three different software development companies have contacted you for a recommendation. All company have everything in-house of today but are considering moving into "the cloud":
 
-* In the second part you should find an academic article/paper, within this area, and summarize it.
+**Company A** - Is a large consulting company that take care of big projects. They handling backup, security information, data processing for many different customers
 
-* The last part will be your recommendation and motivation to each of the scenario. It should be well grounded in the theory.
+**Company B** - Swedish University, handling mail, courses, student result, student list
 
-## Scenarios
-Three different software development companies have contacted you for a recommendation. All company have everything in-house of today but are considering moving into "the cloud".
+**Company C** - Is a law firm that need help with mail, calendar, booking appointments and administration works
 
-### The companies
-
-Company A - Is a large consulting company that take care of big projects. They handling backup, security information, data processing for many different customers
-
-Company B - Swedish University, handling mail, courses, student result, student list
-
-Company C - Is a law firm that need help with mail, calendar, booking appointments and administration works
-
-Company D - Developing Web based games with dynamic data in databases, subscription based. The company is using Continuous Integration with DevOps culture
+**Company D** - Developing Web based games with dynamic data in databases, subscription based. The company is using Continuous Integration with DevOps culture
 
 The customer doesn't always think about everything, it's you job to find these things and point them out to the customer. Here are some topics that the customer might have forgotten:
 
@@ -34,6 +28,8 @@ The customer doesn't always think about everything, it's you job to find these t
 * Availability
 * Localization
 
+### Part 2
+In the second part of the report you should find an academic article/paper, within the cloud computing area, and summarize it.
 
 ## Some tips
 Spell check! And if possible grammar check!
