@@ -10,9 +10,9 @@ Throughout the report you should use references to justify you findings, you can
 In the first part will be your recommendation and motivation to each of the scenario. It should be well grounded in the theory.
 
 **Scenarios** <br />
-Three different software development companies have contacted you for a recommendation. All company have everything in-house of today but are considering moving into "the cloud":
+Three different software development companies have contacted you for a recommendation. All company have everything in-house of today but are considering moving into "the cloud". Your assignment is to provide one or more possible solution and motivate your recommendations:
 
-**Company A** - Is a large consulting company that take care of big projects. They handling backup, security information, data processing for many different customers
+**Company A** - An IT consultant company who is responsible for taking care of other companied IT solutions. They handling backup, security information, data processing  and so on.
 
 **Company B** - Swedish University, handling mail, courses, student result, student list
 
