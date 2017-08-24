@@ -20,10 +20,7 @@ This seminar will concentrate on cloud services and container technologies. Be s
 3. In this question we are trying to think about bigger values about cloud computing and how it can influence. For example in terms of environment, democracy, community benefit...What are your thoughts about this?
   - Will there be democracy-problems worth discussing when talking about big SaaS-companies?
 
-4. What do we mean by multi-tenant applications?
-  - What do you think about challenges and risk with this type of application from a developers view?
-  <br>
-
 5. What is the difference between virtual machines and containers?
+  - Explain the architectural differences?
   - What is the pro and cons for developers?
   - What is the pro and cons for operations?
