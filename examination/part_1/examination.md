@@ -29,7 +29,7 @@ The customer doesn't always think about everything, it's you job to find these t
 * Localization
 
 ### Part 2
-In the second part of the report you should find an academic article/paper, within the cloud computing area, and summarize it.
+In the second part of the report you should [find](https://lnu.se/ub/soka-och-vardera/artiklar--databaser/) an [academic article/paper](https://play.lnu.se/media/t/0_4612xxoy/18350192), within the cloud computing area, and summarize it.
 The purpose of this part is to find relevant information and summarize it to your peers.
 
 ## Some tips
