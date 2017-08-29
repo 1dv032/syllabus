@@ -1,3 +1,9 @@
+## Web Application Architecture
+[Introduction to containers and Docker](https://github.com/CS-LNU-Learning-Objects/web-application-architecture/blob/master/containers.md)<br />
+
+[Continuous Integration](https://github.com/CS-LNU-Learning-Objects/web-application-architecture/blob/master/continuous.md)<br />
+
+[Introduction to microservices](https://github.com/CS-LNU-Learning-Objects/web-application-architecture/blob/master/microservices.md)<br />
 
 ##  Ruby on Rails
 * [Setting up a Ruby on Rails application](https://github.com/1dv032/syllabus/blob/master/resources/part_2/rubyonrails.md) -
