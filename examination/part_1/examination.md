@@ -1,6 +1,6 @@
 ## Examination 1 - Repetition and Cloud Computing
 
-For this examination you are expected to produce a written report of between 800-1000 words. Report should be delivered to the course email address, 1dv032@lnu.se, as a **PDF no later than 26/9 08:00.**
+For this examination you are expected to produce a written report of between 800-1000 words. Report should be delivered to the course email address, 1dv032@lnu.se, as a **PDF no later than 25/9 08:00.**
 Please note that the report should be written in Swedish or English. The report will go through a peer-review after finishing. This means you also should do a review of a other students paper.
 
 ## Content of the report
@@ -40,6 +40,6 @@ Make sure to make references to the course literature and any other articles tha
 ## The peer-review instructions
 In this course we will use so-called peer-review, the Swedish also called "referensgranskning". This means in short that you will study an other student´s written reports. The idea of the step is to demonstrate your knowledge by analyzing and providing feedback on other student's assignments and hopefully also get great feedback on your own. This dose not mean that you should grade each other rather push and give each other good feedback. In addition, it is important to be able to rise from your own bubble and reflect on the work of others.
 
-After the submission deadline, 26/9 0800, you will get an e-mail with another students report.
+After the submission deadline, 25/9 0800, you will get an e-mail with another students report.
 Read and analyze the report and give feedback, no more then 300 words
-Send your feedback to the course email address and a copy to the student who wrote the report, no later than **28/9 08:00**.
+Send your feedback to the course email address and a copy to the student who wrote the report, no later than **27/9 08:00**.
