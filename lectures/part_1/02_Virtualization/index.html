@@ -11,7 +11,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
   <link rel="icon" href="../../images/favicon.png" type="image/png" />
-
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="../../reveal.js/css/reveal.css">
   <link rel="stylesheet" href="../../reveal.js/css/theme/black.css" id="theme">
   <link rel="stylesheet" href="../../reveal.js/css/theme/black.lnu.css" id="theme">
@@ -88,12 +88,17 @@
       transition: 'slide', // none/fade/slide/convex/concave/zoom
 
       // Optional reveal.js plugins
+      chalkboard: { 
+        // optionally load pre-recorded chalkboard drawing from file
+        src: "chalkboard.json",
+      },
       dependencies: [
         { src: '../../reveal.js/lib/js/classList.js', condition: function () { return !document.body.classList; } },
         { src: '../../reveal.js/plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
         { src: '../../reveal.js/plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
         { src: '../../reveal.js/plugin/highlight/highlight.js', async: true, condition: function () { return !!document.querySelector('pre code'); }, callback: function () { hljs.initHighlightingOnLoad(); } },
         { src: '../../reveal.js/plugin/zoom-js/zoom.js', async: true },
+        { src: '../../reveal.js/plugin/chalkboard/chalkboard.js' },
         { src: '../../reveal.js/plugin/notes/notes.js', async: true }
       ]
     });
@@ -122,7 +127,12 @@
           //console.log('toggle Lnu safe background by pressing 1')
           var lectureSafe = document.getElementById('lectureSafe');
           lectureSafe.style.display = (lectureSafe.style.display == 'block')?'none':'block';
-        }, // toggle Lnu safe background by pressing '1'
+        }, 
+        67: function() { RevealChalkboard.toggleNotesCanvas() },	// toggle notes canvas when 'c' is pressed
+        66: function() { RevealChalkboard.toggleChalkboard() },	// toggle chalkboard when 'b' is pressed
+        46: function() { RevealChalkboard.clear() },	// clear chalkboard when 'DEL' is pressed
+        8: function() { RevealChalkboard.reset() },	// reset chalkboard data on current slide when 'BACKSPACE' is pressed
+        68: function() { RevealChalkboard.download() },	// downlad recorded chalkboard drawing when 'd' is pressed
       },
       slideNumber: true
     });
