@@ -1,6 +1,14 @@
 <!-- Start -->
 # Today's lecture <!-- {_style="font-size:140%"} -->
-* Virtualization
+## Virtualization
+* Virtual Machines
+    * What is Virtual Machines?
+    * Benefits of Virtual Machines
+    * Understanding Virtual Machines
+* Containers
+    * What is a Container?
+    * Virtual Machines vs. Containers
+    * Understanding containers
 
 Note:
 These are the topics for todays lecture.
@@ -159,13 +167,78 @@ Source: [VMware - Understanding Virtualization](https://www.vmware.com/content/d
 <!-- {_style="text-align: right; font-size:70%"} -->
 
 
---
+---
 # Containers
-Containers are another virtualization technique. They provide isolation at the pro- cess level instead of the machine level. While a VM is a machine that shares physical hardware with other VMs, each container is a group of processes that run in iso- lation on the same machine. All of the containers run under the same operating system, but each container is self-contained as far as the  les it uses. Therefore there is no dependency hell.
-Containers are much lighter weight and permit more services to be packed on fewer machines. Docker, Mesos, and Kubernetes are popular systems for man- aging large numbers of containers. They all use the same container format, which means once a container is created, it can be used on a desktop, server, or huge farm of servers.
+* Containers are another virtualization technique
+    * Not light-weight VM’s
+* Isolation at the process level instead of the machine level
+* Containers run under the same operating system/kernel
+* Provides a virtual operating system not a VM with own CPU, memory, I/O
 
-Pros and cons of virtualization and containerization, as well as technical details of how they work, can be be found in Volume 2, Chapter 3, “Selecting a Service Platform,” of this book series.
-Self-service container administration is made possible by Kubernetes and other container management systems. Customers provide the container speci-  cation and the management system  nds an available machine and spins up the container.
-One bad situation people get into with containers is a lack of reproducibil- ity. After using the system for a while, there comes a day when a container needs to be rebuilt from scratch to upgrade a library or other  le. Suddenly the team
 
-realizes no one is around who remembers how the container was made. The way to prevent this is to make the container’s creation similar to compiling software: A written description of what is to be in the container is passed through automation that reads the description and outputs the container. The description is tracked in source code control like any other source code. Containers should be built using whatever continuous integration (CI) system is used for building other software in your organization.
+Note:
+The analogy we use here at Docker is comparing houses (virtual machines) to apartments (Docker containers).
+Houses (the VMs) are fully self-contained and offer protection from unwanted guests. They also each possess their own infrastructure – plumbing, heating, electrical, etc. Furthermore, in the vast majority of cases houses are all going to have at a minimum a bedroom, living area, bathroom, and kitchen. It’s incredibly difficult to ever find a “studio house” – even if one buys the smallest house they can find, they may end up buying more than they need because that’s just how houses are built.
+Apartments (Docker containers) also offer protection from unwanted guests, but they are built around shared infrastructure. The apartment building (the server running the Docker daemon, otherwise known as a Docker host) offers shared plumbing, heating, electrical, etc. to each apartment. Additionally apartments are offered in several different sizes – from studio to multi-bedroom penthouse. You’re only renting exactly what you need.
+
+
+--
+## Virtual Machines vs. Containers
+
+![Virtual Machines vs. Containers](images/vm-vs-containers.png)
+
+Source: [Docker - What is Docker](https://www.docker.com/what-docker#/VM)
+
+<!-- {_style="text-align: right; font-size:70%"} -->
+
+
+--
+## Virtual Machines vs. Containers
+Containers and VMs Together
+![Virtual Machines vs. Containers](images/containers-and-vm-together.png)
+
+Source: [Docker for the Virtualization Admin](https://goto.docker.com/docker-virtualization-admin-ebook.html)
+
+<!-- {_style="text-align: right; font-size:70%"} -->
+
+
+--
+## Benefits of Containers
+* Ease of Use – build once, run anywhere
+* Speed – lightweight, less resources, boot time
+* Distribution – make them publicly available
+* Modular and Scalable – a container for each service
+
+
+--
+## Understanding Containers
+> A container is a group of processes running on an operating system that are isolated from other such groups of processes.
+
+Source: The Practice of Cloud System Administration
+
+<!-- {_style="text-align: right; font-size:70%"} -->
+
+Note:
+Own Namespace, chroot (Subdir), network
+
+
+--
+## Understanding Containers
+* The processes all run under the same operating system
+    * You can't have one process under Linux an another on Windows
+* Do not allocate large chunk of RAM and disk
+* Processes in a container are:
+    * controlled as a group
+    * only allows to interact with processes within the container
+* Each container has its own copy of packages, chared libs and other required files
+
+
+Source: The Practice of Cloud System Administration
+
+<!-- {_style="text-align: right; font-size:70%"} -->
+
+Note:
+* Not as wasteful as VMs
+* If the container is configured to have a memory limit, the sum total of memory used by all processes in the container can't exceed that limit.
+* Processes that are not in a container can kill or interact with all processes.
+* Dependency hell is avoided
