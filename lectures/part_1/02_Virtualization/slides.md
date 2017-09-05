@@ -1,4 +1,4 @@
-<!-- Start -->
+ <!-- Start -->
 # Today's lecture <!-- {_style="font-size:140%"} -->
 ## Virtualization
 * Virtual Machines
@@ -34,7 +34,7 @@ Source: Virtual Machines by Jim Smith & Ravi Nair, Edition 2005
 
 --
 ## What is Virtual Machines?
-> Virtual machines are created when a physical machine is partitioned to run a separate operating system for each partition. 
+> Virtual machines are created when a physical machine is partitioned to run a separate operating system for each partition.
 
 Source: The Practice of Cloud System Administration
 
@@ -57,7 +57,7 @@ Can **not access the resources**, disk, memory, of other VMs on the same physica
     * consolidating powerful machines
     * run on legacy systems
 
-Source: [Oracle](https://docs.oracle.com/cd/E27300_01/E27309/html/vmusg-virtualization-reasons.html) 
+Source: [Oracle](https://docs.oracle.com/cd/E27300_01/E27309/html/vmusg-virtualization-reasons.html)
 
 <!-- {_style="text-align: right; font-size:70%"} -->
 Note:
@@ -87,10 +87,10 @@ Source: Virtualization Essentials by Matthew Portnoy, Edition 2012
 
 ![Type 1 Hypervisor](images/type-1-hypervisor.png)<!-- {_style="float: right"} -->
 
-* Runs on bare metal, direct communication with H/W 
+* Runs on bare metal, direct communication with H/W
 * Better performance
 * More secure and reliable
-* Examples: 
+* Examples:
     * Xen
     * MS Hyper-V
     * VMWare ESX
@@ -104,10 +104,10 @@ Source: Virtualization Essentials by Matthew Portnoy, Edition 2012
 
 ![Type 2 Hypervisor](images/type-2-hypervisor.png)<!-- {_style="float: right"} -->
 
-* Runs on top of an OS, communicates with the OS 
+* Runs on top of an OS, communicates with the OS
 * Less efficient and low performance
 * Less reliable because of host OS
-* Examples: 
+* Examples:
     * VirtualBox
     * VMWare Station
     * Virtual Server
@@ -177,9 +177,9 @@ Source: [VMware - Understanding Virtualization](https://www.vmware.com/content/d
 
 * Needs special H/W
 * Intel VT-x , AMD-V
-* PI’s automatically trapped and 
+* PI’s automatically trapped and
     <br />directly executed
-* No binary translation 
+* No binary translation
 * Dependent on VMM
 <br/><br/><br/><br/><br/><br/>
 
@@ -249,7 +249,7 @@ Source: [Docker for the Virtualization Admin](https://goto.docker.com/docker-vir
 * Processes in a container are:
     * controlled as a group
     * only allows to interact with processes within the container
-* Each container has its own copy of packages, chared libs and other required files
+* Each container has its own copy of packages, shared libs and other required files
 
 
 Source: The Practice of Cloud System Administration
