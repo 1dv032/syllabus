@@ -19,10 +19,17 @@
 <iframe width="560" height="315" src="https://www.youtube.com/embed/B_kpTunSwdU?list=PLSWJPPj5sKmpSllVlpyGh-eepqrQVnjJo" frameborder="0" allowfullscreen></iframe>
 
 ## Lecture 02 - Virtualization
-* 
+* Virtual Machines
+    * What is Virtual Machines?
+    * Benefits of Virtual Machines
+    * Understanding Virtual Machines
+* Containers
+    * What is a Container?
+    * Virtual Machines vs. Containers
+    * Understanding containers
 
 ### Resources
-- HTML-presentation
+- [HTML-presentation](https://cdn.rawgit.com/1dv032/syllabus/master/lectures/part_1/02_Virtualization/index.html#/)
 - Recording
 
 
