@@ -33,12 +33,19 @@ Source: Virtual Machines by Jim Smith & Ravi Nair, Edition 2005
 
 
 --
-# What is Virtualization?
+## What is Virtual Machines?
+> Virtual machines are created when a physical machine is partitioned to run a separate operating system for each partition. 
 
+Source: The Practice of Cloud System Administration
+
+<!-- {_style="text-align: right; font-size:70%"} -->
+Note:
+Processes running in a VM have **no awareness** that they are nte running on a physical machine<br/>
+Can **not access the resources**, disk, memory, of other VMs on the same physical machine
 
 
 --
-## Benefits of Virtualization
+## Benefits of Virtual Machines
 * Share resources
     * resource optimization, multiplexing
     * dynamic workload balancing
@@ -53,12 +60,19 @@ Source: Virtual Machines by Jim Smith & Ravi Nair, Edition 2005
 Source: [Oracle](https://docs.oracle.com/cd/E27300_01/E27309/html/vmusg-virtualization-reasons.html) 
 
 <!-- {_style="text-align: right; font-size:70%"} -->
+Note:
+VMs can make computing more efficient. Physical machines today are very fast and powerful, applications don't use all the resources, this excess capacity is usually called **stranded capacity** <br/>
+VMs provide better **isolation** than simple multitasking
 
 
 --
-# Hypervisor
+## Understanding Virtual Machines
+### Hypervisor
+
+![Hypervisor](images/hypervisor.png)<!-- {_style="float: right"} -->
+
 * Originally Virtual Machine Monitor (VMM)
-* OS was called supervisors, code to supersede OS to allow programmer debugging
+* OS was called supervisors, code to supersede <br/> OS to allow programmer debugging
 * Properties for ideal VMM
     * Fidelity – identical environment
     * Isolation – complete control
@@ -70,7 +84,11 @@ Source: Virtualization Essentials by Matthew Portnoy, Edition 2012
 
 --
 # Type 1 Hypervisor
-* Runs on bare metal, direct communication with H/W l Better performance
+
+![Type 1 Hypervisor](images/type-1-hypervisor.png)<!-- {_style="float: right"} -->
+
+* Runs on bare metal, direct communication with H/W 
+* Better performance
 * More secure and reliable
 * Examples: 
     * Xen
@@ -83,7 +101,10 @@ Source: Virtualization Essentials by Matthew Portnoy, Edition 2012
 
 --
 # Type 2 Hypervisor
-* Runs atop an OS, communicates with the OS 
+
+![Type 2 Hypervisor](images/type-2-hypervisor.png)<!-- {_style="float: right"} -->
+
+* Runs on top of an OS, communicates with the OS 
 * Less efficient and low performance
 * Less reliable because of host OS
 * Examples: 
@@ -158,7 +179,7 @@ Source: [VMware - Understanding Virtualization](https://www.vmware.com/content/d
 * Intel VT-x , AMD-V
 * PI’s automatically trapped and 
     <br />directly executed
-* No binary transalation 
+* No binary translation 
 * Dependent on VMM
 <br/><br/><br/><br/><br/><br/>
 
@@ -168,6 +189,15 @@ Source: [VMware - Understanding Virtualization](https://www.vmware.com/content/d
 
 
 ---
+# Containers
+> A container is a group of processes running on an operating system that are isolated from other such groups of processes.
+
+Source: The Practice of Cloud System Administration
+
+<!-- {_style="text-align: right; font-size:70%"} -->
+
+
+--
 # Containers
 * Containers are another virtualization technique
     * Not light-weight VM’s
@@ -212,18 +242,7 @@ Source: [Docker for the Virtualization Admin](https://goto.docker.com/docker-vir
 
 --
 ## Understanding Containers
-> A container is a group of processes running on an operating system that are isolated from other such groups of processes.
-
-Source: The Practice of Cloud System Administration
-
-<!-- {_style="text-align: right; font-size:70%"} -->
-
-Note:
-Own Namespace, chroot (Subdir), network
-
-
---
-## Understanding Containers
+* Containers are isolated from each other
 * The processes all run under the same operating system
     * You can't have one process under Linux an another on Windows
 * Do not allocate large chunk of RAM and disk
@@ -238,6 +257,7 @@ Source: The Practice of Cloud System Administration
 <!-- {_style="text-align: right; font-size:70%"} -->
 
 Note:
+* Own Namespace, chroot (Subdir), network
 * Not as wasteful as VMs
 * If the container is configured to have a memory limit, the sum total of memory used by all processes in the container can't exceed that limit.
 * Processes that are not in a container can kill or interact with all processes.
