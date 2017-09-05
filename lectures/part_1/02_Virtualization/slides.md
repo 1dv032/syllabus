@@ -1,4 +1,4 @@
- <!-- Start -->
+<!-- Start -->
 # Today's lecture <!-- {_style="font-size:140%"} -->
 ## Virtualization
 * Virtual Machines
@@ -34,7 +34,7 @@ Source: Virtual Machines by Jim Smith & Ravi Nair, Edition 2005
 
 --
 ## What is Virtual Machines?
-> Virtual machines are created when a physical machine is partitioned to run a separate operating system for each partition.
+> Virtual machines are created when a physical machine is partitioned to run a separate operating system for each partition. 
 
 Source: The Practice of Cloud System Administration
 
@@ -57,12 +57,14 @@ Can **not access the resources**, disk, memory, of other VMs on the same physica
     * consolidating powerful machines
     * run on legacy systems
 
-Source: [Oracle](https://docs.oracle.com/cd/E27300_01/E27309/html/vmusg-virtualization-reasons.html)
+Source: [Oracle](https://docs.oracle.com/cd/E27300_01/E27309/html/vmusg-virtualization-reasons.html) 
 
 <!-- {_style="text-align: right; font-size:70%"} -->
 Note:
 VMs can make computing more efficient. Physical machines today are very fast and powerful, applications don't use all the resources, this excess capacity is usually called **stranded capacity** <br/>
-VMs provide better **isolation** than simple multitasking
+VMs provide better **isolation** than simple multitasking <br/>
+Cons: performance and overhead
+
 
 
 --
@@ -80,6 +82,8 @@ VMs provide better **isolation** than simple multitasking
 
 Source: Virtualization Essentials by Matthew Portnoy, Edition 2012
 <!-- {_style="text-align: right; font-size:70%"} -->
+Note:
+**First VMM** were used for the development abd debugging of OS.
 
 
 --
@@ -87,16 +91,19 @@ Source: Virtualization Essentials by Matthew Portnoy, Edition 2012
 
 ![Type 1 Hypervisor](images/type-1-hypervisor.png)<!-- {_style="float: right"} -->
 
-* Runs on bare metal, direct communication with H/W
+* Runs on bare metal, direct communication with H/W 
 * Better performance
 * More secure and reliable
-* Examples:
+* Examples: 
     * Xen
     * MS Hyper-V
     * VMWare ESX
 
 Source: Virtualization Essentials by Matthew Portnoy, Edition 2012
 <!-- {_style="text-align: right; font-size:70%"} -->
+Note:
+Less overhead<br/>
+Cost
 
 
 --
@@ -104,16 +111,18 @@ Source: Virtualization Essentials by Matthew Portnoy, Edition 2012
 
 ![Type 2 Hypervisor](images/type-2-hypervisor.png)<!-- {_style="float: right"} -->
 
-* Runs on top of an OS, communicates with the OS
+* Runs on top of an OS, communicates with the OS 
 * Less efficient and low performance
 * Less reliable because of host OS
-* Examples:
+* Examples: 
     * VirtualBox
     * VMWare Station
     * Virtual Server
 
 Source: Virtualization Essentials by Matthew Portnoy, Edition 2012
 <!-- {_style="text-align: right; font-size:70%"} -->
+Note:
+The **first x86** offerings were Type 2, quickest path to market, the host OS already handled all the hardware communication.
 
 
 --
@@ -177,9 +186,9 @@ Source: [VMware - Understanding Virtualization](https://www.vmware.com/content/d
 
 * Needs special H/W
 * Intel VT-x , AMD-V
-* PI’s automatically trapped and
+* PI’s automatically trapped and 
     <br />directly executed
-* No binary translation
+* No binary translation 
 * Dependent on VMM
 <br/><br/><br/><br/><br/><br/>
 
@@ -207,9 +216,9 @@ Source: The Practice of Cloud System Administration
 
 
 Note:
-The analogy we use here at Docker is comparing houses (virtual machines) to apartments (Docker containers).
-Houses (the VMs) are fully self-contained and offer protection from unwanted guests. They also each possess their own infrastructure – plumbing, heating, electrical, etc. Furthermore, in the vast majority of cases houses are all going to have at a minimum a bedroom, living area, bathroom, and kitchen. It’s incredibly difficult to ever find a “studio house” – even if one buys the smallest house they can find, they may end up buying more than they need because that’s just how houses are built.
-Apartments (Docker containers) also offer protection from unwanted guests, but they are built around shared infrastructure. The apartment building (the server running the Docker daemon, otherwise known as a Docker host) offers shared plumbing, heating, electrical, etc. to each apartment. Additionally apartments are offered in several different sizes – from studio to multi-bedroom penthouse. You’re only renting exactly what you need.
+The analogy we use here at Docker is comparing houses (virtual machines) to apartments (Docker containers).<br/>
+**Houses** (the VMs) are fully **self-contained and offer protection from unwanted guests**. They also each possess their **own infrastructure** – plumbing, heating, electrical, etc. Furthermore, in the vast majority of cases houses are all going to have at a **minimum a bedroom, living area, bathroom, and kitchen**. It’s incredibly difficult to ever find a “studio house” – even if one buys the smallest house they can find, they may end up buying more than they need because that’s just how houses are built.<br/>
+**Apartments** (Docker containers) also offer **protection from unwanted guests**, but they are built around **shared infrastructure**. The apartment building (the server running the Docker daemon, otherwise known as a Docker host) offers shared plumbing, heating, electrical, etc. to each apartment. Additionally apartments are offered in **several different sizes** – from studio to multi-bedroom penthouse. *You’re only renting exactly what you need.*
 
 
 --
