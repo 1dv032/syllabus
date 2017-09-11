@@ -172,6 +172,7 @@ Note:
     * Licencing
     * Security (?)
   * Virtualization - better use of resources
+  * Service availability
 * Data
   * Storage infrastructure
   * backups, recovery
@@ -183,9 +184,11 @@ Note:
   * Pay for what you need, flexibility (?)
   * Upgrading infrastructure for new products
   * Data migration
-  * Avoid hitting the roof
-* Environmentally friendly
-  * Energy solutions
+  * Demand for a service may varies with time
+    * Pay-as-you-go
+* Environmentally friendly?
+  * Leading to new energy solutions
+  * Localization of "cloud data centers"
 
 
 --
@@ -193,10 +196,12 @@ Note:
 ## Challenges!
 * It's free....or?
   * Is Google Docs free? Is Facebook?
+    * Filter bubbles...
 * Legal and constraints on hosting location
   * How will see it? (lex Transportstyrelsen)
   * Sensitive data, personal integration, Laws
 * When I delete is it deleted?
+  * Transparency
 
 
 --
@@ -204,8 +209,11 @@ Note:
 ## Challenges!
 
 * Portability
-  * How to change cloud provider
-  * Export, import of data, Infrastructure as Code
+  * How to change cloud provider?
+  * Data lock-in, What if the provider will shut down?
+  * Data Transfer Bottlenecks?
+    * The cost of big data transfer
+    * Ship disk?
 * How to handle variable capacity?
   * Support
   * Cost
