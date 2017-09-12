@@ -163,7 +163,7 @@ Note:
 
 --
 
-  ![ias](images/cloud_computing.svg.png)
+  ![ias](images/cloud_computing.png)
 
   <!-- {_class="center"} -->
 
