@@ -204,7 +204,7 @@ Note:
   * Transparency how data is handle
 * SaaS is often free....or?
   * Is Google Docs free? Is Facebook?
-    * Filter bubbles...
+          
 
 
 --
