@@ -1,14 +1,14 @@
 <!-- Start -->
-# Today's lecture <!-- {_style="font-size:140%"} -->
-## The Cloud
-* Definition of the cloud
+## Today's lecture
+
+* Definition of "The Cloud"
     * Characteristics
     * History
     * Basic concepts
 * Cloud Services
 * Deploy models
 * Business drivers
-* Challenges with the cloud
+* Challenges
 
 Note:
 These are the topics for todays lecture.
@@ -20,11 +20,12 @@ These are the topics for todays lecture.
 
 <!-- {_class="center"} -->
 
-Cloud computing?<!-- {_style="text-align: center; font-size:40%"} -->
+Cloud computing?<!-- {_style="text-align: center; font-size:55%"} -->
 
 
 Note:
-Hur vi kommer i kontakt med molntjänster idag.
+Osäkert vad själva ordet/begreppet kommer ifrån. Bild på moln för att beskriva helhet utan att gå in i detaljer. Nätverksschema förr ritade servrar som cirklar => serverkluster => såg ut som ett moln.<br>
+Hur vi kommer i kontakt med molntjänster idag?<br>
 Bygga system. Webbhotel vs. VPS, virtualisering. Förtsättning från förra veckan
 
 
@@ -42,28 +43,30 @@ Source - [NIST (National Institute of Standards and Technology) Definition(http:
 
 * On-demand self-service
   * A customer can get computing capabilities (server time, network storage) automatically without human interaction with the service provider.
-  * Programmable
 * Broad network access
   * The services are available over the network and accessed through standard mechanisms (thin or thick client)
+  * Programmable API
 * Resource pooling
-  * Pooled to serve multiple consumers using a multi-tenant model, with different physical and virtual resources dynamically assigned and reassigned according to the<br> consumers demand
+  * Pooled to serve multiple consumers using a multi-tenant model, with different physical and virtual resources dynamically assigned and reassigned according to the consumers demand
 
 
 --
 ## Characteristics
 
 * Rapid elasticity
-  * Services can be rapidly and elastically created. They can automatically scale in and out.
+  * Services (Servers) can be rapidly and elastically created. They can automatically scale in and out.
 * Measured service
-  * Cloud systems can automatically control and optimize resources by using a metering capability. Measuring storage, processing, bandwidth...)
+  * Cloud systems can automatically control and optimize resources by using a metering capability. Measuring storage, processing, bandwidth...
 
-<br>
-![scaling](images/scaling.png)<!-- {_style="text-align: center; width:4 0%"} -->
+
+![scaling](images/scaling.png)<!-- {_style="width:55%"} -->
+
+<!-- {_class="center"} -->
 
 
 --
 ## History
-* Delivering computing resources through a global network is rooted in the 1960s.
+* The idea of delivering computing resources through a global network is rooted in the 1960s.
 * John McCarthy (1961)
     * "computers of the future...someday be organised as a public utility..."
     * "Mainframe timesharing"
@@ -81,14 +84,14 @@ Source - [NIST (National Institute of Standards and Technology) Definition(http:
 * Salesforce.com in 1999, the concept of delivering enterprise applications via a simple website.
 * Amazon Web Services in 2002, which provided a suite of cloud-based services including storage, computation...
   *  2006, Amazon launched its Elastic Compute cloud (EC2)
-*  2009, ("Web 2.0"). Google and others started to offer browser-based enterprise applications, though services such as Google Apps.
+* "Web 2.0" - Google and others started to offer browser-based enterprise applications, though services such as Google Apps.
 
 Note:
 
 
 
 
---
+---
 ## Service models (the big three)
 
 * SaaS
@@ -102,6 +105,7 @@ Note:
 * IaaS
   * Infrastructure as a Service
   * The consumer can use processing, storage, network and other fundamental computing resources. The consumer can create servers and run there own applications in the cloud.
+    * Windows Azure, AWS, Digital Ocean
 
 
 --
@@ -113,7 +117,7 @@ Note:
 * Community cloud
   * The cloud infrastructure is shared between several organizations that has shared concerns.
 * Public cloud
-  * The cloud infrastructure is made available to the general public or a large group of users and is owned by a cloud provider selling cloud services.
+  * The cloud infrastructure is made available to the general public or a large group of **cloud consumers** and is owned by a **cloud provider** selling cloud services.
 * Hybrid cloud
   * The cloud infrastructure is a composition of two or more clouds (private, public or community). Bound together by technology that enables data portability.
 
@@ -137,8 +141,8 @@ Note:
 
 
 
----
-## Resources in the cloud
+--
+## Cloud resources
 
 * Compute
   * Mainly server instances - Create and restore VMs
@@ -149,7 +153,7 @@ Note:
     * Ex. [Amazon EBS](https://aws.amazon.com/ebs/), [OpenStack Cinder](https://wiki.openstack.org/wiki/Cinder)
   * Object Storage
     * Files can be stored and accessed from different parts of the infrastructure or publicly
-    * Designed for long-term storage often accessed from different servers
+    * Designed for long-term storage often accessed from different servers (CDN)
       * [Amazon S3](https://aws.amazon.com/s3/), [Openstack Swift](https://wiki.openstack.org/wiki/Swift)
 * Network Resources
   * Manage connectivity between its own elements and with external networks
@@ -171,7 +175,7 @@ Note:
     * Avoiding overheads
     * Licencing
     * Security (?)
-  * Virtualization - better use of resources
+  * Flexibility - better use of resources
   * Service availability
 * Data
   * Storage infrastructure
@@ -181,11 +185,10 @@ Note:
 --
 ## Why using Cloud?
 * Capacity planning
-  * Pay for what you need, flexibility (?)
-  * Upgrading infrastructure for new products
-  * Data migration
   * Demand for a service may varies with time
     * Pay-as-you-go
+  * Upgrading infrastructure for new products
+  * Data migration
 * Environmentally friendly?
   * Leading to new energy solutions
   * Localization of "cloud data centers"
@@ -194,14 +197,14 @@ Note:
 --
 
 ## Challenges!
-* It's free....or?
+* Legal and constraints on hosting location
+  * Who will see it?
+  * Sensitive data, personal integration, legal issues
+* When I delete data is it deleted?
+  * Transparency how data is handle
+* SaaS is often free....or?
   * Is Google Docs free? Is Facebook?
     * Filter bubbles...
-* Legal and constraints on hosting location
-  * How will see it? (lex Transportstyrelsen)
-  * Sensitive data, personal integration, Laws
-* When I delete is it deleted?
-  * Transparency
 
 
 --
@@ -218,4 +221,19 @@ Note:
   * Support
   * Cost
 * Private or public?
-  * Cost
+
+
+--
+## Next time...
+
+![docker](images/docker.png)
+
+<!-- {_class="center"} -->
+
+
+---
+<br>
+<img src="images/bye.gif" width="40%" />
+
+
+<!-- {_class="center"} -->
