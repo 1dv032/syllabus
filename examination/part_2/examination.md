@@ -36,19 +36,34 @@ You are the first employee in the newly created development team, your colleague
   * The application should use the latest available (that RedMine support) versions of Ruby and Rails
   * The vagrant scripting should be divided into different files for the different steps.
   * The application can use the build in WebBrick server provided by the RubyOnRails platform.
-  
+  * The vagrant script should have comments describing whats happening.
+
 
 2. **Docker Development version** -
-  In this step you should dockerize the Hour application. The setup should fit the developers in the team so don't focus on production yet even if we want the two setups look the same in the end.
+  In this step you should dockerize the RedMine application. The setup should fit the developers in the team so don't focus on production yet even if we want the two setups look the same in the end.
   You should analyze the application and see what part will go into the different containers. The solution should be a couple of containers defined in dockerfiles and put together in a docker-compose-file.
 
-3. **Docker Production version** -
-  In this last step you should try to take the dockerized Hour Application to production. The whole application should have a reversed proxy in-front that forces the users to rung HTTPS. If the user visits the site through port 80 a redirect to port 443 should be done. For now the solution could work with self-signed certificates.
+  The following requirements is wanted:
+  * The application should run on Ubuntu - Latest version that works
+  * The latest stable version of RedMine should be used
+  * The application should use the latest available (that RedMine support) versions of Ruby and Rails
+  * The application should use a dedicated database server. MySQL or Postgree DB.
+  * The application should be able to connect to through http://localhost:8080 on the host system
+  * The Dockerfile and docker-compose file should have comments to describe how it works
+  * You should provide documentation for the user of your docker solution. Which commandos to use and so on...
 
-  The application should run in production mode meaning that the rails environment should be production, including setting the required for running a rails application in production. For more information about this you can red this resource [Rails in production](https://github.com/1dv032/syllabus/blob/master/resources/part_2/rubyonrails_production.md).
+3. **Docker Production version** -
+  In this last step you should try to take the dockerized Hour Application to production. The application should have the same requirements as the Development version but should also include the following requirements:
+
+  * The whole application should have a Nginx reversed proxy in-front that forces the users to run through HTTPS. If the user visits the site through **port 80** a redirect to port 443 should be done. For now the solution could work with self-signed certificates.
+  * The application should run in production mode meaning that the rails environment should be production, including setting the required for running a rails application in production. For more information about this you can red this resource [Rails in production](https://github.com/1dv032/syllabus/blob/master/resources/part_2/rubyonrails_production.md).
 
   Following point is not mandatory but *could* affect the grades on this examination:
-  - Configure support for Redis which should be used for caching.
-  - Don´t use the rails frameworks built in web server - Use a app server like passenger, unicorn, puma…
-  - Let your reverse proxy handle all the static resources so that request to these don´t goes through the rails framework.
-  - Implement a system for handling log volumes through docker.
+  * Don´t use the rails frameworks built in web server - Use a app server like passenger, unicorn, puma…
+  * Implement a system for handling log volumes through docker.
+  * Configure support for Redis which should be used for caching.
+  * Let your reverse proxy handle all the static resources so that request to these don´t goes through the rails framework.
+
+## Must read
+http://www.redmine.org/projects/redmine/wiki/RedmineInstall#Installation-procedure
+https://github.com/1dv032/syllabus/blob/master/resources/part_2/rubyonrails.md
