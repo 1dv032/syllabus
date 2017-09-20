@@ -1,9 +1,9 @@
 ## 1. Setup a Ruby on Rails application with Vagrant for development
 In this exercise you should create a vagrant-file where you set up a new Ruby on Rails application. All the steps should be defined in scripts and should be executed when running the `vagrant up`-command. The script should:
 
-* Defining a [Ubuntu 14.04 LTS as base image](https://atlas.hashicorp.com/ubuntu)
-* Install ruby version 2.3.1
-* Install rails version 4.1.x
+* Defining a [Ubuntu LTS as base image](https://atlas.hashicorp.com/ubuntu)
+* Install ruby latest version
+* Install rails latest version
 * Create a [new rails project ](http://guides.rubyonrails.org/command_line.html#rails-new)
 * Bundle all the gems
 * Generate [a scaffold application](http://guides.rubyonrails.org/command_line.html#rails-generate)
@@ -16,25 +16,23 @@ First of all go through the ["getting started" from vagrants documentation](http
 
 ### Solution proposal
 https://github.com/1dv032/exercise-vagrant-ror
+**OBS!** This is an old solution and some versions of OS and software can be utdated
 
 ## 2. Containerization of an node.js dev setup
 You will find this exercise and its instruction (the readme-file) in an own repo: https://github.com/1dv032/exercise-docker-nodejs-dev
 
 ### Solution proposal
-https://github.com/1dv032/solution-exercise-docker-nodejs-dev
+To come...
 
 ## 3. Docker compose with and RoR application
 You will find this exercise and its instruction (the readme-file) in an own repo: https://github.com/1dv032/exercise-docker-compose-ror-dev
 
 ### Solution proposal
-https://github.com/1dv032/solution-exercise-docker-compose-ror-dev
+To come...
 
 ## 4. Moving to staging/production - node.js and a reversed proxy 
 You will find this exercise and its instruction (the readme-file) in an own repo: https://github.com/1dv032/exercise-docker-nodejs-prod
 
 ### Solution proposal
-https://github.com/1dv032/solution-exercise-docker-nodejs-prod
+To come...
 
-## 5. Setting up monitoring
-
-### To Be
