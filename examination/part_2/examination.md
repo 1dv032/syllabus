@@ -53,7 +53,7 @@ You are the first employee in the newly created development team, your colleague
   * You should provide documentation for the user of your docker solution. Which commandos to use and so on...
 
 3. **Docker Production version** -
-  In this last step you should try to take the dockerized Hour Application to production. The application should have the same requirements as the Development version but should also include the following requirements:
+  In this last step you should try to take the dockerized RedMine Application to production. The application should have the same requirements as the Development version but should also include the following requirements:
 
   * The whole application should have a Nginx reversed proxy in-front that forces the users to run through HTTPS. If the user visits the site through **port 80** a redirect to port 443 should be done. For now the solution could work with self-signed certificates.
   * The application should run in production mode meaning that the rails environment should be production, including setting the required for running a rails application in production. For more information about this you can red this resource [Rails in production](https://github.com/1dv032/syllabus/blob/master/resources/part_2/rubyonrails_production.md).
