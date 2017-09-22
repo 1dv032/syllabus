@@ -6,7 +6,7 @@
     * Containers core concepts
     * From a software perspective
 * Docker
-  * History
+  * What is docker
   * Characteristics
   * Basic concepts
 * Practical
@@ -106,3 +106,188 @@ separated process<br>
 ![docker](images/docker.png)
 
 <!-- {_class="center"} -->
+
+
+--
+## What is docker?
+* Docker provides tooling and a platform to manage containers
+* started in France as an internal project within dotCloud, a platform-as-a-service company
+* the world’s leading software container platform
+* Focus on minimize the gap from development to deployment
+  * Developing, shipping and running
+  * Simpler tools, management, scaling and so on
+* Minimize the diversion between development- and production Environmentally
+  * "It works on my machine"
+* The docker platform is "Open Source", Promoted by the Docker, Inc
+* Written in GO language (https://golang.org)
+--
+## Docker - Architecture
+
+* Docker Engine
+  * A client-server models
+    * Server, docker deamon, creates images, containers, networks and volumes
+    * REST API, interface for programs to talk to the deamon
+    * A CLI client
+      * Could be other tools...communicating with the API
+
+![docker enging](./images/engine-components-flow.png)
+
+--
+## Docker - Architecture
+
+![docker enging](./images/engine-components-flow.png)
+
+* Docker Registries
+  * Stores *docker images* (Docker Hub, Docker Cloud)
+  * Public or Private
+  * Docker store - Buy and sell application or services
+
+--
+## Docker basic concepts
+
+* Images
+  * read-only templates with instructions for creating a container
+  * Often an image is based on another image
+  * Get it from Docker Hub or your own registry
+  * Defined in a *Dockerfile*
+* Containers
+  * A runnable instance of an image
+  * Relatively well isolated from other containers and its host machines
+  * ``` docker run -i -t ubuntu /bin/bash ```
+* Services
+  * Scaling of containers across multiple Docker deamons (swarm mode)
+
+--
+## Docker characteristics
+
+* Layers - Changes are done in layers, not the whole image
+  * UnionFS - Used by Docker engine
+  * Union File System, Used to layered Docker images
+* Single process
+* Stateless, read-only
+  * How to store data? Volumes!
+* Portable
+
+--
+## About Volumes
+
+
+## Getting started
+
+* Community Edition (CE) and Enterprise Edition (EE)
+  * https://docs.docker.com/engine/installation/
+  * Docker for mac, Docker for Windows
+  * Read installations instructions for your linux dist.
+    * https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/
+
+![docker install](./images/docker-app-drag.png)
+
+
+--
+## Is it working?
+
+```bash
+docker run hello-world
+```
+
+--
+## Basic ubuntu container
+
+```bash
+docker run -i -t ubuntu /bin/bash
+```
+
+Note: 'cat /etc/*release*
+
+---
+## The Dockerfile
+* In the Dockerfile (a textfile) you define your image from which you build your container(s)
+* Contains all the commands needed for the preferred image
+* Load and build with ``` docker build .```
+
+```
+#
+# Nginx Dockerfile
+#
+FROM ubuntu:16.04
+
+LABEL maintainer="thajo@lnu.se"
+
+RUN apt-get update \
+    && apt-get install -y nginx \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
+    && echo "daemon off;" >> /etc/nginx/nginx.conf
+
+EXPOSE 80
+CMD ["nginx"]
+
+```
+
+```
+docker build . -t thajo/nginx
+docker run -p 8080:80 -d thajo/nginx
+```
+
+Note:
+Each command in a own layer<br>
+#Running the build
+docker build . -t thajo/rails
+# Starting a container
+docker run -p 80:80 -d thajo/rails
+#stoping
+docker stop id
+
+--
+#Dockerfile command
+
+* FROM
+  * Defines the base image to work with
+* LABEL
+  * Meta data about this image (creator, maintainer and so on)
+* RUN
+  * Specifies one (or combined) commands to run in the shell
+* CMD
+  * One per file, defaults for an executing container (entrypoint is default /bin/sh)
+* COPY
+  * Copy files or directory and add them to the containers file system
+* ADD
+  * Like copy, could use URLs, could unpack some compressed files
+* ENV
+  * Sets an environment variable in the container
+* WORKDIR
+  * Specifies the working directory from where RUN, CMD, COPY, ADD...runs
+* EXPOSE
+  * Exposes the ports to the container
+* VOLUME
+  * Instructs how to create a mount point for holding data
+https://docs.docker.com/engine/reference/builder/
+--
+```bash
+## Example
+```
+
+---
+#Docker Compose
+
+> Compose is a tool for defining and running multi-container Docker applications
+
+* Uses a YAML-file to configure an applications services
+
+```YAML
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+    - "5000:5000"
+    volumes:
+    - .:/code
+    - logvolume01:/var/log
+    links:
+    - redis
+  redis:
+    image: redis
+volumes:
+  logvolume01: {}
+```
