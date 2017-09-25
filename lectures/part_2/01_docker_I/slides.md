@@ -33,6 +33,7 @@ separated process<br>
 --
 ![container](./images/containers.jpg)
 
+
 --
 
 ## History
@@ -197,6 +198,7 @@ separated process<br>
 docker run hello-world
 ```
 
+
 --
 ## Basic ubuntu container
 
@@ -271,6 +273,8 @@ docker stop id
 * VOLUME
   * Instructs how to create a mount point for holding data
 https://docs.docker.com/engine/reference/builder/
+
+
 --
 ```bash
 ## Example
