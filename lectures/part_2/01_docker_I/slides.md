@@ -80,6 +80,7 @@ separated process<br>
   * Load balancing
   * Example; Kubernetes, etcd, Docker swarm
 
+
 ---
 ## Modern software architecture
 
@@ -120,6 +121,8 @@ separated process<br>
   * "It works on my machine"
 * The docker platform is "Open Source", Promoted by the Docker, Inc
 * Written in GO language (https://golang.org)
+
+
 --
 ## Docker - Architecture
 
@@ -132,6 +135,7 @@ separated process<br>
 
 ![docker enging](./images/engine-components-flow.png)
 
+
 --
 ## Docker - Architecture
 
@@ -141,6 +145,7 @@ separated process<br>
   * Stores *docker images* (Docker Hub, Docker Cloud)
   * Public or Private
   * Docker store - Buy and sell application or services
+
 
 --
 ## Docker basic concepts
@@ -157,6 +162,7 @@ separated process<br>
 * Services
   * Scaling of containers across multiple Docker deamons (swarm mode)
 
+
 --
 ## Docker characteristics
 
@@ -167,6 +173,7 @@ separated process<br>
 * Stateless, read-only
   * How to store data? Volumes!
 * Portable
+
 
 --
 ## About Volumes
@@ -198,6 +205,7 @@ docker run -i -t ubuntu /bin/bash
 ```
 
 Note: 'cat /etc/*release*
+
 
 ---
 ## The Dockerfile
@@ -238,6 +246,7 @@ docker run -p 80:80 -d thajo/rails
 #stoping
 docker stop id
 
+
 --
 #Dockerfile command
 
@@ -266,6 +275,7 @@ https://docs.docker.com/engine/reference/builder/
 ```bash
 ## Example
 ```
+
 
 ---
 #Docker Compose
