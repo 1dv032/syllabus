@@ -197,6 +197,25 @@ Source: https://blog.octo.com/en/docker-registry-first-steps/
 
 --
 ## About Volumes
+* How to handle dynamic data in a read-only container?
+* Docker is using Volumes - Take completely care of them
+* Using a volume does not increase the size of containers using it
+* A volume could be used by many containers
+* By default, not deleted when container is stopped
+
+
+```bash
+## Creates a datacontainer based on ubuntu
+docker create -v /logs --name logscontainer ubuntu
+## start a container and mounts the volume
+docker run -t -i --volumes-from logscontainer ubuntu /bin/bash
+## or
+docker run -t -i --volumes-from logscontainer centos /bin/bash
+
+# create both volume and container
+docker run -v ~/myVolume:/data -it ubuntu /bin/bash
+```
+https://docs.docker.com/engine/admin/volumes/volumes/
 
 
 ---
@@ -308,6 +327,52 @@ https://docs.docker.com/engine/reference/builder/
 --
 ```bash
 ## Example
+FROM node:8.5.0
+LABEL maintainer="thajo@lnu.se"
+
+EXPOSE 8080
+
+ENV INSTALL_PATH /var/www/app
+
+RUN mkdir -p  $INSTALL_PATH
+WORKDIR  $INSTALL_PATH
+
+
+COPY package.json .
+RUN npm install --quiet
+
+COPY . .
+
+CMD ["npm", "start"]
+```
+
+--
+## Commands to test
+
+```bash
+# Running the build with a tag
+docker build . -t thajo/rails
+
+# Starting a container
+docker run -p 8080:8080 -d thajo/rails
+ 
+# Starting a container with a bash
+docker run -t -i  thajo/rails /bin/bash
+
+# Login to a running container
+docker exec -i -t <ps_id> /bin/bash
+
+ 
+# Stop all containers
+docker stop $(docker ps -a -q)
+# Remove all containers
+docker rm $(docker ps -a -q)
+# Remove all images
+docker rmi $(docker images -q)
+
+# Remove all valumes (make sure to remove the volume container first)
+docker volume rm $(docker volume ls -qf dangling=true)
+
 ```
 
 
@@ -344,6 +409,12 @@ volumes:
 ```
 
 Example
+
+
+---
+## Get started
+
+https://docs.docker.com/get-started/
 
 
 ---
