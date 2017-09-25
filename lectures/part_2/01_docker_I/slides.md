@@ -24,7 +24,7 @@ These are the topics for todays lecture.
 
 ![containers](./images/containers-and-vm-together.png)
 
-> Containers are an important technology that is not going away for a while
+> "Containers are an important technology that is not going away for a while"
 
 Note:
 separated process<br>
@@ -43,6 +43,11 @@ separated process<br>
 * 2004, Solaris zones
 * 2006, Linuxkernel, The result was generic process containers, which were later renamed control groups, or cgroups
 * 2008 user namespaces, processes with own users and root account
+
+
+
+--
+## History
 * The Linux Containers project (LXC), created by engineers from IBM around 2008,
   * LXC provided an improved user experience around containers
   * Since the 1.0 release of LXC in early 2014
@@ -54,7 +59,7 @@ separated process<br>
 * 2016, CoreOS launches Rocket 1.0
 
 
---
+---
 ## Containers core concepts
 
 * Container manager
@@ -68,6 +73,10 @@ separated process<br>
     2. A web server (Apache)
     3. An application platform runtime (PHP)
     4. The application code
+
+
+--
+## Containers core concepts
 * Images
   * A template of your container defined by the configuration file (and build with layers)
   * Ready to be hosted on one or many hosts
@@ -84,9 +93,9 @@ separated process<br>
 ---
 ## Modern software architecture
 
-* Monolitic apps --> Microservices
 * App servers --> PaaS
-* Physical machines or VMs --> Conatiners
+* Physical machines or VMs --> Containers
+* Monolitic apps --> Microservices
 
 
 --
@@ -94,11 +103,15 @@ separated process<br>
 
 ![monolicti](./images/monolitic.png)
 
+<!-- {_class="center"} -->
+
 
 --
 ## ..to microservices
 
 ![monolicti](./images/ms.png)
+
+<!-- {_class="center"} -->
 
 
 ---
@@ -112,8 +125,8 @@ separated process<br>
 --
 ## What is docker?
 * Docker provides tooling and a platform to manage containers
-* started in France as an internal project within dotCloud, a platform-as-a-service company
-* the world’s leading software container platform
+* Started in France as an internal project within dotCloud, a platform-as-a-service company
+* The world’s leading software container platform
 * Focus on minimize the gap from development to deployment
   * Developing, shipping and running
   * Simpler tools, management, scaling and so on
@@ -135,16 +148,23 @@ separated process<br>
 
 ![docker enging](./images/engine-components-flow.png)
 
+<!-- {_class="center"} -->
+
 
 --
 ## Docker - Architecture
-
-![docker enging](./images/engine-components-flow.png)
 
 * Docker Registries
   * Stores *docker images* (Docker Hub, Docker Cloud)
   * Public or Private
   * Docker store - Buy and sell application or services
+
+![docker registry](./images/docker-registry.png)
+<!-- {_style="width:50%"} -->
+
+Source: https://blog.octo.com/en/docker-registry-first-steps/
+
+<!-- {_style="text-align: right; font-size:60%"} -->
 
 
 --
@@ -179,6 +199,7 @@ separated process<br>
 ## About Volumes
 
 
+---
 ## Getting started
 
 * Community Edition (CE) and Enterprise Edition (EE)
@@ -188,6 +209,11 @@ separated process<br>
     * https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/
 
 ![docker install](./images/docker-app-drag.png)
+<!-- {_style="width:50%"} -->
+
+Source: [docker.com](https://docker.com)
+
+<!-- {_style="text-align: right; font-size:60%"} -->
 
 
 --
@@ -214,12 +240,13 @@ Note: 'cat /etc/*release*
 * Contains all the commands needed for the preferred image
 * Load and build with ``` docker build .```
 
-```
-#
-# Nginx Dockerfile
-#
-FROM ubuntu:16.04
 
+--
+
+```
+# Nginx Dockerfile
+
+FROM ubuntu:16.04
 LABEL maintainer="thajo@lnu.se"
 
 RUN apt-get update \
@@ -249,7 +276,7 @@ docker stop id
 
 
 --
-#Dockerfile command
+# Dockerfile commands
 
 * FROM
   * Defines the base image to work with
@@ -263,6 +290,10 @@ docker stop id
   * Copy files or directory and add them to the containers file system
 * ADD
   * Like copy, could use URLs, could unpack some compressed files
+
+
+--
+# Dockerfile commands
 * ENV
   * Sets an environment variable in the container
 * WORKDIR
@@ -286,21 +317,38 @@ https://docs.docker.com/engine/reference/builder/
 > Compose is a tool for defining and running multi-container Docker applications
 
 * Uses a YAML-file to configure an applications services
+* Structure is shown through indentation (one or more spaces - NOT tabs).
+* List items are denoted by a dash
+* Key value pairs within a map are separated by a colon.
 
-```YAML
+http://www.yaml.org/
+
+
+--
+```
 version: '3'
 services:
   web:
     build: .
     ports:
-    - "5000:5000"
+      - "5000:5000"
     volumes:
-    - .:/code
-    - logvolume01:/var/log
+      - .:/code
+      - logvolume01:/var/log
     links:
-    - redis
+      - redis
   redis:
     image: redis
 volumes:
   logvolume01: {}
 ```
+
+Example
+
+
+---
+# Tack för idag
+
+![good bye](./images/bye.gif)
+
+<!-- {_class="center"} -->
