@@ -1,0 +1,17 @@
+body{
+    padding-top:48px;
+}
+.row{
+    margin-right: 0;
+    margin-left: 0;
+}
+.navbar-nav .btn-link {
+    padding-top:15px;
+    padding-bottom: 15px;
+    line-height: 20px;
+    text-decoration: none;
+    color:#999;
+}
+.navbar-nav .btn-link:hover {
+    color:#fff;
+}

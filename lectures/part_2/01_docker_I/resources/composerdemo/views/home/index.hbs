@@ -1,0 +1,9 @@
+<h2>Pure Numbers</h2>
+{{#if pureNumbers }}
+<dl>
+    {{#each pureNumbers}}
+        <dt>{{this.createdAt}}</dt>
+        <dd>{{this.value}}</dd>
+    {{/each}}
+</dl>
+{{/if}}
