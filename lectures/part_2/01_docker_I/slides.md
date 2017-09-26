@@ -4,7 +4,7 @@
 * Containers
     * History
     * Containers core concepts
-    * From a software perspective
+    * From a software architecture perspective
 * Docker
   * What is docker
   * Characteristics
@@ -12,7 +12,7 @@
 * Practical
   * How to install
   * Dockerfile
-  * Docker-compose
+  * Docker-compose (intro only)
 
 Note:
 These are the topics for todays lecture.
@@ -24,6 +24,7 @@ These are the topics for todays lecture.
 
 ![containers](./images/containers-and-vm-together.png)
 
+<!-- {_class="center"} -->
 > "Containers are an important technology that is not going away for a while"
 
 Note:
@@ -33,30 +34,41 @@ separated process<br>
 --
 ![container](./images/containers.jpg)
 
+<!-- {_class="center"} -->
+
+Note:
+Black boxex. Dont know whats in them, isolated processes<br>
+Dont care whats in them, know how to distribute them and ship them<br>
+Mitten av 50-talet<br>
+All vet hur man hanterar dem, hor man förvarar dem osv
+
 
 --
 ## History
 
 * UNIX - "jail" - modified runtime preventing application accessing protected resources
-  * And jails, an early implementation of container technology, was added to FreeBSD., 2000
-* Linux-VServer project lacked process migration and clustering, its real weakness was that it required a patched kernel
-* 2004, Solaris zones
-* 2006, Linuxkernel, The result was generic process containers, which were later renamed control groups, or cgroups
-* 2008 user namespaces, processes with own users and root account
+  * jails, an early implementation of container technology, was added to FreeBSD, 2000
+* Linux-VServer adding operating system-level virtualization capabilities to the Linux kernel. Its real weakness was that it required a patched kernel
+* 2004, Solaris containers/zones
+* 2006-2008, Linux kernel got support for generic process containers, which were later renamed control groups, or cgroups
+* 2008 Linux namespaces, processes with own users and root account
 
 
 
 --
 ## History
-* The Linux Containers project (LXC), created by engineers from IBM around 2008,
-  * LXC provided an improved user experience around containers
-  * Since the 1.0 release of LXC in early 2014
-  * most complete implementation of Linux container manager.
-* LXC userspace tools with even easier to use tooling aimed at developers looking for simple ways to package their applications.
-  * Docker, 2015, donated the project’s existing codebase to the Open Container Initiative
+* [The Linux Containers project](https://linuxcontainers.org/), created by engineers from IBM around 2008
+  * Projects like LXC and LXD provided an improved user experience around containers
+  * Most complete implementation of Linux container manager.
+  * Combine namespace and cgroups
+* [Docker](https://docker.com) tools with even easier to use tooling aimed at developers looking for simple ways to package their applications.
+  * Docker, 2015, donated the project’s existing codebase through the [Open Container Initiative](https://www.opencontainers.org/)
+* 2016, CoreOS launches [Rocket 1.0](https://coreos.com/rkt/)
 * Orchestrating at Scale
-  * Kubernetes launched in 2014, Google discussed how “everything at Google runs in a container”
-* 2016, CoreOS launches Rocket 1.0
+  * [Kubernetes](https://kubernetes.io/) launched in 2014, Google discussed how [“everything at Google runs in a container”](https://www.theregister.co.uk/2014/05/23/google_containerization_two_billion/), "We start over two billion containers per week"
+    * Google has developed a variant of LXC named, charmingly, lmctfy, short for Let Me Contain That For You.
+  * [Docker swarm](https://docs.docker.com/engine/swarm/)
+
 
 
 ---
@@ -67,6 +79,7 @@ separated process<br>
     * Docker, Rocket
 * Configuration File
   * A file where the containers (or application) needs is defined
+    * Textformat, VCS
 * Layers
   * A container is made up of Layers
     1. A base layer - a base OS (Ubuntu)
@@ -79,7 +92,7 @@ separated process<br>
 ## Containers core concepts
 * Images
   * A template of your container defined by the configuration file (and build with layers)
-  * Ready to be hosted on one or many hosts
+  * Used to create instances, containers
 * Registers
   * Stores container images (Docker hub)
   * Gives you reusability
@@ -93,9 +106,15 @@ separated process<br>
 ---
 ## Modern software architecture
 
+> How does containerization fit into modern software architecture
+
 * App servers --> PaaS
 * Physical machines or VMs --> Containers
 * Monolitic apps --> Microservices
+
+https://coursepress.lnu.se/kurs/systemadministrationii/part-2-application-operations/study-material/
+
+<!-- {_style="text-align: right; font-size:60%"} -->
 
 
 --
@@ -113,6 +132,8 @@ separated process<br>
 
 <!-- {_class="center"} -->
 
+Note: Skalning förenklas
+
 
 ---
 ## Docker
@@ -125,12 +146,11 @@ separated process<br>
 --
 ## What is docker?
 * Docker provides tooling and a platform to manage containers
-* Started in France as an internal project within dotCloud, a platform-as-a-service company
-* The world’s leading software container platform
+* Started in France as an internal project within dotCloud (now Docker inc.), a platform-as-a-service company
 * Focus on minimize the gap from development to deployment
   * Developing, shipping and running
   * Simpler tools, management, scaling and so on
-* Minimize the diversion between development- and production Environmentally
+* Minimize the diversion between development- and production environment
   * "It works on my machine"
 * The docker platform is "Open Source", Promoted by the Docker, Inc
 * Written in GO language (https://golang.org)
@@ -187,22 +207,28 @@ Source: https://blog.octo.com/en/docker-registry-first-steps/
 ## Docker characteristics
 
 * Layers - Changes are done in layers, not the whole image
-  * UnionFS - Used by Docker engine
-  * Union File System, Used to layered Docker images
+  * UnionFS (Union File System) - Used by Docker engine
+  * Used to layered Docker images
+  * A change to an original image is put in a new layer, not recreate the whole image
 * Single process
+  * Web server, load balancer, reversed proxy, database server...
 * Stateless, read-only
-  * How to store data? Volumes!
+  * How to store data? Docker Volumes!
 * Portable
+  * The application is separated from low level configurations.
+  * Easy to move and run on other Docker engines
+    * Continuous Delivery pipelines
+      * https://github.com/CS-LNU-Learning-Objects/web-application-architecture/blob/master/continuous.md
 
 
 --
 ## About Volumes
 * How to handle dynamic data in a read-only container?
-* Docker is using Volumes - Take completely care of them
+* Docker is using Volumes - Containers for storing persistent data
 * Using a volume does not increase the size of containers using it
-* A volume could be used by many containers
+* A volume could be used/mounted by many containers
 * By default, not deleted when container is stopped
-
+  * Recreate a server, still need the data
 
 ```bash
 ## Creates a datacontainer based on ubuntu
@@ -211,11 +237,12 @@ docker create -v /logs --name logscontainer ubuntu
 docker run -t -i --volumes-from logscontainer ubuntu /bin/bash
 ## or
 docker run -t -i --volumes-from logscontainer centos /bin/bash
-
 # create both volume and container
 docker run -v ~/myVolume:/data -it ubuntu /bin/bash
 ```
 https://docs.docker.com/engine/admin/volumes/volumes/
+
+<!-- {_style="text-align: right; font-size:60%"} -->
 
 
 ---
@@ -321,6 +348,8 @@ docker stop id
   * Exposes the ports to the container
 * VOLUME
   * Instructs how to create a mount point for holding data
+
+
 https://docs.docker.com/engine/reference/builder/
 
 
@@ -329,22 +358,20 @@ https://docs.docker.com/engine/reference/builder/
 ## Example
 FROM node:8.5.0
 LABEL maintainer="thajo@lnu.se"
-
+# Expose a port from the container
 EXPOSE 8080
-
+# Set an env-variable
 ENV INSTALL_PATH /var/www/app
-
 RUN mkdir -p  $INSTALL_PATH
 WORKDIR  $INSTALL_PATH
-
-
+# Copy code
 COPY package.json .
 RUN npm install --quiet
-
+# Copy app
 COPY . .
-
 CMD ["npm", "start"]
 ```
+
 
 --
 ## Commands to test
@@ -352,24 +379,18 @@ CMD ["npm", "start"]
 ```bash
 # Running the build with a tag
 docker build . -t thajo/rails
-
 # Starting a container
 docker run -p 8080:8080 -d thajo/rails
- 
 # Starting a container with a bash
 docker run -t -i  thajo/rails /bin/bash
-
 # Login to a running container
 docker exec -i -t <ps_id> /bin/bash
-
- 
 # Stop all containers
 docker stop $(docker ps -a -q)
 # Remove all containers
 docker rm $(docker ps -a -q)
 # Remove all images
 docker rmi $(docker images -q)
-
 # Remove all valumes (make sure to remove the volume container first)
 docker volume rm $(docker volume ls -qf dangling=true)
 
@@ -395,17 +416,18 @@ version: '3'
 services:
   web:
     build: .
+    links:
+      - mongodb
     ports:
       - "5000:5000"
+  mongodb:
+    image: mongo:3.4
+    expose:
+      - "27017"
     volumes:
-      - .:/code
-      - logvolume01:/var/log
-    links:
-      - redis
-  redis:
-    image: redis
+      - mongodbdata:/data/db
 volumes:
-  logvolume01: {}
+  mongodbdata:
 ```
 
 Example
