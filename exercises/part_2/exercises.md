@@ -22,13 +22,13 @@ https://github.com/1dv032/exercise-vagrant-ror
 You will find this exercise and its instruction (the readme-file) in an own repo: https://github.com/1dv032/exercise-docker-nodejs-dev
 
 ### Solution proposal
-To come...
+https://github.com/1dv032/solution-exercise-docker-nodejs-dev
 
 ## 3. Docker compose with and RoR application
 You will find this exercise and its instruction (the readme-file) in an own repo: https://github.com/1dv032/exercise-docker-compose-ror-dev
 
 ### Solution proposal
-To come...
+https://github.com/1dv032/solution-exercise-docker-compose-ror-dev
 
 ## 4. Moving to staging/production - node.js and a reversed proxy 
 You will find this exercise and its instruction (the readme-file) in an own repo: https://github.com/1dv032/exercise-docker-nodejs-prod
