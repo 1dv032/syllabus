@@ -34,5 +34,5 @@ https://github.com/1dv032/solution-exercise-docker-compose-ror-dev
 You will find this exercise and its instruction (the readme-file) in an own repo: https://github.com/1dv032/exercise-docker-nodejs-prod
 
 ### Solution proposal
-To come...
+https://github.com/1dv032/solution-exercise-docker-nodejs-prod
 
