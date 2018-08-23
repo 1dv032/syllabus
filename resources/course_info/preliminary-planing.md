@@ -40,6 +40,7 @@
       <td>w39</td>
       <td>
         <ul>
+          <li>Work with Examination 1 report</li>
           <li>
             <strong>08:00 September 26 - Deadline</strong> Examination 1 Report</li>
           <li>
