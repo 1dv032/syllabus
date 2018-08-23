@@ -39,11 +39,12 @@
       </td>
     </tr>
     <tr>
-      <td>39</td>
+      <td>w39</td>
       <td>
         <ul>
           <li>
             <strong>08:00 September 26 - Deadline</strong> Examination 1 Report</li>
+          <li>
             <strong>23:59 September 30 - Deadline</strong> hand in peer-review</li>
         </ul>
       </td>
