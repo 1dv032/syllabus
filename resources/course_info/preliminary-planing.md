@@ -1,5 +1,3 @@
-## Preliminary planing (deadlines)
-
 <table width="70%">
   <thead>
     <tr>
