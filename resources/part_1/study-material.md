@@ -1,17 +1,5 @@
-## Cloud computing and cloud services
-Cloud computing is the evolution of different technologies that have come together to change an organizations approach for building IT infrastructure or handling their software. There is nothing new in any of the technologies, it is all about how all this came together and how it is accessible to all of us under the name of cloud computing. The cloud is were you go to use technology when you need it, for as long as you need it.
+## Reading
+Chapter 1-3 in the book "The Practice of Cloud System Administration"
 
-The following articles (some of the academic) is trying to describe the definition of the cloud, the different ways you can categorize it and different cloud service that are available.
-
-## Articles
-[Understanding the Cloud Computing Stack: SaaS, PaaS, IaaS](https://support.rackspace.com/whitepapers/understanding-the-cloud-computing-stack-saas-paas-iaas/) -
-This article is a white paper written by the cloud company Rackspace. It gives you the definition of the cloud and different cloud services. It also gives a couple of use cases.
-
-[Cloud Computing: Issues & challenges](https://github.com/1dv032/syllabus/raw/master/resources/part_1/Cloud_Computing_Issues_and_Challenges.pdf) -
-Next article is a academic one taken from the International Conference of Cloud, Big Data and thrust, 2013. This article will give a more detailed description and definition of the cloud and it services but also discuss the challenges when moving to the cloud.
-
-[Cloud Computing Security and Privacy Issues](http://www.cepis.org/index.jsp?p=641&n=825&a=4758&) -
-This article take a deeper look at the issues that rises with cloud computing. The article is written by The Council of European Professional Informatics Societies (CEPIS) which is a non-profit organization seeking to improve and promote a high standard among informatics professionals.
-
-## Linux and Bash
+## Recap - Linux and Bash
 See the linux learning object - [https://github.com/CS-LNU-Learning-Objects/linux](https://github.com/CS-LNU-Learning-Objects/linux)
