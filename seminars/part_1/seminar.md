@@ -34,6 +34,18 @@ The seminar includes three parts and will be examined with Passed (P) and Fail(F
 The grades will depend on your performance all this three steps. Have you prepared yourself? Were you active in the seminar? Did you have well reinforced arguments? Did your reflections from the seminar showed
 We will also take notes how well you perform (+ or -) in this three steps which could affect the final grade in this course.
 
+### Resources
+  - [The ethics of cloud computing - A conceptual review](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5708509)<br>
+  Even if this article was release as early as 2010 it goes through some aspects on cloud computing that could be of great interest for this seminar.
+
+  - [Cloud Computing: Issues & challenges](https://github.com/1dv032/syllabus/raw/master/resources/part_1/Cloud_Computing_Issues_and_Challenges.pdf) -
+Next article is a academic one taken from the International Conference of Cloud, Big Data and thrust, 2013. This article will give a more detailed description and definition of the cloud and it services but also discuss the challenges when moving to the cloud.
+
+  - [Cloud Computing Security and Privacy Issues](http://www.cepis.org/index.jsp?p=641&n=825&a=4758&) -
+This article take a deeper look at the issues that rises with cloud computing. The article is written by The Council of European Professional Informatics Societies (CEPIS) which is a non-profit organization seeking to improve and promote a high standard among informatics professionals.
+
+There are a few interesting talks about cloud computing available through [TED Talks](https://www.ted.com/) and [TEDx Talks](https://www.ted.com/watch/tedx-talks)
+
 ### Re-examination
 If you get the grade F or misses the seminar you will have an other opportunity. This will be at the end of the course.
 
