@@ -107,15 +107,13 @@ Todo:
 ---
 <!-- Literature -->
 ## Literature
-* [The Practice of System and Network Administration - Third Edition](http://www.adlibris.com/se/organisationer/product.aspx?isbn=0321919165)
-  * Limoncelli, Thomas A.; Hogan , Christina J.; Chalup, Strata R.
+* [The Practice of Cloud System Administration](http://www.adlibris.com/se/organisationer/product.aspx?isbn=032194318X)
+  * Limoncelli, Thomas A.
   * Addison ­Wesley Professional
   * Recommended
-  * ISBN: 0321919165
+  * ISBN: 032194318X
 
-![The Practice of System and Network Administration - Third Edition](http://www.adlibris.com/se/organisationer/covers/M/0/32/0321919165.jpg)
-Note:
-Not mandatory but recommended<br />
+![The Practice of Cloud System Administration](http://www.adlibris.com/se/organisationer/covers/M/0/32/032194318X.jpg)
 
 
 ---
