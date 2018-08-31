@@ -5,20 +5,16 @@ We will link to two different articles as a support for this seminar. This does 
 ### Questions
 
 1. As you probably know cloud computing technologies is part of your day-to-day life. We often value it as the what the services bring us and how well we can use them. In this part you should think about other aspects then the technical. Below is a list of different views, some discussed in the articles, some not. **Try to find facts and summon your own opinion and arguments for both positive and negative aspects of cloud computing in regard to the following**:
-
 - Environment and sustainability
 - In the context of development countries and fighting poverty
 - [Globalization](https://en.wikipedia.org/wiki/Globalization)
 - Privacy for the citizens 
 
-
 2. Cloud computing and the data - One of the biggest challenges of cloud computing is about handling the data that is stored and that is created by technologies (metadata). Which are the challenges about this and how could one strive to overcome them? What are the responsibilities? Who is responsible?  
-
 Try to think about this question from three different views:
-
-  * As a private person 
-  * As a developer of SaaS/web-based software 
-  * As a cloud provider 
+* As a private person 
+* As a developer of SaaS/web-based software 
+* As a cloud provider 
 
 3. Find an article or some kind of case that you think is suitable to this seminar and that could be of interest for your class mates. Be prepared to explain your choses article/case in the seminar.
 
