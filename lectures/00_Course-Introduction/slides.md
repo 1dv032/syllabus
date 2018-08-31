@@ -79,8 +79,8 @@ Goals:
 <!-- {_style="margin-right: 25%"} -->
 Todo:
 * 3 lecture - Recap of 1DV031, Virtualization, Service Models
-* 1 seminar (oral examination) Deadline 14/9
-* 1 examination assignment (written examination) Deadline 25/9
+* 1 seminar (oral examination) Deadline 20-21/9
+* 1 examination assignment (written examination) Deadline 26/9 and 30/9 (Peer-review)
 
 <!-- {_style="font-size: 75%"} -->
 Note:
@@ -99,8 +99,8 @@ Goals:
 Todo:
 * 3 lectures - Docker, Application Platforms
 * 4-5 exercises
-* 1 examination assignment Deadline 26/10
-* 1 oral hearing Deadline 26/10
+* 1 examination assignment Deadline 01/11
+* 1 oral hearing Deadline 01/11
 * 2 x 1h tutoring/week
 
 
