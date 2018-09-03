@@ -13,7 +13,42 @@ You have been asked by a young software company to investigate their possibiliti
 [Insert IMAGE HERE]
 
 1. The service have a simple load balancer (today this a nginx) with a round-robin algorithm.
-2. T
+2. Today there are two frontend-servers running LTS node.js. Their job is to redirect requests to the right services and then put together the responses and send them back to the client.
+3. The web site. This is the part that handles all the visual part of the software. This is a monolith written in the python framework Django, using the 3.7 version of python.
+4. Database for the website, PostgreSQL version 10.5
+5. The Auth microservice. This microservice support the authentication, the handling of user credentials
+6. Database storing the user credentials, PostgreSQL version 10.5
+7. Microservices that handles the service logs, both system logs and meta data from the users that will be used for analyzing there learning and calculating point in the gamification system.
+8. Databases for the log data. One for system logs, one for metadata. PostgreSQL version 10.5
+9. The calculation microservice. This part draws data from the logs and make some calculations every night. The results is stored in a database
+10. The database where calculated data is stored and used by the web site, PostgreSQL version 10.5
+
+The problem is that the system have problem have scalability problem. The service has been popular and the last moth the users has doubled many times. This has lead to that the servers been overloaded some times. The company have taken the decision to investigate how to solve this problem. One direction is to outsource the operations of servers and infrastructure to the cloud. There are plans of building a private cloud but they also want to investigate the public cloud sphare. This is where you come in.
+
+## The assignment
+You should write a report where you have investigated the possibility to move the described software to the cloud and using one of the big IaaS; AWS, Microsoft Azure or/and Google Cloud Platform. You can choose one or compare two depending on your ambition. The here follows a description of the mission from the company.
+
+We want to handle the scalability problem. We don´t want a technical report how to scale the application but more an overview what possibilities and services that is available and an estimation of the cost of the different services we needed. We also want references back to where you find your information so we can track it back. 
+We will estimate our traffic will be 50 hits per second normally but during some points of the day or when we do some campaign it could in extreme cases be up to 2500 hits per second.
+
+* Ofcourse we want a loadbalansing mechanism in-font of our front-end servers. What available services are there and what is the cost. 
+* We want to have the ability to scale our front-end servers and microservices, hopefully in a elastic and cost-effective way
+* We want backup of and be able to have redundant data
+* The calculating microservice will calculate a lot of data and it will need to have some calculating power when they do their job
+* We want to be sure of that we owns our data and that the IaaS won´t be able to take our intellectual property or miss-abuse our clients thrust.
+* We want to know if we can be sure that when we delete some data (for example a user) the data can´t be reproduced
+* We want to know how the IaaS handle metadata (our interaction with the IaaS-services). 
+* How is the up-time for the services
+* Are there some easy way to run health check?
+* We are interesting to implement a more fine-grade monitoring system for our application. Are the any services for this?
+
+### Structure of the report
+
+You are pretty free to structure your report. We assume you have the knowledge of how to present written text in a structure way that makes it easy for the reader to understand. Here are some "must-have":
+
+* The document must have your name, student-id in the first page.
+* The report must include a description of the IaaS you may choose
+* Each, by you, investigated service the IaaS provide must be described, motivated from our point of view and some kind of estimated monthly cost
 
 
 ## Some tips
