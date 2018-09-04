@@ -1,6 +1,6 @@
 ## Seminar
-This seminar will concentrate on cloud services and focus from a [ethical](https://en.wikipedia.org/wiki/Ethics) point view.
-We will link to two different articles as a support for this seminar. This does not mean that you should depend only on these articles. You are expected to do some work by yourself by finding other articles, talks and facts that will support you in this assignment
+This seminar will concentrate on cloud computing and focus on a [ethical](https://en.wikipedia.org/wiki/Ethics) point view.
+We will link to some different articles as a support for this seminar but this does not mean that you should depend only on these articles. You are expected to do some work by yourself by finding other articles, talks and facts that will support you in this assignment
 
 ### Questions
 
