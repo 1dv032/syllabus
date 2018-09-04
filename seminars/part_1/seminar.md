@@ -4,21 +4,21 @@ We will link to some different articles as a support for this seminar but this d
 
 ### Questions
 
-1. As you probably know cloud computing technologies is part of your day-to-day life. We often value it as what the services bring us and how what they could offer us. In this part you should think about other aspects then the technical innovation. Below is a list of different views, some discussed in the articles, some not. **Try to find facts and summon your own opinion and arguments for both positive and negative aspects of cloud computing in regard to the following**:
+1. As you probably know cloud computing technologies is part of your day-to-day life. We often value it as what the services bring us and what they could offer us. In this part you should think about other aspects then the technical innovation. Below is a list of different contexts, some discussed in the articles, some not. **Try to find facts and summon your own opinion and arguments for both positive and negative aspects of cloud computing in regard to the following from an ethical viewpoint**:
 - Environment and sustainability
-- In the context of development countries and fighting poverty
+- Development countries and fighting poverty
 - [Globalization](https://en.wikipedia.org/wiki/Globalization)
 - Privacy for the digital citizens 
 
-2. Cloud computing and the data - One of the biggest challenges of cloud computing is about handling the data that is stored and that is created by technologies (metadata). Which are a few challenges about this and how could one strive to overcome them? What are the responsibilities? Who is responsible?  
+2. Cloud computing and the data - One of the biggest challenges of cloud computing is handling the data that is stored and that is created by technologies (metadata). What are the challenges and how could we strive to overcome them? What are the responsibilities? Who is responsible?  
 Try to think about this question from three different views:
-* As a private person 
-* As a developer of SaaS/web-based software 
 * As a cloud provider 
+* As a developer of SaaS/web-based software
+* As a private person  
 
 3. Find an article or some kind of case that you think is suitable to this seminar and that could be of interest for your class mates. Be prepared to explain your choses article/case in the seminar.
 
-4. Privacy and personal integration - What do you think when someone tell you "Well I don´t care about digital privacy - I have nothing to hide!" when talking about privacy in the context of cloud computing and social media? Do you agree? Could it a problem to think so or will it easy up like innovation and the development of technology? 
+4. Privacy and personal integrity - What do you think when someone tell you "Well I don´t care about digital privacy - I have nothing to hide!" when talking about privacy in the context of cloud computing and social media? Do you agree? Could it a problem to think so or will it easy up like innovation and the development of technology? 
 
 ### Examination
 The seminar includes three parts and will be examined with Passed (P) and Fail(F). 
