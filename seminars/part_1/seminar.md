@@ -27,7 +27,7 @@ The seminar includes three parts and will be examined with Passed (P) and Fail(F
 2. The second part is the seminar, the group discussion - You will be divided into groups and you are expected to be prepared and to be active in the discussions. **See your schedule for more information about when this is.**
 3. The last part is the after-seminar report. After the seminar you should write down your reflections from the seminar and push these up to your repository. Did you learn something new during the seminar? Did you forgot to say something? Any other reflections? This should be pushed at latest two days after the seminar.
 
-The grades will depend on your performance all this three steps. Have you prepared yourself? Were you active in the seminar? Did you have well reinforced arguments? Did your reflections from the seminar showed
+The grades will depend on your performance all this three steps. Have you prepared yourself? Were you active in the seminar? Did you have well reinforced arguments? How where your reflections?
 We will also take notes how well you perform (+ or -) in this three steps which could affect the final grade in this course.
 
 ### Resources
