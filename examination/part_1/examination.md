@@ -36,7 +36,7 @@ We will estimate our traffic will be 50 hits per second normally but during some
 * We want backup of and be able to have redundant data
 * The calculating microservice will calculate a lot of data and it will need to have some calculating power when they do their job
 * We want to be sure of that we owns our data and that the IaaS won´t be able to take our intellectual property or miss-abuse our clients thrust.
-* We want to know if we can be sure that when we delete some data (for example a user) the data can´t be reproduced
+* We want to know if we can be sure that when we delete some data (for example a user) the data can´t be reproduced. How about data migration?
 * We want to know how the IaaS handle metadata (our interaction with the IaaS-services).
 * We are interesting in storage of static files 
 * How is the up-time for the services
