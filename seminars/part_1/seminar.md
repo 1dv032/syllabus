@@ -8,7 +8,7 @@ We will link to some different articles as a support for this seminar but this d
 - Environment and sustainability
 - Development countries and fighting poverty
 - [Globalization](https://en.wikipedia.org/wiki/Globalization)
-- Privacy for the digital citizens 
+- The rise of the artificial intelligence 
 
 2. Cloud computing and the data - One of the biggest challenges of cloud computing is handling the data that is stored and that is created by technologies (metadata). What are the challenges and how could we strive to overcome them? What are the responsibilities? Who is responsible?  
 Try to think about this question from three different views:
@@ -16,18 +16,18 @@ Try to think about this question from three different views:
 * As a developer of SaaS/web-based software
 * As a private person  
 
-3. Find an article or some kind of case that you think is suitable to this seminar and that could be of interest for your class mates. Be prepared to explain your choses article/case in the seminar.
+3. Find an article or some kind of case that you think is suitable to this seminar and that could be of interest for your class mates. Be prepared to explain your chosen article/case in the seminar.
 
 4. Privacy and personal integrity - What do you think when someone tell you "Well I don´t care about digital privacy - I have nothing to hide!" when talking about privacy in the context of cloud computing and social media? Do you agree? Could it a problem to think so or will it easy up like innovation and the development of technology? 
 
 ### Examination
 The seminar includes three parts and will be examined with Passed (P) and Fail(F). 
 
-1. The first part is the preparation. You will write done your preparations you done on each questions (with references to articles you read and so on). This must be pushed to your course repository **at least the same morning (08:00) on the day of the seminar**. It must be in md- or pdf-format. Keep it short but show us that you done your work. **If we don´t found any preparation you can´t attend the seminar.**
+1. The first part is the preparation. You will write down your preparations you have done on each questions (with references to articles you used). This must be pushed to your course repository **at least the same morning (08:00) on the day of the seminar**. It must be in md- or pdf-format. Keep it short but show us that you done your work. **If we don´t found any preparation you can´t attend the seminar.**
 2. The second part is the seminar, the group discussion - You will be divided into groups and you are expected to be prepared and to be active in the discussions. **See your schedule for more information about when this is.**
 3. The last part is the after-seminar report. After the seminar you should write down your reflections from the seminar and push these up to your repository. Did you learn something new during the seminar? Did you forgot to say something? Any other reflections? This should be pushed at latest two days after the seminar.
 
-The grades will depend on your performance all this three steps. Have you prepared yourself? Were you active in the seminar? Did you have well reinforced arguments? How where your reflections?
+The grades will depend on your performance all this three steps. Have you prepared yourself? Were you active in the seminar? Did you have well reinforced arguments? How were your reflections?
 We will also take notes how well you perform (+ or -) in this three steps which could affect the final grade in this course.
 
 ### Resources
