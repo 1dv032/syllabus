@@ -31,7 +31,7 @@ The grades will depend on your performance all this three steps. Have you prepar
 We will also take notes how well you perform (+ or -) in this three steps which could affect the final grade in this course.
 
 ### Resources
-  - [The ethics of cloud computing - A conceptual review](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5708509)<br>
+  - [The ethics of cloud computing - A conceptual review](http://coursepress.lnu.se/kurs/systemadministrationii/files/2018/09/ethics_of_cloud.pdf)<br>
   Even if this article was release as early as 2010 it goes through some aspects on cloud computing that could be of great interest for this seminar.
 
   - [Cloud Computing: Issues & challenges](https://github.com/1dv032/syllabus/raw/master/resources/part_1/Cloud_Computing_Issues_and_Challenges.pdf) -
