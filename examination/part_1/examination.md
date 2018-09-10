@@ -9,7 +9,7 @@ The writing of this report aims to give knowledge of finding and analyzing servi
 ### The scenario
 You have been asked by a relatively new started software company to investigate the possibilities to bring their software into the cloud. Today there software is operated in a private data center where they configure up a couple of different servers supporting their infrastructure. The company have develop a web-based software that learns users to speak and understand different languages with a [gamification system](https://en.wikipedia.org/wiki/Gamification). The software includes not just the web site but also servers that handles calculation, logging, data management and so on. The following image describes the system and how it looks today:
 
-[Insert IMAGE HERE]
+[Image over the application](https://github.com/1dv032/syllabus/raw/master/examination/part_1/app_image.png)
 
 1. The service have a simple load balancer (Nginx) with a round-robin algorithm.
 2. Two frontend-servers running node.js LTS. Their job is to redirect requests to the right service and then put together the responses and send them back to the client.
