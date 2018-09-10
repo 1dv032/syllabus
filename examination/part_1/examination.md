@@ -4,16 +4,15 @@ For this examination you are expected to produce a written report of between 800
 The report will go through a peer-review after finishing. This means you also should do a review of a other students paper as part of the assignment. **Again, the report must be in pdf-format**
 
 ## Purpose of the report
-The writing of this report aims to give knowledge of finding and analyzing services hosted by cloud service providers. In the report you will try to act as some kind of cloud advisor and try to analyze some scenarios and determine which kind of services will fit and motivate and explain your choices. The idea is not to get down to technical details rather to give an learn about and explore the services that are available. There will be no "direct and correct" answers in this assignment but we are expecting that you do the job as good as you can to get reasonable answers and show us that you have put effort into your report.
-
+The writing of this report aims to give knowledge of finding and analyzing services hosted by cloud service providers. In the report you will try to act as some kind of cloud advisor and try to analyze some scenarios and determine which kind of services will fit and motivate and explain your choices. The idea is not to get down to technical details rather to learn about and explore the services that are available. There will be no "direct and correct" answers in this assignment but we are expecting that you do the job as good as you can to get reasonable answers and show us that you have put effort into your report.
 
 ### The scenario
-You have been asked by a pretty new started software company to investigate the possibilities to bring their software into the cloud. Today they operate the application in a private datacenter where the configure up a couple of different servers supporting their infrastructure. The company have develop a web-based software that learns their users to speak and understand different languages with a [gamification system](https://en.wikipedia.org/wiki/Gamification). The software includes not just the web site but also servers that handles calculation, logging, data management and so on. The following image describes the system and how it looks today:
+You have been asked by a relatively new started software company to investigate the possibilities to bring their software into the cloud. Today there software is operated in a private data center where they configure up a couple of different servers supporting their infrastructure. The company have develop a web-based software that learns users to speak and understand different languages with a [gamification system](https://en.wikipedia.org/wiki/Gamification). The software includes not just the web site but also servers that handles calculation, logging, data management and so on. The following image describes the system and how it looks today:
 
 [Insert IMAGE HERE]
 
-1. The service have a simple load balancer (today this a nginx) with a round-robin algorithm.
-2. Today there are two frontend-servers running node.js LTS. Their job is to redirect requests to the right service and then put together the responses and send them back to the client.
+1. The service have a simple load balancer (Nginx) with a round-robin algorithm.
+2. Two frontend-servers running node.js LTS. Their job is to redirect requests to the right service and then put together the responses and send them back to the client.
 3. The web site. This is the part that handles all the visual part of the software. This is a monolith written in the python framework Django, using the 3.7 version of python.
 4. Database for the website, PostgreSQL version 10.5
 5. The Auth microservice. This microservice support the authentication, the handling of user credentials
@@ -23,11 +22,10 @@ You have been asked by a pretty new started software company to investigate the 
 9. The calculation microservice. This part draws data from the logs and make some calculations every night. The results is stored in a database
 10. The database where calculated data is stored and used by the web site, PostgreSQL version 10.5
 
-The biggest issue today is that the service have scalability problems. The service has been popular and the last moth the users has doubled many times. This has led to that the servers been overloaded at some times and ended with non-responding servers. The company have taken the decision to investigate how to solve this problem. One direction is to outsource the operations of servers and infrastructure to the cloud. There are plans of building a private cloud but they also want to investigate the public cloud sphere. This is where you come in.
+The biggest issue today is that the service have scalability problems. The service has been popular and the last moth the users has doubled many times. This has led to the servers been overloaded at some times and ended with non-responding servers. The company have taken the decision to investigate how to solve this problem. One direction is to outsource the operations of servers and infrastructure to the cloud. There are plans of building a private cloud but they also want to investigate the public cloud sphere. This is where you come in.
 
 ## The assignment
 You should write a report where you have investigated the possibility to move the described software to the cloud and using one of the big IaaS; AWS, Microsoft Azure or/and Google Cloud Platform. You can choose one or compare two depending on your ambition. Here follows a description of the mission from the company.
-
 
 We want to handle the scalability problem. We don´t want a technical report how to scale the application but more **an overview what possibilities and services that is available and an estimation of the cost of the different services we needed.** We also want references back to where you find your information so we can track it back. 
 We will estimate our traffic will be 50 hits per second normally but during some points of the day or when we do some campaign it could in extreme cases be up to 2500 hits per second.
@@ -54,7 +52,6 @@ You are pretty free to structure your report. We assume you have the knowledge o
 * Each, by you, investigated service the IaaS provide must be described, motivated from our point of view and some kind of estimated monthly cost
 
 
-
 ## Some tips
 Spell check! Grammar check! Bad written reports will be failed!
 Read it out loud. If it is hard for you to read, it is probably hard for someone else.
@@ -66,6 +63,6 @@ Make sure to make references to the course literature and any other articles tha
 ## The peer-review instructions
 In this course we will use so-called peer-review, the Swedish also called "referensgranskning". This means in short that you will study an other student´s written reports. The idea of the step is to demonstrate your knowledge by analyzing and providing feedback on other student's assignments and hopefully also get great feedback on your own. This dose not mean that you should grade each other rather push and give each other good feedback. In addition, it is important to be able to rise from your own bubble and reflect on the work of others.
 
-After the submission deadline, 25/9 0800, you will get an e-mail with another students report.
+After the submission deadline, **27/9 08:00**, you will get an e-mail with another students report.
 Read and analyze the report and give feedback, no more then 300 words
-Send your feedback to the course email address and a copy to the student who wrote the report, no later than **27/9 08:00**.
+Send your feedback to the course email address and a copy to the student who wrote the report, no later than **30/9 23:59**.

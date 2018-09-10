@@ -42,7 +42,7 @@
         <ul>
           <li>Work with Examination 1 report</li>
           <li>
-            <strong>08:00 September 26 - Deadline</strong> Examination 1 Report</li>
+            <strong>08:00 September 27 - Deadline</strong> Examination 1 Report</li>
           <li>
             <strong>23:59 September 30 - Deadline</strong> hand in peer-review</li>
         </ul>
