@@ -31,12 +31,10 @@
 
 ### Resources
 - [HTML-presentation](https://cdn.rawgit.com/1dv032/syllabus/master/lectures/part_1/02_Virtualization/index.html#/)
-
-<!--
-- [Recording 2017-09-05, 13.15 (Youtube)](https://youtu.be/kvHb7VNPPVE?t=14m21s&list=PLSWJPPj5sKmomUa_KTF5E91wwHx6BcUXP)
+- [Recording 2018-09-11, 13.15 (Youtube)](https://youtu.be/nKZvQMUCQ54?t=14m55s&list=PLSWJPPj5sKmomUa_KTF5E91wwHx6BcUXP)
 <br />
-<iframe width="560" height="315" src="https://www.youtube.com/embed/kvHb7VNPPVE?t=14m21s&list=PLSWJPPj5sKmomUa_KTF5E91wwHx6BcUXP" frameborder="0" allowfullscreen></iframe>
--->
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nKZvQMUCQ54?t=14m55s&list=PLSWJPPj5sKmomUa_KTF5E91wwHx6BcUXP" frameborder="0" allowfullscreen></iframe>
+
 
 ## Lecture 03 - Service Models and Cloud Computing
 * Definition of "The Cloud"
