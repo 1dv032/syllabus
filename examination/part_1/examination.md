@@ -18,8 +18,8 @@ You have been asked by a relatively new started software company to investigate 
 5. The Auth microservice. This microservice support the authentication, the handling of user credentials
 6. Database storing the user credentials, PostgreSQL version 10.5
 7. Microservices that handles the service logs, both system logs and meta data from the users that will be used for analyzing their learning and calculating point in the gamification system.
-8. Databases for the log data. One for system logs, one for metadata. PostgreSQL version 10.5
-9. The calculation microservice. This part draws data from the logs and make some calculations every night. The results is stored in a database
+8. Database for logging data and interaction. Mainly for metadata. This is a influxDB (a database) version 1.6.2
+9. The calculation microservice. This part draws data from the logs and make some calculations every night. The results is stored in the log database.
 10. The database where calculated data is stored and used by the web site, PostgreSQL version 10.5
 
 The biggest issue today is that the service have scalability problems. The service has been popular and the last moth the users has doubled many times. This has led to the servers been overloaded at some times and ended with non-responding servers. The company have taken the decision to investigate how to solve this problem. One direction is to outsource the operations of servers and infrastructure to the cloud. There are plans of building a private cloud but they also want to investigate the public cloud sphere. This is where you come in.
@@ -28,7 +28,7 @@ The biggest issue today is that the service have scalability problems. The servi
 You should write a report where you have investigated the possibility to move the described software to the cloud and using one of the big IaaS; AWS, Microsoft Azure or/and Google Cloud Platform. You can choose one or compare two depending on your ambition. Here follows a description of the mission from the company.
 
 We want to handle the scalability problem. We don´t want a technical report how to scale the application but more **an overview what possibilities and services that is available and an estimation of the cost of the different services we needed.** We also want references back to where you find your information so we can track it back. 
-We will estimate our traffic will be 50 hits per second normally but during some points of the day or when we do some campaign it could in extreme cases be up to 2500 hits per second.
+We will estimate our traffic will be 50 QPS normally but during some points of the day or when we do some campaign it could in extreme cases be up to 2500 QPS. At the moment we have MAU-number of 15.000. Our log database contains 100 GB of data at the moment and today it is growing with about 0.5 GB/day.
 
 * We want a up-time of at least 98%. What will happen if the cloud provider don´t live up to this?
 * Of course we want a load balancing mechanism in-font of our front-end servers. 
