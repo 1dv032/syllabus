@@ -22,26 +22,27 @@ You have been asked by a relatively new started software company to investigate 
 9. The calculation microservice. This part draws data from the logs and make some calculations every night. The results is stored in the log database.
 10. The database where calculated data is stored and used by the web site, PostgreSQL version 9.4
 
-The biggest issue today is that the service have scalability problems. The service has been popular and the last moth the users has doubled many times. This has led to the servers been overloaded at some times and ended with non-responding servers. The company have taken the decision to investigate how to solve this problem. One direction is to outsource the operations of servers and infrastructure to the cloud. There are plans of building a private cloud but they also want to investigate the public cloud sphere. This is where you come in.
+The biggest issue today is that the service have is the fear of getting scalability problems. The service has been popular and the last month the users has doubled many times and most of the competence is in development of the product. One possible way is to move the operations of servers and infrastructure to the cloud. This is where you come in.
 
 ## The assignment
 You should write a report where you have investigated the possibility to move the described software to the cloud and using one of the big IaaS; AWS, Microsoft Azure or/and Google Cloud Platform. You can choose one or compare two depending on your ambition. Here follows a description of the mission from the company.
 
-We want to handle the scalability problem. We don´t want a technical report how to scale the application but more **an overview what possibilities and services that is available and an estimation of the cost of the different services we needed.** We also want references back to where you find your information so we can track it back. 
-We will estimate our traffic will be 50 QPS normally but during some points of the day or when we do some campaign it could in extreme cases be up to 2500 QPS. At the moment we have MAU-number of 15.000. Our log database contains 100 GB of data at the moment and today it is growing with about 0.5 GB/day.
+We don´t want a technical report how to set up the infrastructure but more **an overview what possibilities and services that is available and an estimation of the cost of the different services we needed.** We also want references back to where you find your information so we can track it back. 
+We will estimate our traffic will be 50 QPS normally but during some points of the day or when we do some campaign it could in extreme cases be up to 2500 QPS. At the moment we have MAU-number of 15.000. 
+
+Here are some questions you should answer about your chosen IaaS:
 
 * We want a up-time of at least 98%. What will happen if the cloud provider don´t live up to this?
-* Of course we want a load balancing mechanism in-font of our front-end servers. 
-* We want to have the ability to scale our front-end servers and microservices, hopefully in a elastic and cost-effective way
-* We want backup of and be able to have redundant data
-* The calculating microservice will calculate a lot of data and it will need to have some calculating power when they do their job
+* How about load balancing for our front-end servers?
+* If our traffic and number of users grow. Is there any way to dynamic scale?
 * We want to be sure of that we owns our data and that the IaaS won´t be able to take our intellectual property or miss-abuse our clients thrust.
-* We want to know if we can be sure that when we delete some data (for example a user) the data can´t be reproduced. How about data migration?
+* We want to know if that when we delete some data (for example a user) the data can´t be reproduced. 
 * We want to know how the IaaS handle metadata (our interaction with the IaaS-services).
-* We are interesting in storage of static files. In the future we may want to store more data like video and audio. 
-* How is the up-time for the services
+* We are interesting in storage of static files. In the future we may want to store more data like video and audio. Is there services availible for this and how will it affect the cost?
 * Are there some easy way to run health check?
 * We are interesting to implement a more fine-grade monitoring system for our application. Are the any services for this?
+* How mush will our current infrastructure cost in the cloud
+
 
 ### Structure of the report
 
