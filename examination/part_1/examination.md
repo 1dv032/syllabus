@@ -14,13 +14,13 @@ You have been asked by a relatively new started software company to investigate 
 1. The service have a simple load balancer (Nginx) with a round-robin algorithm.
 2. Two frontend-servers running node.js LTS. Their job is to redirect requests to the right service and then put together the responses and send them back to the client.
 3. The web site. This is the part that handles all the visual part of the software. This is a monolith written in the python framework Django, using the 3.7 version of python.
-4. Database for the website, PostgreSQL version 10.5
+4. Database for the website, PostgreSQL version 9.4
 5. The Auth microservice. This microservice support the authentication, the handling of user credentials
-6. Database storing the user credentials, PostgreSQL version 10.5
+6. Database storing the user credentials, PostgreSQL version 9.4
 7. Microservices that handles the service logs, both system logs and meta data from the users that will be used for analyzing their learning and calculating point in the gamification system.
 8. Database for logging data and interaction. Mainly for metadata. This is a noSQL database. 
 9. The calculation microservice. This part draws data from the logs and make some calculations every night. The results is stored in the log database.
-10. The database where calculated data is stored and used by the web site, PostgreSQL version 10.5
+10. The database where calculated data is stored and used by the web site, PostgreSQL version 9.4
 
 The biggest issue today is that the service have scalability problems. The service has been popular and the last moth the users has doubled many times. This has led to the servers been overloaded at some times and ended with non-responding servers. The company have taken the decision to investigate how to solve this problem. One direction is to outsource the operations of servers and infrastructure to the cloud. There are plans of building a private cloud but they also want to investigate the public cloud sphere. This is where you come in.
 
