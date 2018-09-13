@@ -18,7 +18,7 @@ You have been asked by a relatively new started software company to investigate 
 5. The Auth microservice. This microservice support the authentication, the handling of user credentials
 6. Database storing the user credentials, PostgreSQL version 10.5
 7. Microservices that handles the service logs, both system logs and meta data from the users that will be used for analyzing their learning and calculating point in the gamification system.
-8. Database for logging data and interaction. Mainly for metadata. This is a influxDB (a database) version 1.6.2
+8. Database for logging data and interaction. Mainly for metadata. This is a noSQL database. 
 9. The calculation microservice. This part draws data from the logs and make some calculations every night. The results is stored in the log database.
 10. The database where calculated data is stored and used by the web site, PostgreSQL version 10.5
 
