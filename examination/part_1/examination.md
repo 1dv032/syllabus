@@ -41,8 +41,17 @@ Here are some questions you should answer about your chosen IaaS:
 * We are interesting in storage of static files. In the future we may want to store more data like video and audio. Is there services availible for this and how will it affect the cost?
 * Are there some easy way to run health check?
 * We are interesting to implement a more fine-grade monitoring system for our application. Are the any services for this?
-* How mush will our current infrastructure cost in the cloud
+* How much will our current infrastructure cost in the cloud
 
+### Some data
+| Description | Numbers of| CPU  | RAM  | Storage  | Other  |
+| ------------- |:-------------:|:-----:|:-----:|:-----:|:-----:|
+| Load balancer | 1 | - | - | - | 50 - 2500 QPS, HTTP messages|
+| Front-end server | 2 | 1 | 0.5 GB | 1 GB | - |
+| Web site/microservices | 3 | 1 | 2 GB | 1 GB | - |
+| Calculation service | 1 | 4 | 16 GB | 1 GB | - |
+| PostgreSQL RDBS | 3 | 2 | 1 GB | 10 GB | - |
+| noSQL | 1 | - | - | 300 GB | - |
 
 ### Structure of the report
 
