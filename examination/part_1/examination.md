@@ -39,8 +39,8 @@ Here are some questions you should answer about your chosen IaaS:
 * We want to know if that when we delete some data (for example a user) the data can´t be reproduced. 
 * We want to know how the IaaS handle metadata (our interaction with the IaaS-services).
 * We are interesting in storage of static files. In the future we may want to store more data like video and audio. Is there services available for this and how will it affect the cost?
-* Are there some easy way to run health check?
-* We are interesting to implement a more fine-grade monitoring system for our application. Are the any services for this?
+* Are there some easy way to run health checks?
+* We are interesting to implement a more fine-grained monitoring system for our application. Are the any services for this?
 * How much will our current infrastructure cost in the cloud?
 * What are your recommendations? Which kind of services could we use?
 
