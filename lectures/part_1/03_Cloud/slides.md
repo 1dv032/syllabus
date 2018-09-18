@@ -133,6 +133,8 @@ Source - [NIST (National Institute of Standards and Technology) [Definition](htt
   * IaaS, PaaS, SaaS, FaaS...
   * 54 geographical regions, more to come
     * Some regions has multiple "Availability Zones"
+* Google Cloud ([https://cloud.google.com/](https://cloud.google.com/))
+* IBM Cloud ([https://www.ibm.com/cloud/](https://www.ibm.com/cloud/))
 
 
 --
