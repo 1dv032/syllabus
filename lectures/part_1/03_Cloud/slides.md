@@ -122,7 +122,8 @@ Source - [NIST (National Institute of Standards and Technology) [Definition](htt
   * IaaS, PaaS, SaaS, FaaS...
   * 17 geographical regions, six more to come
     * Each region has multiple "Availability Zones"
-
+    * Each region is completely independent. Each Availability Zone is isolated
+    * Availability Zones in a region are connected through low-latency links.
 ![AWS regions](images/aws_regions.png)
 
 
@@ -169,55 +170,33 @@ Source - [NIST (National Institute of Standards and Technology) [Definition](htt
 
 ---
 ## Why using Cloud?
-* Cost
+* Cost effective?
+  * Pay-as-you-go
   * Someone else is taking care of stuff
-    * Avoiding overheads
-    * Licensing
-    * Security (?)
-  * Flexibility - better use of resources
-  * Service availability
+    * Avoiding overheads, licensing...
+* Flexibility - better use of resources
+  * Support new business models
+* Service availability
 * Data
-  * Storage infrastructure
-  * backups, recovery
-
-
---
-## Why using Cloud?
-* Capacity planning
-  * Demand for a service may varies with time
-    * Pay-as-you-go
-  * Upgrading infrastructure for new products
+  * Storage infrastructure, backups, recovery
   * Data migration
 * Environmentally friendly?
-  * Leading to new energy solutions
-  * Localization of "cloud data centers"
+  * Power, cooling, leading to new energy solutions
 
 
 --
 
 ## Challenges!
 * Legal and constraints on hosting location
-  * Who will see it?
   * Sensitive data, personal integration, legal issues
 * When I delete data is it deleted?
   * Transparency how data is handle
 * SaaS is often free....or?
   * Is Google Docs free? Is Facebook?
-
-
---
-## Challenges!
-
 * Portability
-  * How to change cloud provider?
-  * Data lock-in, What if the provider will shut down?
-  * Data Transfer Bottlenecks?
-    * The cost of big data transfer
-    * Ship disk?
-* How to handle variable capacity?
-  * Support
-  * Cost
-* Private or public or hybrid?
+  * Vendor lock-in, What if the provider will shut down?
+* What happen when our PaaS is acquired?
+* ...
 
 
 ---
