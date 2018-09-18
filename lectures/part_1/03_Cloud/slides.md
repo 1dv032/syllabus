@@ -184,52 +184,45 @@ Source - [NIST (National Institute of Standards and Technology) [Definition](htt
 
 ## Challenges!
 * Legal and constraints on hosting location
-  * Sensitive data, personal integration, legal issues
+  * Sensitive data, personal integrity, legal issues
+  * What happen when our PaaS is acquired?
 * When I delete data is it deleted?
   * Transparency how data is handle
 * SaaS is often free....or?
   * Is Google Docs free? Is Facebook?
 * Portability
   * Vendor lock-in, What if the provider will shut down?
-* What happen when our PaaS is acquired?
 * ...
 
 
 ---
 ## Capacity planning
-* Chapter 18
+* Chapter 18 (p. 365-378)
 * Ensuring enough resources when needed
   * no over- or under capacity
 * Avoid services failing, improving cost effectiveness
 * Data-driven process
   * Automated collected data from monitoring tools
-  * Could be analyzed mathematical models
-
-
----
-## Terms to know
-* QPS
-  * Query per seconds
-* MAU
-  * Monthly active users
-* Engagement
-  * How many times a user performance some transaction
-* Primary resource
-  * What resource is most critical for a service? CPU? Storage?
-* Core driver
-  * Factors that strongly drive demand for the primary resource
-* Time series
-  * Sequence of data points measured at time intervals
+  * Could be analyzed (advanced) mathematical models
 
 
 --
-## What resources to track
-* CPU, RAM, Storage, network capacity, IP addresses, licenses, service contracts, power...
-  * Monitoring system collects data
-* Resiliency - Capacity that allows some components to fail
-* Observing values over a timetable
-  * Physical services have longer timetables then virtual services
-  * Automation, where is the resource cheapest just now
+* Primary resource
+  * Which resource is most critical for a service? CPU? Storage?
+    * First step to identify
+* Secondary resource
+  * Not interesting when calculating capacity but should be monitored 
+* Ancillary (sv: underordnad) resource
+  * server instances, load balancers, power, other infrastructure components
+    * Find the relationship between primary resources and ancillary resources
+* Core driver
+  * Factors that strongly drive demand for the primary resource
+  * QPS
+    * Query per seconds
+  * MAU
+    * Monthly active users
+* Time series
+  * Sequence of data points measured at time intervals
 
 
 --
@@ -252,39 +245,22 @@ Additional resources = future resources - current resources
   * Should be notified by monitoring 
 
 
----
-#### Identifying the resources for your service
-CPU, memory, storage, bandwidth...
-
-* Primary resource 
-  * What is the most important resource for the service  
-  * First step to identify
-* Secondary resource
-  * Not interesting when calculating capacity but should be monitored 
-* Ancillary (sv: underordnad) resource
-  * server instances, load balancers, power, other infrastructure components
-  * Find the relationship between primary resources and ancillary resources
-* Finding capacity limits
-  * The point when a resource starts to degrade or become unpredictable
-  * Load testing in lab environment
-  * Need to be known for each primary and secondary resource
-
-
 --
-#### Core drivers and primary resources
+#### Capacity model
 
-* Factors that drive demand for primary resources
-* MAU, WAU, 5DA, QPS and other relevant metrics depending on the service
 * Capacity model shows the relationship between core driver and primary resource
-  * Try to show how changes in core drivers will affect primary (and secondary) resources
+  * Try to show how changes in core drivers will affect primary resources
   * Which core driver influence which resource and how strongly - By correlation 1 to -1
   * Regression analysis (sv. Regressionsanalys) on time-series data
-    * Formula in the book (page 376)
 * Changes in service will probably change the correlation, needs to be recalculated
 * Could be used for forecasting models
 
+![formula](images/values.png)
 
----
+<!-- {_class="center"} -->
+
+
+--
 ### Formula
 ![formula](images/formula.png)
 
@@ -296,13 +272,5 @@ CPU, memory, storage, bandwidth...
 ## Next time...
 
 ![docker](images/docker.png)
-
-<!-- {_class="center"} -->
-
-
----
-<br>
-<img src="images/bye.gif" width="40%" />
-
 
 <!-- {_class="center"} -->
