@@ -122,6 +122,8 @@ Source - [NIST (National Institute of Standards and Technology) [Definition](htt
     * Each region has multiple "Availability Zones"
     * Each region is completely independent. Each Availability Zone is isolated
     * Availability Zones in a region are connected through low-latency links.
+
+
 ![AWS regions](images/aws_regions.png)
 
 
