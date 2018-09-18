@@ -149,7 +149,7 @@ Source - [NIST (National Institute of Standards and Technology) [Definition](htt
   * Government, health care, companies with needs of same applications
   * [Report about Swedish government cloud](http://www.statenssc.se/omstatensservicecenter/publikationer/rapporter/arkiv/engemensamstatligmolntjanstformyndigheternasitdrift.2106.html)
 * Hybrid cloud
-  * The cloud infrastructure is a composition of two or more clouds (private, public or community). Bound together by shared goals.
+  * The cloud infrastructure is a composition of two or more clouds (private, public or community). 
     * Cost, performance, security
     * Avoid vendor lock-ins, easier through containerization?
 
