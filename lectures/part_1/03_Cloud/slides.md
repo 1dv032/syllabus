@@ -1,26 +1,27 @@
 <!-- Start -->
 ## Today's lecture
 
-* Definition of "The Cloud"
+* Definition of "cloud"
     * Characteristics
-    * History
-    * Basic concepts
+    * Basic concepts and terminology
 * Cloud Services
+    * Cases
 * Deploy models
 * Business drivers
 * Challenges
+* Some about capacity planning
 
 Note:
 These are the topics for todays lecture.
 
 
 ---
-
+### The cloud?
 ![The cloud](images/cloud-1.png)
 
 <!-- {_class="center"} -->
 
-Cloud computing?<!-- {_style="text-align: center; font-size:55%"} -->
+<!--Cloud computing? {_style="text-align: center; font-size:55%"} -->
 
 
 Note:
@@ -33,14 +34,13 @@ Bygga system. Webbhotel vs. VPS, virtualisering. Förtsättning från förra vec
 ## Definition
 > Cloud computing is a model for enabling ubiquitous, convenient, *on-demand* network access to a *shared pool* of configurable computing resources (e.g., networks, servers, storage, applications, and services) that can be rapidly provisioned and released with minimal management effort or service provider interaction. This cloud model is composed of five essential characteristics, three service models, and four deployment models.
 
-Source - [NIST (National Institute of Standards and Technology) Definition(http://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf)] <br>Mell and Grance
+Source - [NIST (National Institute of Standards and Technology) [Definition](http://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf)] - Mell and Grance
 
 <!-- {_style="text-align: center; font-size:40%"} -->
 
 
 --
 ## Characteristics
-
 * On-demand self-service
   * A customer can get computing capabilities (server time, network storage) automatically without human interaction with the service provider.
 * Broad network access
@@ -52,85 +52,28 @@ Source - [NIST (National Institute of Standards and Technology) Definition(http:
 
 --
 ## Characteristics
-
 * Rapid elasticity
-  * Services (Servers) can be rapidly and elastically created. They can automatically scale in and out.
+  * Resources can be rapidly and elastically created. They can automatically scale in and out.
 * Measured service
   * Cloud systems can automatically control and optimize resources by using a metering capability. Measuring storage, processing, bandwidth...
 
 
-![scaling](images/scaling.png)<!-- {_style="width:55%"} -->
-
-<!-- {_class="center"} -->
-
-
---
-## History
-* The idea of delivering computing resources through a global network is rooted in the 1960s.
-* John McCarthy (1961)
-    * "computers of the future...someday be organised as a public utility..."
-    * "Mainframe timesharing"
-* “Intergalactic computer network” - Running applications and services from ARPANET
-* Distributed computing
-  * a group of independent and geographically dispersed computer systems take part to solve a complex problem
-* Grid computing
-  * A service for sharing computer power and data storage capacity over the Internet
-
-
-
---
-## History
-* Search engines 1993 (AltaVista, Lycos, InfoSeek), Web-based e-mail 1994
-* Salesforce.com in 1999, the concept of delivering enterprise applications via a simple website.
-* Amazon Web Services in 2002, which provided a suite of cloud-based services including storage, computation...
-  *  2006, Amazon launched its Elastic Compute cloud (EC2)
-* "Web 2.0" - Google and others started to offer browser-based enterprise applications, though services such as Google Apps.
-
-Note:
-
-
-
-
 ---
 ## Service models (the big three)
-
 * SaaS
   * Software as a Service
-  * Consumers uses the providers application that runs on a cloud infrastructure
-    * Google docs, Cloud9, hotmail...
+  * Consumers uses the providers web-accessible applications
+    * Google docs, Salesforce, Github...
 * PaaS
   * Platform as a Service
-  * The consumer can deploy their own applications into the provided cloud infrastructure.
-    * Google App Engine, Heroku, WS Elastic Beanstalk, Windows Azure
+  * The consumer can deploy their own applications into the vendor-provided framework
+    * Google App Engine, [Heroku](https://www.heroku.com), WS Elastic Beanstalk
+      * charge of CPU time, bandwidth, storage, offer elastic scaling
 * IaaS
   * Infrastructure as a Service
   * The consumer can use processing, storage, network and other fundamental computing resources. The consumer can create servers and run there own applications in the cloud.
-    * Windows Azure, AWS, Digital Ocean
-
-
---
-
-## Deployment models
-
-* Private cloud
-  * The cloud is used only by one organization
-* Community cloud
-  * The cloud infrastructure is shared between several organizations that has shared concerns.
-* Public cloud
-  * The cloud infrastructure is made available to the general public or a large group of **cloud consumers** and is owned by a **cloud provider** selling cloud services.
-* Hybrid cloud
-  * The cloud infrastructure is a composition of two or more clouds (private, public or community). Bound together by technology that enables data portability.
-
-
---
-
-## Deployment models...
-
-* Public IaaS cloud
-  * Amazon AWS, Digital Ocean
-* Community IaaS cloud
-* Private IaaS
-  * Open Stack, CloudStack
+    * Windows Azure, AWS, Digital Ocean, Google Cloud 
+      * charge for compute time, storage, network traffic
 
 
 --
@@ -140,32 +83,88 @@ Note:
 <!-- {_class="center"} -->
 
 
+---
+## FaaS
+* Function as a service
+* Runs functionalities of an application
+* O ne way of achieving a "serverless" architecture
+  * AWS Lambda, Google cloud functions, MS Azure functions...
+* Data processing, event-driven workflows
+* Charge by execution time
+
 
 --
-## Cloud resources
+### Cloud resources services
 
 * Compute
-  * Mainly server instances - Create and restore VMs
-  * Calculating capacity - FaaS (function as a service)
+  * Mainly server instances - Create and restore VMs, container management
+    * Scaling, Serverless applications...
 * Storage Resources
   * Block Storage
     * Mounted on server instances, Appears as an local disk drive but are often allocated from the network ( = there will be latency)
-    * Ex. [Amazon EBS](https://aws.amazon.com/ebs/), [OpenStack Cinder](https://wiki.openstack.org/wiki/Cinder)
+      * Ex. [Amazon EBS](https://aws.amazon.com/ebs/), [OpenStack Cinder](https://wiki.openstack.org/wiki/Cinder)
   * Object Storage
     * Files can be stored and accessed from different parts of the infrastructure or publicly
     * Designed for long-term storage often accessed from different servers (CDN)
       * [Amazon S3](https://aws.amazon.com/s3/), [Openstack Swift](https://wiki.openstack.org/wiki/Swift)
+  * Hot & Cold storage
 * Network Resources
   * Manage connectivity between its own elements and with external networks
-  * Internal routing, load balancing, security - Automated?
-  * [Software-defined network](https://en.wikipedia.org/wiki/Software-defined_networking) - Programmable infrastructure
+    * Internal routing, load balancing, Gateways, Scalable DNS...
+* Analytics, Migration, Databases, Development tools, Machine learning....
+
+
+---
+## Case - AWS
+
+* Amazon Web Service ([https://aws.amazon.com/](https://aws.amazon.com/))
+  * 2002
+  * IaaS, PaaS, SaaS, FaaS...
+  * 17 geographical regions, six more to come
+    * Each region has multiple "Availability Zones"
+
+![AWS regions](images/aws_regions.png)
+
+
+---
+## Case - MS Azure
+
+* Microsoft Azure ([https://azure.microsoft.com](https://azure.microsoft.com))
+  * 2010
+  * IaaS, PaaS, SaaS, FaaS...
+  * 54 geographical regions, more to come
+    * Some regions has multiple "Availability Zones"
 
 
 --
+### Deployment models (resource sharing)
 
-  ![ias](images/cloud_computing.png)
+* Private cloud
+    * The cloud is used and maintained by only one organization
+* Community cloud
+  * The cloud infrastructure is shared between several organizations that has shared concerns.
+  * Government, health care, companies with needs of same applications
+  * [Report about Swedish government cloud](http://www.statenssc.se/omstatensservicecenter/publikationer/rapporter/arkiv/engemensamstatligmolntjanstformyndigheternasitdrift.2106.html)
+* Public cloud
+  * The cloud infrastructure is made available to the general public or a large group of **cloud consumers** and is owned by a **cloud provider** selling cloud services.
+* Hybrid cloud
+  * The cloud infrastructure is a composition of two or more clouds (private, public or community). Bound together by technology that enables data portability.
+    * Cost, performance, security
+    * Avoid vendor lock-ins, easier through containerization?
 
-  <!-- {_class="center"} -->
+
+--
+### Choosing Deployment models
+* Compliance (sv: överensstämmelse)
+  * Regulations depending on business, size, locations
+* Privacy
+  * Data leakage, accidental exposure
+* Cost
+  * Total cost of ownership (TCO), Return of Investment (ROI)
+  * Using long term or short term
+* Control
+  * Private give more control, hardware, technologies, data
+  * Require more knowledge 
 
 
 ---
@@ -173,7 +172,7 @@ Note:
 * Cost
   * Someone else is taking care of stuff
     * Avoiding overheads
-    * Licencing
+    * Licensing
     * Security (?)
   * Flexibility - better use of resources
   * Service availability
@@ -204,11 +203,9 @@ Note:
   * Transparency how data is handle
 * SaaS is often free....or?
   * Is Google Docs free? Is Facebook?
-          
 
 
 --
-
 ## Challenges!
 
 * Portability
@@ -220,7 +217,104 @@ Note:
 * How to handle variable capacity?
   * Support
   * Cost
-* Private or public?
+* Private or public or hybrid?
+
+
+---
+## Capacity planning
+* Chapter 18
+* Ensuring enough resources when needed
+  * no over- or under capacity
+* Avoid services failing, improving cost effectiveness
+* Data-driven process
+  * Automated collected data from monitoring tools
+  * Could be analyzed mathematical models
+
+
+---
+## Terms to know
+* QPS
+  * Query per seconds
+* MAU
+  * Monthly active users
+* Engagement
+  * How many times a user performance some transaction
+* Primary resource
+  * What resource is most critical for a service? CPU? Storage?
+* Core driver
+  * Factors that strongly drive demand for the primary resource
+* Time series
+  * Sequence of data points measured at time intervals
+
+
+--
+## What resources to track
+* CPU, RAM, Storage, network capacity, IP addresses, licenses, service contracts, power...
+  * Monitoring system collects data
+* Resiliency - Capacity that allows some components to fail
+* Observing values over a timetable
+  * Physical services have longer timetables then virtual services
+  * Automation, where is the resource cheapest just now
+
+
+--
+### Standard capacity planning
+What are you going to need? When? Yearly calculation for each resource
+
+```
+Future resources = 
+Current resources x (1 + normal growth + planned growth) + headroom
+Additional resources = future resources - current resources
+```
+
+* Normal growth (%)
+  * Without business or marketing events
+  * Calculated by observing historic data (more the better)
+* Planned growth (%)
+  * Events, campaign, product launch  
+* Headroom
+  * Short-time spikes (percentage of current capacity)
+  * Should be notified by monitoring 
+
+
+---
+#### Identifying the resources for your service
+CPU, memory, storage, bandwidth...
+
+* Primary resource 
+  * What is the most important resource for the service  
+  * First step to identify
+* Secondary resource
+  * Not interesting when calculating capacity but should be monitored 
+* Ancillary (sv: underordnad) resource
+  * server instances, load balancers, power, other infrastructure components
+  * Find the relationship between primary resources and ancillary resources
+* Finding capacity limits
+  * The point when a resource starts to degrade or become unpredictable
+  * Load testing in lab environment
+  * Need to be known for each primary and secondary resource
+
+
+--
+#### Core drivers and primary resources
+
+* Factors that drive demand for primary resources
+* MAU, WAU, 5DA, QPS and other relevant metrics depending on the service
+* Capacity model shows the relationship between core driver and primary resource
+  * Try to show how changes in core drivers will affect primary (and secondary) resources
+  * Which core driver influence which resource and how strongly - By correlation 1 to -1
+  * Regression analysis (sv. Regressionsanalys) on time-series data
+    * Formula in the book (page 376)
+* Changes in service will probably change the correlation, needs to be recalculated
+* Could be used for forecasting models
+
+
+---
+### Formula
+![formula](images/formula.png)
+
+<!-- {_class="center"} -->
+
 
 
 --
