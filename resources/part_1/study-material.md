@@ -1,5 +1,6 @@
 ## Reading
-Chapter 1-3 in the book "The Practice of Cloud System Administration"
+Chapter 1-3, 18 in the book "The Practice of Cloud System Administration"
+
 
 ## Links
 [VMware - Understanding Virtualization](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/techpaper/VMware_paravirtualization.pdf)
