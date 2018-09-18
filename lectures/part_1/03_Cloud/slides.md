@@ -140,16 +140,16 @@ Source - [NIST (National Institute of Standards and Technology) [Definition](htt
 --
 ### Deployment models (resource sharing)
 
+* Public cloud
+  * The cloud infrastructure is made available to the general public or a large group of **cloud consumers** and is owned by a **cloud provider** selling cloud services.
 * Private cloud
     * The cloud is used and maintained by only one organization
 * Community cloud
   * The cloud infrastructure is shared between several organizations that has shared concerns.
   * Government, health care, companies with needs of same applications
   * [Report about Swedish government cloud](http://www.statenssc.se/omstatensservicecenter/publikationer/rapporter/arkiv/engemensamstatligmolntjanstformyndigheternasitdrift.2106.html)
-* Public cloud
-  * The cloud infrastructure is made available to the general public or a large group of **cloud consumers** and is owned by a **cloud provider** selling cloud services.
 * Hybrid cloud
-  * The cloud infrastructure is a composition of two or more clouds (private, public or community). Bound together by technology that enables data portability.
+  * The cloud infrastructure is a composition of two or more clouds (private, public or community). Bound together by shared goals.
     * Cost, performance, security
     * Avoid vendor lock-ins, easier through containerization?
 
