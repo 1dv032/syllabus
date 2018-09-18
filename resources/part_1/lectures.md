@@ -48,9 +48,6 @@
 
 ### Resources
 - [HTML-presentation](https://cdn.rawgit.com/1dv032/syllabus/master/lectures/part_1/03_Cloud/index.html#/)
-
-<!--
-- [Recording 2017-09-05, 13.15 (Youtube)](https://youtu.be/DZEqfZ9VllQ?t=14m09s&list=PLSWJPPj5sKmomUa_KTF5E91wwHx6BcUXP)
+- [Recording 2018-09-18, 13.15 (Youtube)](https://youtu.be/Ez53siG0oVM?t=14m50s&list=PLSWJPPj5sKmomUa_KTF5E91wwHx6BcUXP)
 <br />
-<iframe width="560" height="315" src="https://www.youtube.com/embed/DZEqfZ9VllQ?t=14m09s&list=PLSWJPPj5sKmomUa_KTF5E91wwHx6BcUXP" frameborder="0" allowfullscreen></iframe>
--->
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Ez53siG0oVM?t=14m50s&list=PLSWJPPj5sKmomUa_KTF5E91wwHx6BcUXP" frameborder="0" allowfullscreen></iframe>
