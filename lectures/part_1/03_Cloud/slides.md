@@ -115,8 +115,6 @@ Source - [NIST (National Institute of Standards and Technology) [Definition](htt
 
 
 ---
-## Case - AWS
-
 * Amazon Web Service ([https://aws.amazon.com/](https://aws.amazon.com/))
   * 2002
   * IaaS, PaaS, SaaS, FaaS...
@@ -128,8 +126,6 @@ Source - [NIST (National Institute of Standards and Technology) [Definition](htt
 
 
 ---
-## Case - MS Azure
-
 * Microsoft Azure ([https://azure.microsoft.com](https://azure.microsoft.com))
   * 2010
   * IaaS, PaaS, SaaS, FaaS...
