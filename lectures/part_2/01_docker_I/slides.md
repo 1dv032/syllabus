@@ -3,7 +3,6 @@
 
 * Containers
     * History
-    * Containers core concepts
     * From a software architecture perspective
 * Docker
   * What is docker
@@ -21,17 +20,6 @@ These are the topics for todays lecture.
 ---
 
 ## Containers
-
-![containers](./images/containers-and-vm-together.png)
-
-<!-- {_class="center"} -->
-> "Containers are an important technology that is not going away for a while"
-
-Note:
-separated process<br>
-
-
---
 ![container](./images/containers.jpg)
 
 <!-- {_class="center"} -->
@@ -42,97 +30,51 @@ Dont care whats in them, know how to distribute them and ship them<br>
 Mitten av 50-talet<br>
 All vet hur man hanterar dem, hor man förvarar dem osv
 
+---
+## Containers
+![containers](./images/containers-and-vm-together.png)
+
+<!-- {_class="center"} -->
+> "Containers are an important technology that is not going away for a while"
+
+Note:
+separated process<br>
 
 --
-## History
+## History of using containers
 
 * UNIX - "jail" - modified runtime preventing application accessing protected resources
   * jails, an early implementation of container technology, was added to FreeBSD, 2000
-* Linux-VServer adding operating system-level virtualization capabilities to the Linux kernel. Its real weakness was that it required a patched kernel
 * 2004, Solaris containers/zones
 * 2006-2008, Linux kernel got support for generic process containers, which were later renamed control groups, or cgroups
 * 2008 Linux namespaces, processes with own users and root account
-
-
-
---
-## History
 * [The Linux Containers project](https://linuxcontainers.org/), created by engineers from IBM around 2008
   * Projects like LXC and LXD provided an improved user experience around containers
   * Most complete implementation of Linux container manager.
   * Combine namespace and cgroups
-* [Docker](https://docker.com) tools with even easier to use tooling aimed at developers looking for simple ways to package their applications.
-  * Docker, 2015, donated the project’s existing codebase through the [Open Container Initiative](https://www.opencontainers.org/)
+
+
+--
+## History
+* [Docker](https://docker.com) tools to help developers pack their application/code
 * 2016, CoreOS launches [Rocket 1.0](https://coreos.com/rkt/)
-* Orchestrating at Scale
-  * [Kubernetes](https://kubernetes.io/) launched in 2014, Google discussed how [“everything at Google runs in a container”](https://www.theregister.co.uk/2014/05/23/google_containerization_two_billion/), "We start over two billion containers per week"
-    * Google has developed a variant of LXC named, charmingly, lmctfy, short for Let Me Contain That For You.
+* Orchestrating containers at scale
+  * [Kubernetes](https://kubernetes.io/) launched in 2014, Google 
+    * Open-source container cluster manager,
   * [Docker swarm](https://docs.docker.com/engine/swarm/)
 
 
-
----
-## Containers core concepts
-
-* Container manager
-  * Tools that help you create a container, deploy it and get it Running
-    * Docker, Rocket
-* Configuration File
-  * A file where the containers (or application) needs is defined
-    * Textformat, VCS
-* Layers
-  * A container is made up of Layers
-    1. A base layer - a base OS (Ubuntu)
-    2. A web server (Apache)
-    3. An application platform runtime (PHP)
-    4. The application code
-
-
 --
-## Containers core concepts
-* Images
-  * A template of your container defined by the configuration file (and build with layers)
-  * Used to create instances, containers
-* Registers
-  * Stores container images (Docker hub)
-  * Gives you reusability
-  * Use base images in a layer
-* Scaling containers
-  * Container loads much more quickly then VMs
-  * Load balancing
-  * Example; Kubernetes, etcd, Docker swarm
+## EVOLVING
 
-
----
-## Modern software architecture
-
-> How does containerization fit into modern software architecture
-
-* App servers --> PaaS
-* Physical machines or VMs --> Containers
-* Monolitic apps --> Microservices
+Development process | Application Architecture | Deployment & Packaging | Infrastructure
+--- | --- | --- | ---
+Waterfall | Monolithic | Physical | Datacenter
+Agile | N-tier | Virtual machines | Hosted datacenter
+DevOps | Microservices | Containers | Cloud
 
 https://coursepress.lnu.se/kurs/systemadministrationii/part-2-application-operations/study-material/
 
-<!-- {_style="text-align: right; font-size:60%"} -->
-
-
---
-## Going from monolitics..
-
-![monolicti](./images/monolitic.png)
-
-<!-- {_class="center"} -->
-
-
---
-## ..to microservices
-
-![monolicti](./images/ms.png)
-
-<!-- {_class="center"} -->
-
-Note: Skalning förenklas
 
 
 ---
@@ -145,40 +87,59 @@ Note: Skalning förenklas
 
 --
 ## What is docker?
-* Docker provides tooling and a platform to manage containers
+* Docker provides a platform and tooling to manage containers
 * Started in France as an internal project within dotCloud (now Docker inc.), a platform-as-a-service company
 * Focus on minimize the gap from development to deployment
   * Developing, shipping and running
-  * Simpler tools, management, scaling and so on
-* Minimize the diversion between development- and production environment
-  * "It works on my machine"
-* The docker platform is "Open Source", Promoted by the Docker, Inc
-* Written in GO language (https://golang.org)
+  * Minimize the diversion between development- and production environment
+    * "It works on my machine"
+* The Docker platform is "Open Source", Promoted by the Docker, Inc
+  * https://www.docker.com/community/open-source
 
 
 --
-## Docker - Architecture
+## Docker overview
 
-* Docker Engine
-  * A client-server models
-    * Server, docker deamon, creates images, containers, networks and volumes
-    * REST API, interface for programs to talk to the deamon
-    * A CLI client
-      * Could be other tools...communicating with the API
-
-![docker enging](./images/engine-components-flow.png)
-
+![docker overview](images/docker_overview.png)
 <!-- {_class="center"} -->
 
 
 --
-## Docker - Architecture
+## Docker demon
 
-* Docker Registries
-  * Stores *docker images* (Docker Hub, Docker Cloud)
-  * Public or Private
-  * Docker store - Buy and sell application or services
+* The docker engine
+  * Client docker CLI
+  * REST API
+  * Docker daemon server (dockerd)
+* The docker daemon
+  * The daemon creates and manage Docker objects (images, containers, networks and volumes)
 
+https://docs.docker.com/engine/docker-overview/#docker-engine
+
+
+--
+## Docker core objects
+* Images
+  * read-only templates with instructions for creating a container
+    * Often an image is based on another image
+    * Get it from Docker Hub or your own registry
+    * Defined in a *Dockerfile*
+* Containers
+  * A runnable instance of an image
+  * Relatively well isolated from other containers and its host machines
+  * ``` docker run -i -t ubuntu /bin/bash ```
+    * Using the "ubuntu" image - connects to /bin/bash
+
+
+--
+## Docker Registry
+
+* Stores *docker images* (Docker Hub...)
+* Public or Private
+* Docker store - Buy and sell application or services
+
+https://hub.docker.com/explore/
+  
 ![docker registry](./images/docker-registry.png)
 <!-- {_style="width:50%"} -->
 
@@ -186,43 +147,23 @@ Source: https://blog.octo.com/en/docker-registry-first-steps/
 
 <!-- {_style="text-align: right; font-size:60%"} -->
 
-
---
-## Docker basic concepts
-
-* Images
-  * read-only templates with instructions for creating a container
-  * Often an image is based on another image
-  * Get it from Docker Hub or your own registry
-  * Defined in a *Dockerfile*
-* Containers
-  * A runnable instance of an image
-  * Relatively well isolated from other containers and its host machines
-  * ``` docker run -i -t ubuntu /bin/bash ```
-* Services
-  * Scaling of containers across multiple Docker deamons (swarm mode)
-
-
 --
 ## Docker characteristics
 
 * Layers - Changes are done in layers, not the whole image
-  * UnionFS (Union File System) - Used by Docker engine
-  * Used to layered Docker images
+  * Uses a union filesystem (overlay, auFS)
   * A change to an original image is put in a new layer, not recreate the whole image
-* Single process
-  * Web server, load balancer, reversed proxy, database server...
+* Single process - Best practice
+  * Application-centric
+  * Application server, load balancer, reversed proxy, database server...
 * Stateless, read-only
-  * How to store data? Docker Volumes!
 * Portable
   * The application is separated from low level configurations.
-  * Easy to move and run on other Docker engines
-    * Continuous Delivery pipelines
-      * https://github.com/CS-LNU-Learning-Objects/web-application-architecture/blob/master/continuous.md
-
+  * Easy to move and run on other Docker engines  
+    * Think of containers on a ship...
 
 --
-## About Volumes
+## Volumes
 * How to handle dynamic data in a read-only container?
 * Docker is using Volumes - Containers for storing persistent data
 * Using a volume does not increase the size of containers using it
@@ -230,16 +171,7 @@ Source: https://blog.octo.com/en/docker-registry-first-steps/
 * By default, not deleted when container is stopped
   * Recreate a server, still need the data
 
-```bash
-## Creates a datacontainer based on ubuntu
-docker create -v /logs --name logscontainer ubuntu
-## start a container and mounts the volume
-docker run -t -i --volumes-from logscontainer ubuntu /bin/bash
-## or
-docker run -t -i --volumes-from logscontainer centos /bin/bash
-# create both volume and container
-docker run -v ~/myVolume:/data -it ubuntu /bin/bash
-```
+
 https://docs.docker.com/engine/admin/volumes/volumes/
 
 <!-- {_style="text-align: right; font-size:60%"} -->
@@ -250,7 +182,8 @@ https://docs.docker.com/engine/admin/volumes/volumes/
 
 * Community Edition (CE) and Enterprise Edition (EE)
   * https://docs.docker.com/engine/installation/
-  * Docker for mac, Docker for Windows
+    * Docker for mac, Docker for Windows
+    * Requires Microsoft Windows 10 Professional or Enterprise 64-bit.
   * Read installations instructions for your linux dist.
     * https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/
 
@@ -293,16 +226,20 @@ Note: 'cat /etc/*release*
 # Nginx Dockerfile
 
 FROM ubuntu:16.04
+
+LABEL "com.example.vendor"="LNU"
+LABEL version="1.0"
+LABEL description="This is just a demo"
 LABEL maintainer="thajo@lnu.se"
 
 RUN apt-get update \
     && apt-get install -y nginx \
     && apt-get clean \
-    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
-    && echo "daemon off;" >> /etc/nginx/nginx.conf
+    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* 
 
 EXPOSE 80
-CMD ["nginx"]
+
+CMD ["nginx", "-g", "daemon off;"]
 
 ```
 
@@ -395,7 +332,16 @@ docker rmi $(docker images -q)
 docker volume rm $(docker volume ls -qf dangling=true)
 
 ```
-
+```bash
+## Creates a volume with the name "logs"
+docker volume create logs
+## start a container and mounts the volume
+docker run -t -i -v logs:/app-logs ubuntu /bin/bash
+## share the same volume
+docker run -t -i --volumes-from logscontainer centos /bin/bash
+# create both volume and container
+docker run -v ~/myApp/src:/app -it ubuntu /bin/bash
+```
 
 ---
 #Docker Compose

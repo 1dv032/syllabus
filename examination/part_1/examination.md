@@ -1,6 +1,6 @@
 ## Examination 1 - Cloud computing services
 
-For this examination you are expected to produce a written report of between 800-1000 words (we won´t fail you if you use more but try to be reasonable). Report should be delivered to the course email address, 1dv032@lnu.se, as a **PDF, see the planing for exact date and time**.
+For this examination you are expected to produce a written report. Report should be delivered to the course email address, 1dv032@lnu.se, as a **PDF, see the planing for exact date and time**.
 The report will go through a peer-review after finishing. This means you also should do a review of a other students paper as part of the assignment. **Again, the report must be in pdf-format**
 
 ## Purpose of the report
