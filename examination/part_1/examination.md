@@ -75,5 +75,7 @@ Make sure to make references to the course literature and any other articles tha
 In this course we will use so-called peer-review, the Swedish also called "referensgranskning". This means in short that you will study an other student´s written reports. The idea of the step is to demonstrate your knowledge by analyzing and providing feedback on other student's assignments and hopefully also get great feedback on your own. This dose not mean that you should grade each other rather push and give each other good feedback. In addition, it is important to be able to rise from your own bubble and reflect on the work of others.
 
 After the submission deadline, **27/9 08:00**, you will get an e-mail with another students report.
-Read and analyze the report and give feedback, no more then 300 words
+Read and analyze the report and give feedback, no more then 300 words.
 Send your feedback to the course email address and a copy to the student who wrote the report, no later than **30/9 23:59**.
+You should also fill out this form [Peer-review 1dv032 HT-18](https://docs.google.com/forms/d/e/1FAIpQLSekqenEYWPCzXoq2N2kLyI_26rpN7iBI0KgkKm5ngxM6YsU6w/formResponse) your response in the form will only be seen by the course administration.
+
