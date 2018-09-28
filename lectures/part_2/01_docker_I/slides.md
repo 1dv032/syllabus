@@ -226,7 +226,6 @@ Note: 'cat /etc/*release*
 # Nginx Dockerfile
 
 FROM ubuntu:16.04
-
 LABEL "com.example.vendor"="LNU"
 LABEL version="1.0"
 LABEL description="This is just a demo"
@@ -238,7 +237,6 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* 
 
 EXPOSE 80
-
 CMD ["nginx", "-g", "daemon off;"]
 
 ```
@@ -362,10 +360,10 @@ version: '3'
 services:
   web:
     build: .
-    links:
+    depends_on:
       - mongodb
     ports:
-      - "5000:5000"
+      - "8080:5000"
   mongodb:
     image: mongo:3.4
     expose:
@@ -375,11 +373,31 @@ services:
 volumes:
   mongodbdata:
 ```
-
-Example
-
-
----
+--
+version: "3"
+services:
+   db:
+     image: mysql:5.7
+     volumes:
+       - db_data:/var/lib/mysql
+     restart: always
+     environment:
+       MYSQL_ROOT_PASSWORD: compose78!#jd
+       MYSQL_DATABASE: wordpress
+       MYSQL_USER: wordpress
+       MYSQL_PASSWORD: compose876Rtgy7!%
+   wordpress:
+     depends_on:
+       - db
+     image: wordpress:latest
+     ports:
+       - "8000:80"
+     restart: always
+     env_file:
+      - secrets.env
+volumes:
+    db_data:
+--
 ## Get started
 
 https://docs.docker.com/get-started/
