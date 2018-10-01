@@ -5,11 +5,10 @@
     * History
     * From a software architecture perspective
 * Docker
-  * What is docker
-  * Characteristics
-  * Basic concepts
+  * What is Docker
+  * Characteristics & basic concepts
 * Practical
-  * How to install
+  * Creating and running docker containers
   * Dockerfile
   * Docker-compose (intro only)
 
@@ -18,20 +17,7 @@ These are the topics for todays lecture.
 
 
 ---
-
-## Containers
-![container](./images/containers.jpg)
-
-<!-- {_class="center"} -->
-
-Note:
-Black boxex. Dont know whats in them, isolated processes<br>
-Dont care whats in them, know how to distribute them and ship them<br>
-Mitten av 50-talet<br>
-All vet hur man hanterar dem, hor man förvarar dem osv
-
----
-## Containers
+### Containers
 ![containers](./images/containers-and-vm-together.png)
 
 <!-- {_class="center"} -->
@@ -40,23 +26,42 @@ All vet hur man hanterar dem, hor man förvarar dem osv
 Note:
 separated process<br>
 
+
 --
-## History of using containers
+### Containers
+![container](./images/containers.jpg)
+<!-- {_class="center"} -->
+<!-- {_style="width:60%"} -->
+
+
+Note:
+Black boxex. Dont know whats in them, isolated processes<br>
+Dont care whats in them, know how to distribute them and ship them<br>
+Mitten av 50-talet<br>
+All vet hur man hanterar dem, hor man förvarar dem osv
+
+
+--
+### History of process isolating
 
 * UNIX - "jail" - modified runtime preventing application accessing protected resources
   * jails, an early implementation of container technology, was added to FreeBSD, 2000
-* 2004, Solaris containers/zones
-* 2006-2008, Linux kernel got support for generic process containers, which were later renamed control groups, or cgroups
-* 2008 Linux namespaces, processes with own users and root account
+* 2004, Solaris containers/*zones*
+* 2006-2008, Linux kernel got support for generic process containers, which were later renamed control groups, or *cgroups*
+* 2008 *Linux namespaces*, processes with own users and root account
 * [The Linux Containers project](https://linuxcontainers.org/), created by engineers from IBM around 2008
-  * Projects like LXC and LXD provided an improved user experience around containers
+  * Projects like *LXC* provided an improved user experience around containers
   * Most complete implementation of Linux container manager.
   * Combine namespace and cgroups
 
 
 --
-## History
+### History
 * [Docker](https://docker.com) tools to help developers pack their application/code
+  * Used LXC in the beginning
+  * Now using a own library, *libcontainer*/*opencontainer/runc*
+    * Implementation of the Open Container Format Specification (OCF)
+    * [https://www.opencontainers.org/](https://www.opencontainers.org/)
 * 2016, CoreOS launches [Rocket 1.0](https://coreos.com/rkt/)
 * Orchestrating containers at scale
   * [Kubernetes](https://kubernetes.io/) launched in 2014, Google 
@@ -65,7 +70,7 @@ separated process<br>
 
 
 --
-## EVOLVING
+### EVOLVING
 
 Development process | Application Architecture | Deployment & Packaging | Infrastructure
 --- | --- | --- | ---
@@ -74,38 +79,38 @@ Agile | N-tier | Virtual machines | Hosted datacenter
 DevOps | Microservices | Containers | Cloud
 
 https://coursepress.lnu.se/kurs/systemadministrationii/part-2-application-operations/study-material/
-
+<!-- {_style="font-size:60%"} -->
 
 
 ---
-## Docker
-
+<!-- {_style="width:65%"} -->
+<!-- {_class="center"} -->
 ![docker](images/docker.png)
 
-<!-- {_class="center"} -->
-
+ 
 
 --
-## What is docker?
+### What is Docker?
 * Docker provides a platform and tooling to manage containers
 * Started in France as an internal project within dotCloud (now Docker inc.), a platform-as-a-service company
 * Focus on minimize the gap from development to deployment
   * Developing, shipping and running
   * Minimize the diversion between development- and production environment
-    * "It works on my machine"
+    * "It works on my machine"-syndrome
 * The Docker platform is "Open Source", Promoted by the Docker, Inc
   * https://www.docker.com/community/open-source
+  * [Open Container Initiative (OCI)](https://www.opencontainers.org/)
 
 
 --
-## Docker overview
+### Docker overview
 
-![docker overview](images/docker_overview.png)
+![docker overview](images/docker_overview.svg)
 <!-- {_class="center"} -->
 
 
 --
-## Docker demon
+### Docker demon
 
 * The docker engine
   * Client docker CLI
@@ -118,7 +123,7 @@ https://docs.docker.com/engine/docker-overview/#docker-engine
 
 
 --
-## Docker core objects
+### Docker core objects
 * Images
   * read-only templates with instructions for creating a container
     * Often an image is based on another image
@@ -129,10 +134,11 @@ https://docs.docker.com/engine/docker-overview/#docker-engine
   * Relatively well isolated from other containers and its host machines
   * ``` docker run -i -t ubuntu /bin/bash ```
     * Using the "ubuntu" image - connects to /bin/bash
+* We build images, we run containers...
 
 
 --
-## Docker Registry
+### Docker Registry
 
 * Stores *docker images* (Docker Hub...)
 * Public or Private
@@ -144,11 +150,11 @@ https://hub.docker.com/explore/
 <!-- {_style="width:50%"} -->
 
 Source: https://blog.octo.com/en/docker-registry-first-steps/
-
 <!-- {_style="text-align: right; font-size:60%"} -->
 
+
 --
-## Docker characteristics
+### Docker characteristics
 
 * Layers - Changes are done in layers, not the whole image
   * Uses a union filesystem (overlay, auFS)
@@ -156,14 +162,16 @@ Source: https://blog.octo.com/en/docker-registry-first-steps/
 * Single process - Best practice
   * Application-centric
   * Application server, load balancer, reversed proxy, database server...
-* Stateless, read-only
+* Stateless, read-only, "Immutable"
+  * Using the image guarantee same containers in all environments
 * Portable
   * The application is separated from low level configurations.
   * Easy to move and run on other Docker engines  
     * Think of containers on a ship...
 
+
 --
-## Volumes
+###  Volumes
 * How to handle dynamic data in a read-only container?
 * Docker is using Volumes - Containers for storing persistent data
 * Using a volume does not increase the size of containers using it
@@ -178,7 +186,7 @@ https://docs.docker.com/engine/admin/volumes/volumes/
 
 
 ---
-## Getting started
+### Getting started
 
 * Community Edition (CE) and Enterprise Edition (EE)
   * https://docs.docker.com/engine/installation/
@@ -196,7 +204,7 @@ Source: [docker.com](https://docker.com)
 
 
 --
-## Is it working?
+### Is it working?
 
 ```bash
 docker run hello-world
@@ -204,7 +212,7 @@ docker run hello-world
 
 
 --
-## Basic ubuntu container
+### Basic ubuntu container
 
 ```bash
 docker run -i -t ubuntu /bin/bash
@@ -214,7 +222,7 @@ Note: 'cat /etc/*release*
 
 
 ---
-## The Dockerfile
+### The Dockerfile
 * In the Dockerfile (a textfile) you define your image from which you build your container(s)
 * Contains all the commands needed for the preferred image
 * Load and build with ``` docker build .```
@@ -223,8 +231,6 @@ Note: 'cat /etc/*release*
 --
 
 ```
-# Nginx Dockerfile
-
 FROM ubuntu:16.04
 LABEL "com.example.vendor"="LNU"
 LABEL version="1.0"
@@ -257,7 +263,7 @@ docker stop id
 
 
 --
-# Dockerfile commands
+### Dockerfile commands
 
 * FROM
   * Defines the base image to work with
@@ -274,7 +280,7 @@ docker stop id
 
 
 --
-# Dockerfile commands
+### Dockerfile commands
 * ENV
   * Sets an environment variable in the container
 * WORKDIR
@@ -318,18 +324,18 @@ docker build . -t thajo/rails
 docker run -p 8080:8080 -d thajo/rails
 # Starting a container with a bash
 docker run -t -i  thajo/rails /bin/bash
-# Login to a running container
-docker exec -i -t <ps_id> /bin/bash
 # Stop all containers
 docker stop $(docker ps -a -q)
 # Remove all containers
 docker rm $(docker ps -a -q)
 # Remove all images
 docker rmi $(docker images -q)
-# Remove all valumes (make sure to remove the volume container first)
+# Remove all volumes (make sure to remove the volume container first)
 docker volume rm $(docker volume ls -qf dangling=true)
-
 ```
+
+
+--
 ```bash
 ## Creates a volume with the name "logs"
 docker volume create logs
@@ -341,8 +347,9 @@ docker run -t -i --volumes-from logscontainer centos /bin/bash
 docker run -v ~/myApp/src:/app -it ubuntu /bin/bash
 ```
 
+
 ---
-#Docker Compose
+###Docker Compose
 
 > Compose is a tool for defining and running multi-container Docker applications
 
@@ -373,7 +380,10 @@ services:
 volumes:
   mongodbdata:
 ```
+
+
 --
+```
 version: "3"
 services:
    db:
@@ -397,6 +407,9 @@ services:
       - secrets.env
 volumes:
     db_data:
+```
+
+
 --
 ## Get started
 
