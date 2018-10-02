@@ -62,7 +62,8 @@ All vet hur man hanterar dem, hor man förvarar dem osv
   * Now using a own library, *libcontainer*/*opencontainer/runc*
     * Implementation of the Open Container Format Specification (OCF)
     * [https://www.opencontainers.org/](https://www.opencontainers.org/)
-* 2016, CoreOS launches [Rocket 1.0](https://coreos.com/rkt/)
+* 2016, CoreOS launches rkt / [Rocket 1.0](https://coreos.com/rkt/)
+  * A lightweight Linux operating system designed for clustered deployments
 * Orchestrating containers at scale
   * [Kubernetes](https://kubernetes.io/) launched in 2014, Google 
     * Open-source container cluster manager,
@@ -142,7 +143,8 @@ https://docs.docker.com/engine/docker-overview/#docker-engine
 * Docker store - Buy and sell application or services
 
 https://hub.docker.com/explore/
-  
+<!-- {_style="text-align: right; font-size:60%"} -->
+
 ![docker registry](./images/docker-registry.png)
 <!-- {_style="width:50%"} -->
 
@@ -164,6 +166,7 @@ Source: https://blog.octo.com/en/docker-registry-first-steps/
 * Layers - Changes are done in layers, not the whole image
   * Uses a union filesystem (overlay, auFS)
   * A change to an original image is put in a new layer, not recreate the whole image
+    * https://medium.com/@jessgreb01/digging-into-docker-layers-c22f948ed612
 * Single process - Best practice
   * Application-centric
   * Application server, load balancer, reversed proxy, database server...
