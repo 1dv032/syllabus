@@ -86,7 +86,6 @@ DevOps | Microservices | Containers | Cloud
 <!-- {_class="center"} -->
 ![docker](images/docker.png)
 
- 
 
 --
 ### What is Docker?
