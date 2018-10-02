@@ -352,6 +352,8 @@ docker run -d -v logs:/var/logs/nginx nginx
 ## use the same volume (maybe for reading)
 docker run -t -i -v logs centos /bin/bash
 
+## Delete most of the things...
+docker system prune -a
 ```
 
 
@@ -387,6 +389,7 @@ services:
 volumes:
   mongodbdata:
 ```
+
 
 --
 ## Get started
