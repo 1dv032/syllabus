@@ -2,8 +2,8 @@
 ## Today's lecture
 
 * Containers
-    * History
-    * From a software architecture perspective
+    * Some history
+    * From a software perspective
 * Docker
   * What is Docker
   * Characteristics & basic concepts
@@ -46,11 +46,11 @@ All vet hur man hanterar dem, hor man förvarar dem osv
 
 * UNIX - "jail" - modified runtime preventing application accessing protected resources
   * jails, an early implementation of container technology, was added to FreeBSD, 2000
-* 2004, Solaris containers/*zones*
-* 2006-2008, Linux kernel got support for generic process containers, which were later renamed control groups, or *cgroups*
-* 2008 *Linux namespaces*, processes with own users and root account
+* 2004, Solaris containers/**zones**
+* 2006-2008, Linux kernel got support for generic process containers, which were later renamed control groups, or **cgroups**
+* 2008 **Linux namespaces**, processes with own users and root account
 * [The Linux Containers project](https://linuxcontainers.org/), created by engineers from IBM around 2008
-  * Projects like *LXC* provided an improved user experience around containers
+  * Projects like **LXC** provided an improved user experience around containers
   * Most complete implementation of Linux container manager.
   * Combine namespace and cgroups
 
@@ -77,9 +77,7 @@ Development process | Application Architecture | Deployment & Packaging | Infras
 Waterfall | Monolithic | Physical | Datacenter
 Agile | N-tier | Virtual machines | Hosted datacenter
 DevOps | Microservices | Containers | Cloud
-
-https://coursepress.lnu.se/kurs/systemadministrationii/part-2-application-operations/study-material/
-<!-- {_style="font-size:60%"} -->
+<!-- {_style="font-size:75%"} -->
 
 
 ---
@@ -103,32 +101,31 @@ https://coursepress.lnu.se/kurs/systemadministrationii/part-2-application-operat
 
 
 --
-### Docker overview
+### Docker Engine
 
-![docker overview](images/docker_overview.svg)
+* Docker Engine
+  * A client-server application
+    * Server, docker deamon (dockerd), creates and manage Docker objects (images, containers, networks and volumes)
+    * REST API, HTTP interface for programs to talk to the deamon
+    * A CLI client
+      * Could be other tools...communicating with the API
+
+
+![docker](images/docker_engine.png)
 <!-- {_class="center"} -->
 
-
---
-### Docker demon
-
-* The docker engine
-  * Client docker CLI
-  * REST API
-  * Docker daemon server (dockerd)
-* The docker daemon
-  * The daemon creates and manage Docker objects (images, containers, networks and volumes)
-
 https://docs.docker.com/engine/docker-overview/#docker-engine
+<!-- {_style="text-align: right; font-size:60%"} -->
+
 
 
 --
-### Docker core objects
+### Docker objects
 * Images
   * read-only templates with instructions for creating a container
-    * Often an image is based on another image
-    * Get it from Docker Hub or your own registry
+    * Often an image is based on another image with extra "instructions"
     * Defined in a *Dockerfile*
+    * Push to and pull from a *registry*
 * Containers
   * A runnable instance of an image
   * Relatively well isolated from other containers and its host machines
@@ -154,6 +151,14 @@ Source: https://blog.octo.com/en/docker-registry-first-steps/
 
 
 --
+### Docker architecture
+
+![docker overview](images/docker_overview.svg)
+<!-- {_class="center"} -->
+
+
+
+--
 ### Docker characteristics
 
 * Layers - Changes are done in layers, not the whole image
@@ -162,12 +167,12 @@ Source: https://blog.octo.com/en/docker-registry-first-steps/
 * Single process - Best practice
   * Application-centric
   * Application server, load balancer, reversed proxy, database server...
-* Stateless, read-only, "Immutable"
-  * Using the image guarantee same containers in all environments
 * Portable
   * The application is separated from low level configurations.
   * Easy to move and run on other Docker engines  
     * Think of containers on a ship...
+* Stateless, read-only, "Immutable"
+  * Using the image guarantee same containers in all environments
 
 
 --
@@ -338,13 +343,12 @@ docker volume rm $(docker volume ls -qf dangling=true)
 --
 ```bash
 ## Creates a volume with the name "logs"
-docker volume create logs
+docker volume create --name logs
 ## start a container and mounts the volume
-docker run -t -i -v logs:/app-logs ubuntu /bin/bash
-## share the same volume
-docker run -t -i --volumes-from logscontainer centos /bin/bash
-# create both volume and container
-docker run -v ~/myApp/src:/app -it ubuntu /bin/bash
+docker run -d -v logs:/var/logs/nginx nginx
+## use the same volume (maybe for reading)
+docker run -t -i -v logs centos /bin/bash
+
 ```
 
 
@@ -381,44 +385,7 @@ volumes:
   mongodbdata:
 ```
 
-
---
-```
-version: "3"
-services:
-   db:
-     image: mysql:5.7
-     volumes:
-       - db_data:/var/lib/mysql
-     restart: always
-     environment:
-       MYSQL_ROOT_PASSWORD: compose78!#jd
-       MYSQL_DATABASE: wordpress
-       MYSQL_USER: wordpress
-       MYSQL_PASSWORD: compose876Rtgy7!%
-   wordpress:
-     depends_on:
-       - db
-     image: wordpress:latest
-     ports:
-       - "8000:80"
-     restart: always
-     env_file:
-      - secrets.env
-volumes:
-    db_data:
-```
-
-
 --
 ## Get started
 
 https://docs.docker.com/get-started/
-
-
----
-# Tack för idag
-
-![good bye](./images/bye.gif)
-
-<!-- {_class="center"} -->
