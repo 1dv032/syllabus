@@ -29,7 +29,7 @@ You are the first employee in the newly created development team, your colleague
   You should analyze the application and see what part will go into the different containers. The solution should be a couple of containers defined in docker files and put together in a docker-compose-file. This version should be used to continue development of Redmine source-code for Sirius Cybernetics needs so you can't use the official Redmine repos for the source code. Instead you should clone or fork the official Redmine into your own repository and use that one when you build the application container.
 
   The following requirements is wanted:
-    * The application should use an Rube-alpine base image suitable for the Redmine application
+    * The application should use an Ruby-alpine base image suitable for the Redmine application
     * The latest stable version of RedMine should be used but from a clone/forked version
     * The application should use the latest available (that RedMine support) versions of Ruby and Rails
     * The application should use a dedicated database server. MySQL or Postgree DB.
