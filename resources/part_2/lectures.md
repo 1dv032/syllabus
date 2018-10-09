@@ -23,7 +23,7 @@
 
 ## Guest Lecture - Monitoring
 - [Recording](https://youtu.be/bhGXLfH11ck?t=13m46s&list=PLSWJPPj5sKmomUa_KTF5E91wwHx6BcUXP) 2016-08-30, 13.15 (Youtube)
-<iframe width="853" height="480" src="https://www.youtube.com/embed/bhGXLfH11ck?t=13m46s&list=PLSWJPPj5sKmomUa_KTF5E91wwHx6BcUXP" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bhGXLfH11ck?t=13m46s&list=PLSWJPPj5sKmomUa_KTF5E91wwHx6BcUXP" frameborder="0" allowfullscreen></iframe>
 
 ## Lecture 05 - Monitoring
 * Overview
@@ -33,6 +33,8 @@
 ### Presentations
 - [HTML-presentation](https://cdn.rawgit.com/2dv514/syllabus/master/lectures/05_monitoring/index.html#/)
 - [Recording 2017-10-04, 13.15 (Youtube)](https://youtu.be/94XMsI2OqvM?t=18m25s&list=PLSWJPPj5sKmomUa_KTF5E91wwHx6BcUXP)
+
+**OBS Detta är en inspelning från förra året och var då kopplade till en annan kurser. Det som diskuteras kring kursen i föreläsningen rör alltså inte 1DV032**
 
 <br />
 <iframe width="560" height="315" src="https://www.youtube.com/embed/94XMsI2OqvM?t=18m25s&list=PLSWJPPj5sKmomUa_KTF5E91wwHx6BcUXP" frameborder="0" allowfullscreen></iframe>
