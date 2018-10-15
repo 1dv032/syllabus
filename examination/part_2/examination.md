@@ -3,7 +3,7 @@ In this examination assignment You should set up a new development and productio
 ## Examination
 
 The examination will be divided in two parts: **First part will be an oral theoretical examination with questions related to the course material in this course.** 
-The second part is more practical examination. To assist you and the examiner, you should provide a general documentation where you can quickly get en overview of your solution but also a recorded video where you demonstrate that your solution fulfills the requirements.
+The second part is more practical examination. To assist you and the examiner, you should provide a general documentation where you can quickly get en overview of your solution **but also a recorded video where you demonstrate that your solution fulfills the requirements.**
 
 ### Documentation
 
@@ -12,6 +12,7 @@ It should, at least, contain the following parts:
 
 1. **Work Diary** - What have you done today? Which problems did you try to solve and how did you solve them. Every day that you have worked with the assignment should have an entry in the diary, it should also include how much time was spent on the specific task and also a summarize time report telling the total time spending on solving this assignment.
 2. **How to test your solution** - The assignment is divided into two different part and you need to document how we can try these different parts. The examiner should be able to test each solution with minimal effort, preferable just one command.
+3. As said above - A video should be recorded demonstrating your solution
 
 ## Sirius Cybernetics Corporation - Mission Statement
 
@@ -37,7 +38,7 @@ You are the first employee in the newly created development team, your colleague
     * The Dockerfile and docker-compose file should have comments to describe how it works
     * You should provide documentation for the user of your docker solution. Which commandos to use and so on...
     * After you run `docker-compose up` you should be able to continue development of the Redmine application and see changes without restarting the containers
-    * more to come...
+    * Validate your solution by make some small code changes (change HTML-content in a template - in the app/view is enough)
 3. **Production version** -
   In this last step you should try to take the dockerized RedMine Application to production. The application should have the same requirements as the Development version but should also include the following requirements:
     * The production infrastructure are utilizing an Kubernetes environment (will be provided for you)
@@ -46,7 +47,6 @@ You are the first employee in the newly created development team, your colleague
     * The whole application should have a Nginx reversed proxy in-front that forces the users to run through HTTPS. If the user visits the site through **port 80** a redirect to port 443 should be done. 
     * The application should run in production mode meaning that the rails environment should be production, including setting the required for running a rails application in production. For more information about this you can red this resource [Rails in production](https://github.com/1dv032/syllabus/blob/master/resources/part_2/rubyonrails_production.md)
     * You should create all the necessary Kubernetes configurations files needed to deploy the application to production
-    * Documentation as step 1 above
 
   Following point is not mandatory but *could* affect the grades on this examination if implemented (some or all):
     * Don´t use the rails frameworks built in web server - Use a app server like passenger, unicorn, puma…
