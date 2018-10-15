@@ -1,68 +1,11 @@
 <!-- Start -->
 ## Today's lecture
-* Docker demo
-* Docker Compose
-* Docker Compose demo
 * Container Orchestration
+* Kubernetes
+* Kubernetes demo
 
 Note:
 These are the topics for todays lecture.
-
-
----
-## Docker - Example
-[Excercise docker nodejs dev](https://github.com/1dv032/exercise-docker-compose-ror-dev)
-> Write a Dockerfile that will build a development template for a node.js developer
-
-* The Dockerfile should use the node:latest as a base image.
-* The Dockerfile should take this repos node project-template and copy the files into the container at creation.
-* The container should expose port 8080 as the port for the node.js web application.
-
-
----
-# Docker Compose
-* defining and running multi-container
-* connecting all services your application needs in one file
-* multi-environments: production, staging, development, testing
-* steps to create
-  1. `Dockerfil` - app environment definition
-  2. `docker-compose.yml` - definition of all services needed
-  3. run `docker-compose up`
-
-
---
-## Docker Compose
-### Features
-* Multiple isolated environments on a single host
-* Preserve volume data
-* Only recreate containers that have changed
-* Variables
-
-Note:
-Compose uses a project name to isolate environments from each other. <br />
-  **on a dev host**, to create multiple copies of a single environment (e.g., you want to run a stable copy for each feature branch of a project)<br />
-  **on a CI server**, to keep builds from interfering with each other, you can set the project name to a unique build number<br />
-  **on a shared host or dev host**, to prevent different projects, which may use the same service names, from interfering with each other<br />
-<br />
-Compose supports **variables** in the Compose file. You can use these variables to **customize your composition for different environments**, or different users  
-
-
---
-## Docker Compose
-### When should you use it?
-* Development environments
-* Automated testing environments
-* Single host deployments
-
-
---
-## Docker Compose - Example
-[Excercise docker compse ror dev](https://github.com/1dv032/exercise-docker-compose-ror-dev)
-
-* Create a docker-compose.yml file that defines the following containers:
-  - Database
-  - Redis
-  - The application
 
 
 ---
@@ -78,8 +21,7 @@ Orchestration includes a number of features:
 
 
 --
-## Container Orchestration
-Kubernetes
+## Kubernetes
 * created by Google 
 * one of the most feature-rich and widely used orchestration frameworks
 * key features include:
@@ -92,78 +34,104 @@ Kubernetes
 
 
 --
-## Container Orchestration
-Kubernetes core components:
-
+## Kubernetes - Core components
 * Cluster 
   - one or more bare-metal servers or virtual machines (referred to as nodes)
   - providing the resources used by Kubernetes to run one or more applications
+* Master
+  - responsible for maintaining the desired state for your cluster
+  - kubectl
 * Node
   - a worker machine, previously known as a minion
   - has the services necessary to run pods
-  - managed by the Master-Nodes
-* Pods 
+  - managed by the Master-Nodes, you’ll rarely interact with nodes directly
+
+
+--
+## Kubernetes - Basic Objects
+* [Pods](https://kubernetes.io/docs/concepts/workloads/pods/pod-overview/)
   - groups of containers and volumes co-located on the same host
   - containers in the same Pod share the same network namespace - `localhost`
-  - pods are considered to be ephemeral
-
-
---
-## Container Orchestration
-Kubernetes core components:
-* Labels 
-  - tags assigned to entities such as containers
-  - allow them to be managed as a group
-  - e.g.
-    - `"release" : "stable", "release" : "canary"`
-    - `"environment" : "dev", "environment" : "qa", "environment" : "production"`
-* Replication Controller
-  - ensures that a specified number of pod replicas are running at any one time
-* Services
+  - pods are considered to be ephemeral and are not resurrected
+* [Services](https://kubernetes.io/docs/concepts/services-networking/service/)
   - act as basic load balancers and ambassadors for pods
-  - exposing them to the outside world
-  - pods targeted by a Service is (usually) determined by a Label Selector 
+  - exposing them to other pods and the outside world
+  - pods targeted by a Service is (usually) determined by a Label Selector
 
 
 --
-## Container Orchestration
-Docker Swarm
-* key features include:
-  - Cluster management integrated with Docker Engine
-  - Decentralized design
-  - Declarative service model
-  - Scaling
-  - Desired state reconciliation
-  - Multi-host networking
-  - Service discovery
-  - Load balancing
-  - Secure by default
-  - Rolling updatess
+## Kubernetes - Basic Objects
+* [Volumes](https://kubernetes.io/docs/concepts/storage/volumes/)
+  - a volume outlives any Containers that run within the Pod
+  - data is preserved across Container restarts
+  - when a Pod ceases to exist, the volume will cease to exist too
+  - Kubernetes supports many types of volumes
+    - awsElasticBlockStore, azureDisk, azureFile, cephfs, configMap, csi, downwardAPI, emptyDir, fc (fibre channel), flocker, gcePersistentDisk, gitRepo (deprecated), glusterfs, hostPath, iscsi, local, nfs, persistentVolumeClaim, projected, portworxVolume, quobyte, rbd, scaleIO, secret, storageos, vsphereVolume <!-- {_style="font-size:60%"} -->
+* [Namespace](https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/)
+  - virtual clusters backed by the same physical cluster
+  - a way to divide cluster resources between multiple users
+  - names of resources must to be unique within a namespace, but not across namespaces
+  - a corresponding DNS entry
+    - `<service-name>.<namespace-name>.svc.cluster.local`
+
+
+--
+## Kubernetes - Controllers
+Controllers build upon the basic objects.
+* [ReplicaSet](https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/)
+  - next-generation Replication Controller
+  - ensures that a specified number of pod replicas are running at any given time
+  - recommended to use Deployments instead
+* [Deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)
+  - a higher-level concept that manages ReplicaSets and Pods
+  - describes a desired state
+  - can handle rolling update, rollback and scaling
+
+
+--
+## Kubernetes - Controllers
+* [StatefulSet](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/)
+  - for applications that require one or more of the following:
+    - stable, unique network identifiers
+    - stable, persistent storage
+    - ordered, graceful deployment and scaling
+    - ordered, automated rolling updates
+  - single-node identity is preserved between upgrades, scaling up and down, or recovery
+* [DaemonSet](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/)
+  - ensures that all (or some) Nodes run a copy of a Pod
+  - intended for helper utilities:  monitoring, log management
+* [Job](https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/)
+  - run-once or scheduled pods
+  - run until “completion”
 
 Note:
-**Cluster management integrated with Docker Engine**: Use the Docker Engine CLI to create a swarm of Docker Engines where you can deploy application services. You don’t need additional orchestration software to create or manage a swarm.<br/>
-**Decentralized design**: Instead of handling differentiation between node roles at deployment time, the Docker Engine handles any specialization at runtime. You can deploy both kinds of nodes, managers and workers, using the Docker Engine. This means you can build an entire swarm from a single disk image.<br/>
-**Declarative service model**: Docker Engine uses a declarative approach to let you define the desired state of the various services in your application stack. For example, you might describe an application comprised of a web front end service with message queueing services and a database backend.<br/>
-**Scaling**: For each service, you can declare the number of tasks you want to run. When you scale up or down, the swarm manager automatically adapts by adding or removing tasks to maintain the desired state.<br/>
-**Desired state reconciliation**: The swarm manager node constantly monitors the cluster state and reconciles any differences between the actual state and your expressed desired state. For example, if you set up a service to run 10 replicas of a container, and a worker machine hosting two of those replicas crashes, the manager will create two new replicas to replace the replicas that crashed. The swarm manager assigns the new replicas to workers that are running and available.<br/>
-**Multi-host networking**: You can specify an overlay network for your services. The swarm manager automatically assigns addresses to the containers on the overlay network when it initializes or updates the application.<br/>
-**Service discovery**: Swarm manager nodes assign each service in the swarm a unique DNS name and load balances running containers. You can query every container running in the swarm through a DNS server embedded in the swarm.<br/>
-**Load balancing**: You can expose the ports for services to an external load balancer. Internally, the swarm lets you specify how to distribute service containers between nodes.<br/>
-**Secure by default**: Each node in the swarm enforces TLS mutual authentication and encryption to secure communications between itself and all other nodes. You have the option to use self-signed root certificates or certificates from a custom root CA.<br/>
-**Rolling updates**: At rollout time you can apply service updates to nodes incrementally. The swarm manager lets you control the delay between service deployment to different sets of nodes. If anything goes wrong, you can roll-back a task to a previous version of the service.<br/>
+stable = persistence across Pod (re)scheduling
 
 
 --
-## Container Orchestration
-Swarm mode key concepts:
-* Swarm
-  - a cluster of Docker engines, or nodes, where you deploy services
-* Node
-  - an instance of the Docker engine participating in the swarm
-  - manager nodes also perform the orchestration and cluster management
-  - worker nodes receive and execute tasks dispatched from manager nodes
-* Services and tasks
-  - definition of the tasks to execute on the manager or worker nodes
-  - specify a container image and which commands to execute inside the container
-  - replicated services model
-* Load balancing
+## Kubernetes - Communication
+* ClusterIP
+  - exposes the service on a cluster-internal IP
+  - only reachable from within the cluster
+* NodePort
+  - exposes the service on each Node’s IP at a static port
+  - external access by <NodeIP>:<NodePort>
+* LoadBalancer
+  - exposes the service externally using a cloud provider’s load balancer
+  - NodePort and ClusterIP services, to which the external load balancer will route, are automatically created.
+* Ingress
+  - can provide load balancing, SSL termination and name-based virtual hosting
+  - requires an Ingress Controller, nginx, HAProxy, Træfik
+
+
+--
+## Kubernetes - Administration
+* Kubernetes cluster
+  - [Minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/) or Cloud Provider 
+* Tools
+  - kubectl - [Install and Set Up kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
+  - definition files in YAML for Pods, Services, Namespace, Deployment...
+  - [Web UI](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/) (Dashboard)
+    - `kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep admin-user | awk '{print $1}') | grep token: | awk '{print $NF}'`
+    - `kubectl proxy`
+    - http://localhost:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/
