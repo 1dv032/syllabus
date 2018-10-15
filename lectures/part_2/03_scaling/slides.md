@@ -54,9 +54,39 @@ These are the topics for todays lecture.
 
 ---
 ## Load balancers
-* DNS Round robin
 * Layer 3 and 4 Load balancers
+  * Layer 3 - IP, Layer 4 TCP/UDP
+  * L3 load balancers track sessions by using destination and source IP 
+    * All traffic from a computer guarantees that the same replica server gets the request
+  * L4 load balancers also adds port information
+* Simple and fast
+* If a replica goes down the LB redirects to another replica
+
 * Layer 7 Load balancers
+  * Analyze the application layer
+  * Look inside HTTP packets (cookies, header...)
 
 
-https://codeburst.io/scaling-out-with-docker-and-nginx-8eda9fb1654c
+--
+## Load balancing methods
+* Round robin (RR)
+* Weighted RR
+* Least Loaded (LL)
+* Least loaded - slow start
+* Utilization limit
+* Latency
+* Cascade
+
+
+--
+## How to handle the state
+* Log in on replica 3, next request goes to replica 1
+* Sticky connections
+* Shared state
+* Hybrid
+
+
+--
+# Global Load Balancer
+
+
