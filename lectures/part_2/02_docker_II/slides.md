@@ -155,7 +155,7 @@ stable = persistence across Pod (re)scheduling
 
 
 ---
-## Good bye
+## Goodbye
 ![docker](images/cat-jump-fail.gif)
 
 <!-- {_class="center"} -->
