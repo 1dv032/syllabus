@@ -152,3 +152,10 @@ stable = persistence across Pod (re)scheduling
     * https://docs.docker.com/registry/insecure/
     * Pull secret
   * Load balancer
+
+
+---
+## Good bye
+![docker](images/cat-jump-fail.gif)
+
+<!-- {_class="center"} -->
