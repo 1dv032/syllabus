@@ -127,15 +127,16 @@ stable = persistence across Pod (re)scheduling
 --
 ## Kubernetes 
 Handling Sensitive Information and Container Configurations
+
 * Config Maps
+![secrets_config-maps](images/secrets_config-maps.png)
+<!-- {_style="float:right; margin:0 5px 0 0; width:500px"} -->
   - a set of values
-  - can be mapped to a pod as “volume” or passed as environment variables
+  - can be mapped to a pod as “volume” or <br />passed as environment variables
 * Secrets
-  - similar to config maps, 
+  - similar to config maps
   - can be mounted into a pod as a volume or as environment variables
   - intended to store credentials to other services that a container might need or to store any sensitive information
-
-![secrets_config-maps](images/secrets_config-maps.png)
 
 
 --
