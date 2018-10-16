@@ -135,3 +135,20 @@ stable = persistence across Pod (re)scheduling
     - `kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep admin-user | awk '{print $1}') | grep token: | awk '{print $NF}'`
     - `kubectl proxy`
     - http://localhost:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/
+
+
+---
+## Kubernetes - Demo
+* Set up communication with the kubernetes cluster
+  * Describe our environment
+* Create a web server with external access
+  * Nginx pod
+  * Service - NodePort
+* App with multiple services
+  * Database
+    * Persistent storage
+  * App with own image
+    * Push image to own registry
+    * https://docs.docker.com/registry/insecure/
+    * Pull secret
+  * Load balancer
