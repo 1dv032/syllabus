@@ -16,7 +16,7 @@ Orchestration includes a number of features:
 * Rescheduling failed containers
 * Linking containers together through agreed interfaces
 * Exposing services to machines outside of the cluster
-* Scaling out or down the cluster by adding or removing containers
+* Scaling by adding or removing containers
 * Load balancing
 
 
@@ -115,7 +115,8 @@ stable = persistence across Pod (re)scheduling
   - only reachable from within the cluster
 * NodePort
   - exposes the service on each Node’s IP at a static port
-  - external access by <NodeIP>:<NodePort>
+  - external access by NodeIP:NodePort
+  - only ports between 30000-32767
 * LoadBalancer
   - exposes the service externally using a cloud provider’s load balancer
   - NodePort and ClusterIP services, to which the external load balancer will route, are automatically created.
