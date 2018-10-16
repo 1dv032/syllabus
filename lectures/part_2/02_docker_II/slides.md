@@ -125,6 +125,20 @@ stable = persistence across Pod (re)scheduling
 
 
 --
+## Kubernetes 
+Handling Sensitive Information and Container Configurations
+* Config Maps
+  - a set of values
+  - can be mapped to a pod as “volume” or passed as environment variables
+* Secrets
+  - similar to config maps, 
+  - can be mounted into a pod as a volume or as environment variables
+  - intended to store credentials to other services that a container might need or to store any sensitive information
+
+![secrets_config-maps](images/secrets_config-maps.png)
+
+
+--
 ## Kubernetes - Administration
 * Kubernetes cluster
   - [Minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/) or Cloud Provider 
@@ -150,7 +164,7 @@ stable = persistence across Pod (re)scheduling
   * App with own image
     * Push image to own registry
     * https://docs.docker.com/registry/insecure/
-    * Pull secret
+    * [Pull secret](https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/)
   * Load balancer
 
 
