@@ -87,6 +87,13 @@ These are the topics for todays lecture.
 
 
 --
-# Global Load Balancer
+# Global Load Balancer (GBL)
 
+* A DNS that redirects traffic to nearest data center
+* Examines the IP by geolocation of the source IP
+  * Nearest
+  * Nearest with limits
+    * Is the nearest full? go to nest (slow start)
+* Nearest by other metrics
+  * latency or cost for instance
 
