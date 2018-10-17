@@ -20,14 +20,12 @@
 <br />
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ZjN0ZNNLHSA?t=10m00s&list=PLSWJPPj5sKmomUa_KTF5E91wwHx6BcUXP" frameborder="0" allowfullscreen></iframe>
 
-## Lecture 05 - Docker II
+## Lecture 05 - Docker Compose
 * Docker demo
 * Docker Compose
 * Container Orchestration
 
 ### Resources
-- [HTML-presentation](https://cdn.rawgit.com/1dv032/syllabus/master/lectures/part_2/02_docker_II/index.html#/)
-
 - [Recording 2017, 13.15 (Youtube)](https://youtu.be/ZjN0ZNNLHSA?t=10m00s&list=PLSWJPPj5sKmomUa_KTF5E91wwHx6BcUXP)
 <br>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/maRMtVeEO0k" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -50,6 +48,17 @@
 
 <br />
 <iframe width="560" height="315" src="https://www.youtube.com/embed/94XMsI2OqvM?t=18m25s&list=PLSWJPPj5sKmomUa_KTF5E91wwHx6BcUXP" frameborder="0" allowfullscreen></iframe>
+
+## Lecture - Kubernetes
+* Container Orchestration
+* Kubernetes
+* Kubernetes demo
+
+### Presentations
+- [HTML-presentation](https://cdn.rawgit.com/1dv032/syllabus/master/lectures/part_2/02_docker_II/index.html#/)
+- [Recording 2018, 13.15 (Youtube)](https://youtu.be/djN0C46GVxA?t=217)
+<br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/djN0C46GVxA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 
 
