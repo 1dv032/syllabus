@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    links:
+      - mongodb
+    ports:
+      - "5000:5000"
+    env_file:
+      - ./.env
+  mongodb:
+    image: mongo:3.4
+    expose:
+      - "27017"
+    volumes:
+      - mongodbdata:/data/db
+volumes:
+  mongodbdata:

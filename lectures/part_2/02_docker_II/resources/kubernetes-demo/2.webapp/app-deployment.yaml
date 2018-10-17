@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    name: web
+  name: web-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      name: web
+  template:
+    metadata:
+      labels:
+        name: web
+    spec:
+      containers:
+      - image: cscloud314.lnu.se:5000/pure-number
+        name: web
+        ports:
+        - containerPort: 5000
+        env:
+        - name: PORT
+          value: "5000"
+        - name: DB_HOST
+          value: "mongo:27017"
+      imagePullSecrets:
+      - name: regcred

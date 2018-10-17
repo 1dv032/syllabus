@@ -1,0 +1,14 @@
+<div class="col-sm-6 col-sm-offset-3">
+
+    <h1><span class="fa fa-edit"></span> Create Pure Number</h1>
+
+    <form action="/create" method="post">
+        {{>validationSummary}}
+        <div class="form-group">
+            <label>Value</label>
+            <input class="form-control" name="value" value="{{value}}" />
+        </div>
+
+        <button type="submit" class="btn btn-warning btn-lg">Save</button>
+    </form>
+</div>
