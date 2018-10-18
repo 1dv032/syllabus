@@ -21,7 +21,7 @@ Chapter 4-5
   * optimizing server for a specific service (like web, db)
     * buffer thrashing - different algorithms for disk I/O performance
 * Scale by adding more memory, more disk, more CPU (to some point)
-  * Horizontal scaling
+  * Vertical scaling
 
 ![single](images/single-machine.png)
 <!-- {_style="width:12%"} -->
@@ -35,7 +35,7 @@ Chapter 4-5
   * Web server layer (application layer)
   * Data service layer  
 * Scale by adding more instances
-  * Vertical scaling
+  * Horizontal scaling
 
 ![single](images/n-tier.png)
 <!-- {_style="width:18%"} -->
@@ -138,17 +138,6 @@ https://www.digitalocean.com/community/tutorials/what-is-high-availability
 * Hybrid
   * Use sticky connection for fastest and shared states to avoid errors
 
-
---
-### Global Load Balancer (GBL)
-
-* A DNS that redirects traffic to nearest data center
-* Examines the IP by geolocation of the source IP
-  * Nearest
-  * Nearest with limits
-    * Is the nearest full? go to nest (slow start)
-* Nearest by other metrics
-  * latency or cost for instance
 
 
 ---
