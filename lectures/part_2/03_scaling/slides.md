@@ -2,15 +2,12 @@
 ### Today's lecture
 * Applications architecture
   * Web-based viewpoint
-    * Dynamic data
 * Scaling patterns
   * load balancers
   * cache
 
 Book - The practice of cloud system administrations<br>
 Chapter 4-5
-Note:
-These are the topics for todays lecture.
 
 
 ---
@@ -18,16 +15,17 @@ These are the topics for todays lecture.
 
 * Web app, database, static/dynamic content on same server
   * Monolithic code base
-* Good fit for smaller applications
+* Good for smaller applications
 * Problems with
   * many simultaneous user, maintenance
-  * optimizing for a specific service (like web, db)
-    * buffer thrashing
+  * optimizing server for a specific service (like web, db)
+    * buffer thrashing - different algorithms for disk I/O performance
 * Scale by adding more memory, more disk, more CPU (to some point)
   * Horizontal scaling
 
 ![single](images/single-machine.png)
-<!-- {_class="center"} -->
+<!-- {_style="width:12%"} -->
+
 
 --
 ### Three-tier Web Service
@@ -40,7 +38,7 @@ These are the topics for todays lecture.
   * Vertical scaling
 
 ![single](images/n-tier.png)
-<!-- {_class="center"} -->
+<!-- {_style="width:18%"} -->
 
 
 --
@@ -56,7 +54,7 @@ These are the topics for todays lecture.
 * Application servers and data layer servers optimizes
 
 ![single](images/4-tier.png)
-<!-- {_class="center"} -->
+<!-- {_style="width:16%"} -->
 
 
 
@@ -79,17 +77,6 @@ https://geekflare.com/open-source-load-balancer/
 
 
 --
-### High-availability (HA)
-* Single point of failure?
-
-![single](images/ha-diagram-animated.gif)
-<!-- {_class="center"} -->
-
-###### image taken from: https://www.digitalocean.com/community/tutorials/what-is-high-availability
-
-
-
---
 ### Load balancers
 * Layer 3 and 4 Load balancers
   * Layer 3 - IP, Layer 4 TCP/UDP
@@ -109,14 +96,11 @@ https://geekflare.com/open-source-load-balancer/
   * Rotated in a loop
 * Weighted RR
   * Like RR but some backend servers could get more requests
-* Least Loaded (LL)
-  * Load balancer get information from backend and choose the one with least loaded
+* Least Loaded (LL) / Least Connection (LC)
+  * Load balancer get information from backend and choose the one that is best suited
 * Least loaded - slow start
   * What happens when a new backend appears?
-    * Start at low rate
-* Utilization limit
-  * Each backend gives load balancer information about how many more QPS it can handle
-    * Load balancer makes load test
+    * Start at low rate 
 * Latency
   * load balancer investigate the response time for each backend server
 * Cascade
@@ -125,13 +109,27 @@ https://geekflare.com/open-source-load-balancer/
 
 
 --
-## Small demo
+### Small demo
 
-[image here]
+![demo](images/demo.png)
+<!-- {_style="width:60%"} -->
+
+
+
+--
+### High-availability (HA)
+* Single point of failure (SPOF)?
+
+![single](images/ha-diagram-animated.gif)
+<!-- {_style="width:70%"} -->
+
+https://www.digitalocean.com/community/tutorials/what-is-high-availability
+<!-- {_style="font-size:40%"} -->
+
 
 --
 ### How to handle the state?
-* Log in on backend server n:o 3, next request goes to server n:o 1
+* Log in on replica 3, next request goes to replica 1
 * Sticky connections
   * Could analyze HTTP traffic, send next request to same server
   * What if that backend server dies?
@@ -151,6 +149,7 @@ https://geekflare.com/open-source-load-balancer/
     * Is the nearest full? go to nest (slow start)
 * Nearest by other metrics
   * latency or cost for instance
+
 
 ---
 ### Scaling
@@ -185,24 +184,28 @@ https://geekflare.com/open-source-load-balancer/
     * Will throughput be better? CPU locks
 * Scaling out/in
   * Scaling horizontal
-  * Adding more replicas
+  * Adding/removing replicas
 
 
 --
 ### Scaling cube (AKF)
 ![single](images/scale_cube.png)
-<!-- {_class="center"} -->
+<!-- {_style="width:60%"} -->
 
+
+--
+### Scaling cube (AKF)
+![single](images/scale_cube.png)
+<!-- {_style="width:10%"} -->
 * x-axis is horizontal duplication
   * clone replicas, scaling out
-  * Could be problem when handling transaction data
+    * Could be problem when handling transaction data
 * y-axis
   * Functional or service split
-  * Allocated additional resources to individual resources
-  * Going from monolith to n-tier to microservice
-  * Split requests, Quality of Service (QoS)
+    * Going from monolith to n-tier to microservice
+    * Split requests, Quality of Service (QoS)
 * z-axis - Lookup-oriented split
-  * For instance splitting databases by year
+  * Splitting databases by year
     * Some year are more popular to read (use x-axis technique)
     * Many dbs could be read-only
   * Segment data by geolocation
@@ -221,7 +224,9 @@ https://geekflare.com/open-source-load-balancer/
     * HTTP caching, CDN, Web Proxies
   * Browser caching
 
-[image here]
+![single](images/cache.png)
+<!-- {_style="width:25%"} -->
+
 
 --
 ### Terms
@@ -241,7 +246,7 @@ https://geekflare.com/open-source-load-balancer/
 
 
 --
-### Some calculations
+### Cache effectiveness
 
 * H = Time when making a cache hit (1s)
 * M = Time when making a cache miss (3.1s)
@@ -255,6 +260,7 @@ H x R + M x ( 1 - R ) < L
 
 2.1 < 3
 ```
+
 
 --
 ### Cache replacement
@@ -287,5 +293,6 @@ H x R + M x ( 1 - R ) < L
 
 ---
 ### Some small demo
-[image here]
+![demo](images/demo.png)
+<!-- {_style="width:60%"} -->
 
