@@ -57,9 +57,21 @@
 ### Presentations
 - [HTML-presentation](https://cdn.rawgit.com/1dv032/syllabus/master/lectures/part_2/02_docker_II/index.html#/)
 - [Demon](https://github.com/1dv032/syllabus/tree/master/lectures/part_2/02_docker_II/resources)
-- [Recording 2018, 13.15 (Youtube)](https://youtu.be/djN0C46GVxAt=4m58s&list=PLSWJPPj5sKmomUa_KTF5E91wwHx6BcUXP)
+- [Recording 2018, 13.15 (Youtube)](https://youtu.be/djN0C46GVxA?t=4m58s&list=PLSWJPPj5sKmomUa_KTF5E91wwHx6BcUXP)
 <br>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/djN0C46GVxA?t=4m58s&list=PLSWJPPj5sKmomUa_KTF5E91wwHx6BcUXP" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 
+## Lecture - Patterns for scaling
+* Applications architecture
+    * Web-based viewpoint
+* Scaling patterns
+    * load balancers
+    * cache
+
+### Presentations
+- [HTML-presentation](https://cdn.rawgit.com/1dv032/syllabus/master/lectures/part_2/03_scaling/index.html#/)
+- [Recording 2018, 13.15 (Youtube)](https://youtu.be/WhS4mJRLBWg?t=10m4s&list=PLSWJPPj5sKmomUa_KTF5E91wwHx6BcUXP)
+<br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WhS4mJRLBWg?t=10m4s&list=PLSWJPPj5sKmomUa_KTF5E91wwHx6BcUXP" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 

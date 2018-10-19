@@ -17,3 +17,7 @@ You will find this exercise and its instruction (the readme-file) in an own repo
 https://github.com/1dv032/solution-exercise-docker-nodejs-prod
 
 ## 4. Kubernetes
+You will find this exercise and its instruction (the readme-file) in an own repo: https://github.com/1dv032/exercise-kubernetes-nodejs-prod
+
+### Solution proposal
+https://github.com/1dv032/solution-exercise-kubernetes-nodejs-prod
