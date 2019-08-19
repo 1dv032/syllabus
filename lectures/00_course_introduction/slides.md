@@ -2,9 +2,9 @@
 ## Course management
 | | | |
 |-|-|-|
-| <!-- {_class="table-cell"} -->  ![Jacob](https://www.gravatar.com/avatar/b47109ad8c128221c9dd060d15c89cc9.jpg?s=80) <!-- {_class="grayscale"} --> | <!-- {_class="table-cell"} --> Jacob Lindehoff (Course manager) |
-| <!-- {_class="table-cell"} --> ![John](https://www.gravatar.com/avatar/2261038623688f4d83dc10c53b85efb8.jpg?s=80)<!-- {_class="grayscale"} --> | <!-- {_class="table-cell"} --> John Häggerud (Course instructor) |
-
+| <!-- {_class="table-cell"} --> ![John](https://www.gravatar.com/avatar/2261038623688f4d83dc10c53b85efb8.jpg?s=80)<!-- {_class="grayscale"} --> | <!-- {_class="table-cell"} --> John Häggerud (Course manager) |
+| <!-- {_class="table-cell"} -->  | <!-- {_class="table-cell"} --> Madelene Amberman (Tutoring) |
+| <!-- {_class="table-cell"} --> | <!-- {_class="grayscale"} --> | <!-- {_class="table-cell"} --> Andreas Johansson (Tutoring)|
 
 <!-- {_class="table lnu-course-management"} -->
 Note:
@@ -25,18 +25,20 @@ Note:
   * "Systemadministration I (1DV031)" or equivalent
 
 
-http://kursplan.lnu.se/kursplaner/kursplan-1DV032-1.pdf
+http://kursplan.lnu.se/kursplaner/kursplan-1DV032-2.pdf
 
 
 --
 <!-- Goals -->
 ## After the course you should understand:
 <!-- {_style="font-size: 140%"} -->
-* different virtualization technologies
-* different service models
-* appropriate operation of applications
-* install and manage server operating systems and applications
-* monitoring in a production environment
+* etiska aspekter och hållbarhetsperspektiv med avseende på molnbaserade datorsystem 
+* förklara värdet, historia och byggstenar rörande begreppet DevOps 
+* redogöra för olika virtualiseringstekniker 
+* förklara olika tjänstemodeller för molnbaserade datorsystem 
+* redogöra för olika monitorerings­- och skalningstekniker i en driftsmiljö 
+* driftsätta webbapplikationer i en molnmiljö
+
 
 <!-- {_class="lnu-margin-right-30"} -->
 Note:
@@ -46,63 +48,19 @@ Taken from the course Syllabus <br />
 
 --
 ## Approach
-* The course is divided into two parts
-  * Part 1: Virtualization and Service Models
-  * Part 2: Application operations
-* Scheduled activities
-  * 5-6 Lectures
-  * 1 Seminars (part 1)
-  * 2x1h/week tutoring (part 2)
-  * 3 examination assignments
-    * 1 seminar
-    * 1 written examination (part 1)
-    * 1 oral hearings (part 2)
+* Lectures
+* 2x1h/week tutoring (part 2)
+* Examination
+  * Provmoment 1: Examinationsuppgift 1 (1,5 hp). Mål 1 och 2 examineras genom en seminarieuppgift. 
+  * Provmoment 2: Examinationsuppgift 2 (1,5 hp). Mål 3­-5 examineras genom inlämningsrapport.
+  * Provmoment 3: Examinationsuppgift 3 (4,5 hp). Mål 2-­6 examineras genom individuell praktisk uppgift samt muntlig examination
+
 
 <!-- {_style="font-size: 90%"} -->
-Note:
-Divided the goals into 2 parts<br />
-First part are more theoretical <br />
-Last part very practical & hands on
 
 
 --
-<!-- Part 1 -->
-## Part 1 - Recap and Service Models
-
-Course week 1 - 4
-
-Goals:
-* different virtualization technologies
-* different service models
-* appropriate operation of applications
-
-<!-- {_style="margin-right: 25%"} -->
-Todo:
-* 3 lecture - Recap of 1DV031, Virtualization, Service Models
-* 1 seminar (oral examination) Deadline 20-21/9
-* 1 examination assignment (written examination) Deadline 26/9 and 30/9 (Peer-review)
-
-<!-- {_style="font-size: 75%"} -->
-Note:
-
-
---
-## Part 2 - Application operations
-
-Course week 4 - 9
-
-Goals:
-* install and manage server operating systems and applications
-* monitoring in a production environment
-
-<!-- {_class="lnu-margin-right-30"} -->
-Todo:
-* 3 lectures - Docker, Application Platforms
-* 4-5 exercises
-* 1 examination assignment Deadline 01/11
-* 1 oral hearing Deadline 01/11
-* 2 x 1h tutoring/week
-
+## About 
 
 ---
 <!-- Literature -->
