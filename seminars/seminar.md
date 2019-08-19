@@ -24,7 +24,7 @@ The seminar examination is three-parted where the first part, the preparation, i
 3. Find an article or some kind of case that you think is suitable to this seminar and that could be of interest for your class mates. Be prepared to explain your chosen article/case in the seminar.
 
 
-### Examination
+## Examination
 The seminar includes three parts and will be examined with Passed (P) and Fail(F). 
 
 1. The first part is the preparation. You will write down your preparations you have done on each questions (with references to articles you used). This must be pushed to your course repository **deadline at noon (12:00) the day before the seminar. It must be in md- or pdf-format.** Keep it short but show us that you done your work. See it as your own main points to support you through the seminar. This is the most important part and you must be prepared to put some time and effort in this step...otherwise the seminar will fail.
@@ -34,7 +34,7 @@ The seminar includes three parts and will be examined with Passed (P) and Fail(F
 
 The grades will depend on your performance all this three steps. Have you prepared yourself? Were you active in the seminar? Did you have well reinforced arguments? How were your reflections? We will also take notes how well you perform (+ or -) in this three steps which could affect the final grade in this course.
 
-### Resources
+## Resources
   - [The ethics of cloud computing - A conceptual review](http://coursepress.lnu.se/kurs/systemadministrationii/files/2018/09/ethics_of_cloud.pdf)<br>
   Even if this article was release as early as 2010 it goes through some aspects on cloud computing that could be of great interest for this seminar.
 
@@ -46,8 +46,8 @@ This article take a deeper look at the issues that rises with cloud computing. T
 
 There are a few interesting talks about cloud computing available through [TED Talks](https://www.ted.com/) and [TEDx Talks](https://www.ted.com/watch/tedx-talks)
 
-### Re-examination
+## Re-examination
 If you get the grade F or misses the seminar you will have an other opportunity. This will be at the end of the course.
 
-### Questions?
+## Questions?
 Please write your questions in the course slack channel
