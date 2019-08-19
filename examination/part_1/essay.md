@@ -23,6 +23,6 @@ In this assignment we have given you a couple of subjects to write about
 ## Examination
 The grade is G or F following the following criteria:
 
-G: The student show knowledge of her/his subject. The reflections have a solid reference back to articles. The language in the essay is good where the student submits her/his own thoughts in grounded way. The student follow the directions regarding the formal presentation of the essay. The student is giving valuable feedback to it´s peer-review where the student show some understanding of it´s peers work.
+G: The student show knowledge of her/his subject. The reflections have a solid reference back to articles. The language in the essay is good where the student submits her/his own thoughts in grounded way. The student follow the directions regarding the formal presentation of the essay. 
 Fx: The essay is not up to the standards for passing but could be complemented.
 F: The essay is not written or not close to passing and the student should redo her/his work
