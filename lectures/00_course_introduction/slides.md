@@ -1,16 +1,24 @@
 <!-- Course management -->
 ## Course management
-| | | |
-|-|-|-|
-| <!-- {_class="table-cell"} --> ![John](https://www.gravatar.com/avatar/2261038623688f4d83dc10c53b85efb8.jpg?s=80)<!-- {_class="grayscale"} --> | <!-- {_class="table-cell"} --> John Häggerud (Course manager) |
-| <!-- {_class="table-cell"} -->  | <!-- {_class="table-cell"} --> Madelene Amberman (Tutoring) |
-| <!-- {_class="table-cell"} --> | <!-- {_class="grayscale"} --> | <!-- {_class="table-cell"} --> Andreas Johansson (Tutoring)|
+* John Häggerud (Course manager)
+  * Course management
+  * Examiner
 
-<!-- {_class="table lnu-course-management"} -->
-Note:
-*
+* Madelene Amberman (Tutoring) 
+* Andreas Johansson (Tutoring)
 
 
+---
+## UDM core courses
+
+* 1dv031 - System Administration I
+  * Networking 101, Linux, bash scripting, installing and configure servers...
+* **1dv032** - System administration II
+  * Cloud computing, Virtualization, Containers, Docker, Kubernetes, scaling and monitoring
+* 2dv527 - Deployment Infrastructures  
+  * Building infrastructures with code
+* 2dv611 - Continuous Deployment
+  * Building pipelines for software
 
 ---
 <!-- Syllabus -->
@@ -48,19 +56,20 @@ Taken from the course Syllabus <br />
 
 --
 ## Approach
-* Lectures
-* 2x1h/week tutoring (part 2)
+* Lectures & tutoring (See schedule)
 * Examination
   * Provmoment 1: Examinationsuppgift 1 (1,5 hp). Mål 1 och 2 examineras genom en seminarieuppgift. 
+    * About ethical considerations of cloud technology 
   * Provmoment 2: Examinationsuppgift 2 (1,5 hp). Mål 3­-5 examineras genom inlämningsrapport.
+    * Research of a cloud provider from a specific criteria
   * Provmoment 3: Examinationsuppgift 3 (4,5 hp). Mål 2-­6 examineras genom individuell praktisk uppgift samt muntlig examination
+    * Dockerize a microservice
+    * Deploy it on a Kubernetes cluster
+    * Oral examination
 
 
 <!-- {_style="font-size: 90%"} -->
 
-
---
-## About 
 
 ---
 <!-- Literature -->
