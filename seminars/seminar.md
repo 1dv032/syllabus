@@ -14,7 +14,6 @@ The seminar examination is three-parted where the first part, the preparation, i
   * How could we gain a better use of could computing in the future?
 - The rise of the artificial intelligence
   * How could cloud computing sustain the grows of AI technology?
-  * 
 
 2. Cloud computing and the data - Privacy and personal integrity
   * Who owns the data in the cloud? How could we decide this? What inflict does [GDPR](https://sv.wikipedia.org/wiki/Dataskyddsf%C3%B6rordningen) mean for cloud computing? 
