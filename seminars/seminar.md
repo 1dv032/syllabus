@@ -7,19 +7,15 @@ The seminar examination is three-parted where the first part, the preparation, i
 
 1. As you understandable cloud computing technologies now is part of your day-to-day life. We often value it as what the services bring us and what they could offer us. In this part you should think about other aspects then the technical innovation. Below is a list of different contexts, some discussed in the articles, some not. There are questions to each context that will be the starting-point in the seminar discussions. 
 **Find facts and summon your own opinion and arguments for both positive and negative aspects of cloud computing in regard to the following from an ethical viewpoint**
-
-- Environment and sustainability
-  * How could cloud computing help in this context?
-  * Are there any issues with cloud computing in this context?
-  * How could we gain a better use of could computing in the future?
-- The rise of the artificial intelligence
-  * How could cloud computing sustain the grows of AI technology?
-
+  - Environment and sustainability
+    * How could cloud computing help in this context?
+    * Are there any issues with cloud computing in this context?
+    * How could we gain a better use of could computing in the future?
+  - The rise of the artificial intelligence
+    * How could cloud computing sustain the grows of AI technology?
 2. Cloud computing and the data - Privacy and personal integrity
   * Who owns the data in the cloud? How could we decide this? What inflict does [GDPR](https://sv.wikipedia.org/wiki/Dataskyddsf%C3%B6rordningen) mean for cloud computing? 
   * What do you think when someone tell you "Well I do not care about digital privacy - I have nothing to hide!" when talking about privacy in the context of cloud computing and social media? Do you agree? Is it a problem to think so or will it easy up things like innovation and the development of technology? 
-
-
 3. Find an article or some kind of case that you think is suitable to this seminar and that could be of interest for your class mates. Be prepared to explain your chosen article/case in the seminar.
 
 
