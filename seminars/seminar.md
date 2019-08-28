@@ -14,8 +14,8 @@ As you understand cloud computing technologies now is part of your day-to-day li
   * How could we gain a better use of could computing in the future? Some innovations that not yet come to use?
 
 #### 2. The rise of the artificial intelligence
-    * How could cloud computing sustain the grows of AI technology? 
-    * Could you find any threats of this? Have the cloud providers any ethical responsibilities regarding that they provide computing for more advanced AI services?
+  * How could cloud computing sustain the grows of AI technology? 
+  * Could you find any threats of this? Have the cloud providers any ethical responsibilities regarding that they provide computing for more advanced AI services?
 
 #### 3. Cloud computing and the data - Privacy and personal integrity
   * Who owns the data in the cloud? What problems could occur if we don have control of our own data (if we are a company running web services at a cloud provider)? What inflict does [GDPR](https://sv.wikipedia.org/wiki/Dataskyddsf%C3%B6rordningen) mean for cloud computing? 
@@ -39,7 +39,7 @@ The grades will depend on your performance all this three steps. Have you prepar
   - [The ethics of cloud computing - A conceptual review](http://coursepress.lnu.se/kurs/systemadministrationii/files/2018/09/ethics_of_cloud.pdf)<br>
   Even if this article was release as early as 2010 it goes through some aspects on cloud computing that could be of great interest for this seminar.
 
-  - [Cloud Computing: Issues & challenges](https://github.com/1dv032/syllabus/raw/master/resources/part_1/Cloud_Computing_Issues_and_Challenges.pdf) -
+  - [Cloud Computing: Issues & challenges](http://coursepress.lnu.se/kurs/systemadministrationii/files/2019/08/Cloud_Computing_Issues_and_Challenges.pdf) -
 Next article is a academic one taken from the International Conference of Cloud, Big Data and thrust, 2013. This article will give a more detailed description and definition of the cloud and it services but also discuss the challenges when moving to the cloud.
 
   - [Cloud Computing Security and Privacy Issues](http://www.cepis.org/index.jsp?p=641&n=825&a=4758&) -
