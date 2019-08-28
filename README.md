@@ -5,10 +5,8 @@ This repro is a place holder for the course web page, https://coursepress.lnu.se
 
 ## Course Info
 **Course code:** 1DV032 <br />
-**Course coordinator:** Jacob Lidnehoff <br />
 **Prerequisites:** Basic programming 1DV021 and System administration I 1DV032 or equivalent.
 ### Contents of the course:
-*
 
 ## Licens
 COPYRIGHT FOR THIS WORK
