@@ -3,13 +3,12 @@
 * John Häggerud (Course manager)
   * Course management
   * Examiner
-
 * Madelene Amberman (Tutoring) 
 * Andreas Johansson (Tutoring)
 
 
 ---
-## UDM core courses
+## UDM - core courses
 
 * 1dv031 - System Administration I
   * Networking 101, Linux, bash scripting, installing and configure servers...
@@ -19,6 +18,7 @@
   * Building infrastructures with code
 * 2dv611 - Continuous Deployment
   * Building pipelines for software
+
 
 ---
 <!-- Syllabus -->
@@ -58,7 +58,7 @@ Taken from the course Syllabus <br />
 ## Approach
 * Lectures & tutoring (See schedule)
 * Examination
-  * Provmoment 1: Examinationsuppgift 1 (1,5 hp). Mål 1 och 2 examineras genom en seminarieuppgift. 
+  * Provmoment 1: Examinationsuppgift 1 (1,5 hp). Mål 1 (och 2) examineras genom en seminarieuppgift. 
     * About ethical considerations of cloud technology 
   * Provmoment 2: Examinationsuppgift 2 (1,5 hp). Mål 3­-5 examineras genom inlämningsrapport.
     * Research of a cloud provider from a specific criteria
@@ -69,6 +69,41 @@ Taken from the course Syllabus <br />
 
 
 <!-- {_style="font-size: 90%"} -->
+
+
+--
+## The seminar
+* Prepare yourself
+  * Reading articles, reflect, think..
+  * Most of the work in this assignment
+* Having the seminar
+  * Group discussions
+  * You will register for a group on the course web page
+* Reflection report
+  * A short reflection of the discussions
+* One re-take in the end of the course
+  * If you miss or fail the seminar you will get a substitute assignment (big report)
+* U/G
+
+
+--
+## The report
+* Do some research on one of the big cloud providers (AWS, Azure, Google Cloud)
+  * Get a scenario (a company want to put their service in a cloud)
+    * Investigates available services, cost, scalability etc.
+* Write a well-structured report, peer-review before hand-in
+* U/G
+
+
+--
+## The practical assignment
+
+* Oral hearing on the theoretical part of the course
+* Dockerize a small microservice
+  * For development
+  * For production on a Kubernetes cluser
+* U/G/VG
+
 
 
 ---
@@ -82,6 +117,8 @@ Taken from the course Syllabus <br />
 
 ![The Practice of Cloud System Administration](http://www.adlibris.com/se/organisationer/covers/M/0/32/032194318X.jpg)
 
+Articles and other stuff...
+
 
 ---
 <!-- webpage -->
@@ -92,3 +129,13 @@ https://coursepress.lnu.se/kurs/systemadministrationii/
 * 1dv032@lnu.se (Private matters only!)
 
 <!-- {_style="margin-right: 25%"} -->
+
+
+---
+<!-- webpage -->
+## How to start
+
+* Register on the course (if you have the requirements)
+* Join the slack channel
+* Start preparing for the seminar
+* Join tomorrows lecture... 
