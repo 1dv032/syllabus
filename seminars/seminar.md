@@ -36,7 +36,7 @@ The seminar includes three parts and will be examined with Passed (P) and Fail(F
 The grades will depend on your performance all this three steps. Have you prepared yourself? Were you active in the seminar? Did you have well reinforced arguments? How were your reflections? We will also take notes how well you perform (+ or -) in this three steps which could affect the final grade in this course.
 
 ## Resources
-This is some articles you should read. Also be prepared to search for own articles to answer all questions in a good way.
+This is some articles you should read. Also be prepared to search for own articles to answer all questions in a good way.http-server
 
   - [The ethics of cloud computing - A conceptual review](http://coursepress.lnu.se/kurs/systemadministrationii/files/2018/09/ethics_of_cloud.pdf)<br>
   Even if this article was release as early as 2010 it goes through some aspects on cloud computing that could be of great interest for this seminar.

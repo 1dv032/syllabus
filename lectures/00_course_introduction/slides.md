@@ -1,6 +1,6 @@
 <!-- Course management -->
 ## Course management
-* John Häggerud (Course manager)
+* John Häggerud 
   * Course management
   * Examiner
 * Madelene Amberman (Tutoring) 
@@ -11,13 +11,15 @@
 ## UDM - core courses
 
 * 1dv031 - System Administration I
-  * Networking 101, Linux, bash scripting, installing and configure servers...
+  * Networking 101, Linux, shell scripting, installing and configure servers (DNS, HTTP...)
 * **1dv032** - System administration II
-  * Cloud computing, Virtualization, Containers, Docker, Kubernetes, scaling and monitoring
+  * Cloud computing, Virtualization, Containers, Docker, Kubernetes, scaling and monitoring 
 * 2dv527 - Deployment Infrastructures  
-  * Building infrastructures with code
-* 2dv611 - Continuous Deployment
-  * Building pipelines for software
+  * Building complete infrastructures with version controlled code
+  * Running monitoring services
+* 2dv611 - Continuous Delivery
+  * Continuous Integration, Building pipelines for software
+  * Getting software to production 
 
 
 ---
@@ -122,6 +124,16 @@ Articles and other stuff...
 
 ---
 <!-- webpage -->
+## How to start
+
+* Register on the course (if you have the requirements)
+* Join the slack channel
+* Start preparing for the seminar
+* Join tomorrows lecture... 
+
+
+---
+<!-- webpage -->
 ## Course webpage
 https://coursepress.lnu.se/kurs/systemadministrationii/
 * Everything static + news
@@ -129,13 +141,3 @@ https://coursepress.lnu.se/kurs/systemadministrationii/
 * 1dv032@lnu.se (Private matters only!)
 
 <!-- {_style="margin-right: 25%"} -->
-
-
----
-<!-- webpage -->
-## How to start
-
-* Register on the course (if you have the requirements)
-* Join the slack channel
-* Start preparing for the seminar
-* Join tomorrows lecture... 
