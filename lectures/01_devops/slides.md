@@ -9,24 +9,37 @@
 ---
 ## Conway´s law (1967)
 "Organizations which design systems ... are constrained to produce designs which are copies of the communication structures of these organizations."
-"the mirroring hypothesis"
+<!-- {_class="fragment"} -->
+
 ![Yoda](./images/yoda.gif)
+<!-- {_class="fragment"} -->
 
 
 ---
+## Delivering software
+* From idea to production
+  * package software
+  * Web-based software/service
+* The need of fast, stabile and safe flow
+
+<img src="./images/agile.png" width="40%" />
+
+
+
+--
 <!-- DevOps -->
 ## The problem with delivering software
 
 <!-- {_style="font-size: 140%"} -->
-* People
+* People<!-- {_class="fragment"} -->
   * Communication, different goals, working in silos
   * Developers creating a feature may have a dependency in other an other team (ops, database administrator etc.)
-* Processes
+* Processes<!-- {_class="fragment"} -->
   * Unable to handle changeability, manual workflows, bottlenecks
-* Technology
+* Technology<!-- {_class="fragment"} -->
   * Drifting servers, "it worked on my machine", slow delivery, blame game
   * Bugs, delays and so on...
-* Web-based companies introduces feature more frequent then those who sell package software
+
 
 
 ---
@@ -40,7 +53,7 @@
 * Operations (Ops)
   * Rewarded for stability and uptime
     * Ops now the underlying system, operating system, hardware, patches, network, logs and so on.
-* Customer/Client (+ management, sales, customers, QA, testers...) want both
+* Customer/Client (+ management, sales, customers, QA, testers...) want both<!-- {_class="fragment"} -->
   * For the client the problem of a service concerns both ops and dev.
 
 
@@ -49,7 +62,7 @@
 ## Case
 Some days after our release the web server(s) experience high load and the service get slow...who to blame!?
 
-<img src="./images/devops-fire.jpeg" />
+<img src="./images/devops-fire.jpeg" style="float: left margin: 10px" width="30%"  /><!-- {_class="fragment"} -->
 
 <ul><!-- {_class="fragment"} -->
   <li>Developers - The code works on my machine!</li>
@@ -58,18 +71,18 @@ Some days after our release the web server(s) experience high load and the servi
 
 
 --
-## DevOps is a mindset! 
+## DevOps  is a reaction!
 * Breaking down silos
 * Removing bottlenecks
 * Creating a a value stream with faster flow for getting ideas to production
-  * Pipeline
+  * Building automated pipelines
 * Continuous improvement
 * Using tools for automated support the above
 
 
 --
-## DevOps is a reaction!
-* Web-based companies introduces feature more frequent then those who sell package software
+## DevOps
+* The initiative mainly from sysadmins/ops
   * Dev - Agile and LEAN Processes
   * Ops - Still waterfall?
   * Web companies/services assume higher availability, more frequent updates
@@ -81,23 +94,21 @@ Some days after our release the web server(s) experience high load and the servi
   * Provide both changeability and stability
   * CAMS (https://blog.chef.io/2010/07/16/what-devops-means-to-me)
     * Culture, Automation, Measurement, Sharing
-    * Relationships, Integration, Automation Continuous improvement (from the book)
-
-
+    * Relationships, Integration, Automation, Continuous improvement (from the book)
 
 
 --
 
 
-## It's about Culture
-
+### Culture - That is what DevOps is about
 * Engage early - burst silos!
-  * Ops and devs in same team (product specific?)
+ * Ops and devs in same team (product specific?)
 * Be open
-  * Visualize what is happening
+ * Visualize what is happening
 * Don´t blame
-  * Be constructive, Prepare for failure and learn from failure!
+ * Be constructive, Prepare for failure and learn from failure!
 * Communications and involvement in every step
+ * Conway's Law
 
 ![teamwork](./images/teamwork.gif)
 
@@ -108,29 +119,31 @@ Some days after our release the web server(s) experience high load and the servi
 * Consistence and stability using scripts
 * Create fast and automated workflows!
   * Never pass defects, smaller batches are better
-* Infrastructure as Code (IaC)
-  * Bringing dev techniques into system administration
-  * Automated testing
 * Use tools to help 
+  * There is nothing like a devops-tool, more how you use them
 
 
 --
 ## It's about Measurement
 * Capture and learn!
+  * Devs have their metrics, Ops have their
 * Improve feedback, shorten feedback loops, amplify
 * Adjust your understanding based on what you learned
 * Measure "everything" - Continuous monitoring
 
+<img src="./images/monitoring.png" width="60%" />
+
+
 
 --
-## It's about sharing
-* Treat your processes as applications - build error handling into them
+## It's about Sharing
 * Share ideas, experience, metrics through the organization
-* "Give the Devs root access" - co-ownership
-* Learn from metrics
-  * Devs have their metrics, Ops have their
+  * co-ownership
 * "Intern open source"
-  * Innovation days
+  * Innovation days, daily stand-ups
+  * Stand-up meeting, postmortems (all together)
+  * Same development and Operations tool chain
+    * Bug-tracking system
 * Experimentation, allocate time to improve the system/flow
 
 
@@ -140,22 +153,14 @@ Some days after our release the web server(s) experience high load and the servi
 ![table](./images/table.png)
 
 
---
-## Examples
-* Stand-up meeting, postmortems (all together)
-* Game day exercise
-* Same development and Operations tool chain
-  * Bug-tracking system
-
-
 ---
 ## So just implementing it...?
 * Changing cultures is hard!
   * Do all have the same understanding of DevOps?
+    * "Legacy projects"
   * Just using tools in not enough!
-  * "Beer is a good DevOps tool"
-* DevOps is not just developers and operations
-* Are all projects suitable for "DevOps"?
+  * DevOps is not just developers and operations
+* Are all projects suitable for the "DevOps" mindset?
   * High risk applications?
 
 
@@ -169,6 +174,7 @@ Some days after our release the web server(s) experience high load and the servi
   * http://www.devsecops.org
 
 
+
 ---
 ## Will I work as a DevOps?
 * The DevOps Role - Existing?
@@ -176,7 +182,7 @@ Some days after our release the web server(s) experience high load and the servi
   * Site-reliability engineering (SRE)
   * Developer, System administrator, software architect...
     * Through the whole organization
-* The mindset influence the courses in UDM
+* The mindset (hopefully) influence our courses in UDM
 
 
 ---
