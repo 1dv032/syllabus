@@ -1,5 +1,5 @@
 ## DevOps
-This lecture includes talk about the term "DevOps" and how it is related to us.
+This lecture includes talk about the term "DevOps" and how it is related our courses.
 
 ## Resources
 [The presentation](https://gitcdn.link/repo/1dv032/syllabus/master/lectures/01_devops/index.html)
