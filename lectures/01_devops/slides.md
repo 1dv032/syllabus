@@ -16,7 +16,7 @@
 
 
 ---
-## Delivering software
+## Building and delivering software
 * From idea to production
   * package software
   * Web-based software/service
@@ -32,14 +32,13 @@
 
 <!-- {_style="font-size: 140%"} -->
 * People<!-- {_class="fragment"} -->
-  * Communication, different goals, working in silos
+  * Communication, working in silos with different goals
   * Developers creating a feature may have a dependency in other an other team (ops, database administrator etc.)
-* Processes<!-- {_class="fragment"} -->
-  * Unable to handle changeability, manual workflows, bottlenecks
 * Technology<!-- {_class="fragment"} -->
   * Drifting servers, "it worked on my machine", slow delivery, blame game
-  * Bugs, delays and so on...
-
+* Processes<!-- {_class="fragment"} -->
+  * Unable to handle changeability, manual workflows, bottlenecks
+  * <img src="./images/changing-the-wheels.png">
 
 
 ---
