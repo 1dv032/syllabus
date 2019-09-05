@@ -8,3 +8,6 @@ This lecture includes talk about the term "DevOps" and how it is related our cou
 
 ## Reading
 Chapter 8 in "The practice of cloud system administration"
+* 2018 State of DevOps Report
+  * https://puppet.com/resources/whitepaper/state-of-devops-report
+  * A report from puppet where key findings and surveys made from companies are presented
