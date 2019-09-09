@@ -285,3 +285,83 @@ H x R + M x ( 1 - R ) < L
 ![demo](images/demo.png)
 <!-- {_style="width:60%"} -->
 
+---
+-
+## Capacity planning
+* Chapter 18 (p. 365-378)
+* Ensuring enough resources when needed
+  * no over- or under capacity
+* Avoid services failing, improving cost effectiveness
+* Data-driven process
+  * Automated collected data from monitoring tools
+  * Could be analyzed (advanced) mathematical models
+
+
+--
+* Primary resource
+  * Which resource is most critical for a service? CPU? Storage?
+    * First step to identify
+* Secondary resource
+  * Not interesting when calculating capacity but should be monitored 
+* Ancillary (sv: underordnad) resource
+  * server instances, load balancers, power, other infrastructure components
+    * Find the relationship between primary resources and ancillary resources
+* Core driver
+  * Factors that strongly drive demand for the primary resource
+  * QPS
+    * Query per seconds
+  * MAU
+    * Monthly active users
+* Time series
+  * Sequence of data points measured at time intervals
+
+
+--
+### Standard capacity planning
+What are you going to need? When? Yearly calculation for each resource
+
+```
+Future resources = 
+Current resources x (1 + normal growth + planned growth) + headroom
+Additional resources = future resources - current resources
+```
+
+* Normal growth (%)
+  * Without business or marketing events
+  * Calculated by observing historic data (more the better)
+* Planned growth (%)
+  * Events, campaign, product launch  
+* Headroom
+  * Short-time spikes (percentage of current capacity)
+  * Should be notified by monitoring 
+
+
+--
+#### Capacity model
+
+* Capacity model shows the relationship between core driver and primary resource
+  * Try to show how changes in core drivers will affect primary resources
+  * Which core driver influence which resource and how strongly - By correlation 1 to -1
+  * Regression analysis (sv. Regressionsanalys) on time-series data
+* Changes in service will probably change the correlation, needs to be recalculated
+* Could be used for forecasting models
+
+![formula](images/values.png)
+
+<!-- {_class="center"} -->
+
+
+--
+### Formula
+![formula](images/formula.png)
+
+<!-- {_class="center"} -->
+
+
+
+--
+## Next time...
+
+![docker](images/docker.png)
+
+<!-- {_class="center"} -->

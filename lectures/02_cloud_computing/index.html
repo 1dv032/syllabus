@@ -3,28 +3,28 @@
 <head>
   <meta charset="utf-8">
 
-  <title>03 - The Cloud - System administation II (1DV032)</title>
+  <title>03 - The Cloud - System administration II (1DV032)</title>
 
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
-  <link rel="icon" href="../../images/favicon.png" type="image/png" />
+  <link rel="icon" href="./../images/favicon.png" type="image/png" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="../../reveal.js/css/reveal.css">
-  <link rel="stylesheet" href="../../reveal.js/css/theme/black.css" id="theme">
-  <link rel="stylesheet" href="../../reveal.js/css/theme/black.lnu.css" id="theme">
+  <link rel="stylesheet" href="./../reveal.js/css/reveal.css">
+  <link rel="stylesheet" href="./../reveal.js/css/theme/black.css" id="theme">
+  <link rel="stylesheet" href="./../reveal.js/css/theme/black.lnu.css" id="theme">
 
   <!-- Code syntax highlighting -->
-  <link rel="stylesheet" href="../../reveal.js/lib/css/zenburn.css">
+  <link rel="stylesheet" href="./../reveal.js/lib/css/zenburn.css">
 
   <!-- Printing and PDF exports -->
   <script>
   var link = document.createElement('link');
   link.rel = 'stylesheet';
   link.type = 'text/css';
-  link.href = window.location.search.match(/print-pdf/gi) ? '../../reveal.js/css/print/pdf.css' : '../../reveal.js/css/print/paper.css';
+  link.href = window.location.search.match(/print-pdf/gi) ? './../reveal.js/css/print/pdf.css' : './../reveal.js/css/print/paper.css';
   document.getElementsByTagName('head')[0].appendChild(link);
   </script>
 
@@ -33,7 +33,7 @@
   <![endif]-->
 </head>
   <body>
-    <img id='lectureSafe' class="lnu-lectureSafe" src="../../reveal.js/lib/img/background.png" />
+    <img id='lectureSafe' class="lnu-lectureSafe" src="./../reveal.js/lib/img/background.png" />
     <div class="reveal lnu">
       <div class="slides noborderimages" onpaste="handlepaste(this, event)">
         <!-- Any section element inside of this container is displayed as a slide -->
@@ -45,15 +45,11 @@
             # Cloud Computing
             <!-- .element: style="font-size: 200%;" -->
 
-            ![Lnu Logo](../../images/lnu-logotype.png)
-            ![Lnu Tree](../../images/lnu-symbol.png)
+            ![Lnu Logo](./../images/lnu-logotype.png)
+            ![Lnu Tree](./../images/lnu-symbol.png)
 
             <!-- .element: class="lnu-footer" style="top: 280px;" -->
           </script>
-        </section>
-
-        <section data-markdown="../../common_slides/cc_jacob-lindehoff.md"
-          data-element-attributes="{_\s*?([^}]+?)}">
         </section>
 
         <section data-markdown="slides.md"
@@ -68,8 +64,8 @@
       </div>
     </div>
 
-    <script src="../../reveal.js/lib/js/head.min.js"></script>
-    <script src="../../reveal.js/js/reveal.js"></script>
+    <script src="./../reveal.js/lib/js/head.min.js"></script>
+    <script src="./../reveal.js/js/reveal.js"></script>
 
     <script>
     function hasClass(el, cls) {
@@ -87,19 +83,14 @@
       center: false,
       transition: 'slide', // none/fade/slide/convex/concave/zoom
 
-      // Optional reveal.js plugins
-      chalkboard: {
-        // optionally load pre-recorded chalkboard drawing from file
-        src: "chalkboard.json",
-      },
       dependencies: [
-        { src: '../../reveal.js/lib/js/classList.js', condition: function () { return !document.body.classList; } },
-        { src: '../../reveal.js/plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
-        { src: '../../reveal.js/plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
-        { src: '../../reveal.js/plugin/highlight/highlight.js', async: true, condition: function () { return !!document.querySelector('pre code'); }, callback: function () { hljs.initHighlightingOnLoad(); } },
-        { src: '../../reveal.js/plugin/zoom-js/zoom.js', async: true },
-        { src: '../../reveal.js/plugin/chalkboard/chalkboard.js' },
-        { src: '../../reveal.js/plugin/notes/notes.js', async: true }
+        { src: './../reveal.js/lib/js/classList.js', condition: function () { return !document.body.classList; } },
+        { src: './../reveal.js/plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+        { src: './../reveal.js/plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+        { src: './../reveal.js/plugin/highlight/highlight.js', async: true, condition: function () { return !!document.querySelector('pre code'); }, callback: function () { hljs.initHighlightingOnLoad(); } },
+        { src: './../reveal.js/plugin/zoom-js/zoom.js', async: true },
+      
+        { src: './../reveal.js/plugin/notes/notes.js', async: true }
       ]
     });
 

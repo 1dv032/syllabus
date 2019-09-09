@@ -1,18 +1,15 @@
 <!-- Start -->
 ## Today's lecture
 
-* Definition of "cloud"
+* Definition of "Cloud"
     * Characteristics
+    * History
     * Basic concepts and terminology
 * Cloud Services
     * Cases
 * Deploy models
 * Business drivers
 * Challenges
-* Some about capacity planning
-
-Note:
-These are the topics for todays lecture.
 
 
 ---
@@ -28,15 +25,29 @@ Note:
 Osäkert vad själva ordet/begreppet kommer ifrån. Bild på moln för att beskriva helhet utan att gå in i detaljer. Nätverksschema förr ritade servrar som cirklar => serverkluster => såg ut som ett moln.<br>
 Hur vi kommer i kontakt med molntjänster idag?<br>
 Bygga system. Webbhotel vs. VPS, virtualisering. Förtsättning från förra veckan
+Turn hardware and networking into software
+Scaling
 
 
 --
+
 ## Definition
 > Cloud computing is a model for enabling ubiquitous, convenient, *on-demand* network access to a *shared pool* of configurable computing resources (e.g., networks, servers, storage, applications, and services) that can be rapidly provisioned and released with minimal management effort or service provider interaction. This cloud model is composed of five essential characteristics, three service models, and four deployment models.
 
 Source - [NIST (National Institute of Standards and Technology) [Definition](http://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf)] - Mell and Grance
 
 <!-- {_style="text-align: center; font-size:40%"} -->
+
+
+
+---
+## Some historical stuff...
+* Main frame computing 1950s
+  * Multiple users working against a central computer
+* Around 1970, concept of virtual machines (VMs)
+  * One or more OS in one physical hardware
+* Virtualized private network
+  * Same service as P2P connections, lower cost
 
 
 --
@@ -83,14 +94,43 @@ Source - [NIST (National Institute of Standards and Technology) [Definition](htt
 <!-- {_class="center"} -->
 
 
----
+--
 ## FaaS
 * Function as a service
 * Runs functionalities of an application
-* O ne way of achieving a "serverless" architecture
+* One way of achieving a "serverless" architecture
   * AWS Lambda, Google cloud functions, MS Azure functions...
 * Data processing, event-driven workflows
 * Charge by execution time
+
+
+---
+### Deployment models (resource sharing)
+
+* Public cloud
+  * The cloud infrastructure is made available to the general public or a large group of **cloud consumers** and is owned by a **cloud provider** selling cloud services.
+* Private cloud
+    * The cloud is used and maintained by only one organization
+* Community cloud
+  * The cloud infrastructure is shared between several organizations that has shared concerns.
+  * Government, health care, companies with needs of same applications
+  * [Report about Swedish government cloud](http://www.statenssc.se/omstatensservicecenter/publikationer/rapporter/arkiv/engemensamstatligmolntjanstformyndigheternasitdrift.2106.html)
+* Hybrid cloud
+  * The cloud infrastructure is a composition of two or more clouds (private, public or community). 
+    * Cost, performance, security
+    * Avoid vendor lock-ins, easier through containerization?
+
+
+--
+## Some kind of taxonomy
+![tax](./images/cloud_overview.jpg)
+* Operating System Service (OSS)
+  * Deploying requested services
+* Buisness System Service (BSS)
+  * Validate request, keep track of resource used
+* Interface and tools
+  * Cloud Service Creator
+  * Cloud service Consumers
 
 
 --
@@ -114,6 +154,12 @@ Source - [NIST (National Institute of Standards and Technology) [Definition](htt
 * Analytics, Migration, Databases, Development tools, Machine learning....
 
 
+--
+# Overview
+![overview](./images/overview.png)
+
+
+
 ---
 * Amazon Web Service ([https://aws.amazon.com/](https://aws.amazon.com/))
   * 2002
@@ -127,7 +173,7 @@ Source - [NIST (National Institute of Standards and Technology) [Definition](htt
 ![AWS regions](images/aws_regions.png)
 
 
----
+--
 * Microsoft Azure ([https://azure.microsoft.com](https://azure.microsoft.com))
   * 2010
   * IaaS, PaaS, SaaS, FaaS...
@@ -137,24 +183,11 @@ Source - [NIST (National Institute of Standards and Technology) [Definition](htt
 * IBM Cloud ([https://www.ibm.com/cloud/](https://www.ibm.com/cloud/))
 
 
---
-### Deployment models (resource sharing)
-
-* Public cloud
-  * The cloud infrastructure is made available to the general public or a large group of **cloud consumers** and is owned by a **cloud provider** selling cloud services.
-* Private cloud
-    * The cloud is used and maintained by only one organization
-* Community cloud
-  * The cloud infrastructure is shared between several organizations that has shared concerns.
-  * Government, health care, companies with needs of same applications
-  * [Report about Swedish government cloud](http://www.statenssc.se/omstatensservicecenter/publikationer/rapporter/arkiv/engemensamstatligmolntjanstformyndigheternasitdrift.2106.html)
-* Hybrid cloud
-  * The cloud infrastructure is a composition of two or more clouds (private, public or community). 
-    * Cost, performance, security
-    * Avoid vendor lock-ins, easier through containerization?
 
 
---
+
+---
+
 ### Choosing Deployment models
 * Compliance (sv: överensstämmelse)
   * Regulations depending on business, size, locations
@@ -199,82 +232,3 @@ Source - [NIST (National Institute of Standards and Technology) [Definition](htt
 * ...
 
 
----
-## Capacity planning
-* Chapter 18 (p. 365-378)
-* Ensuring enough resources when needed
-  * no over- or under capacity
-* Avoid services failing, improving cost effectiveness
-* Data-driven process
-  * Automated collected data from monitoring tools
-  * Could be analyzed (advanced) mathematical models
-
-
---
-* Primary resource
-  * Which resource is most critical for a service? CPU? Storage?
-    * First step to identify
-* Secondary resource
-  * Not interesting when calculating capacity but should be monitored 
-* Ancillary (sv: underordnad) resource
-  * server instances, load balancers, power, other infrastructure components
-    * Find the relationship between primary resources and ancillary resources
-* Core driver
-  * Factors that strongly drive demand for the primary resource
-  * QPS
-    * Query per seconds
-  * MAU
-    * Monthly active users
-* Time series
-  * Sequence of data points measured at time intervals
-
-
---
-### Standard capacity planning
-What are you going to need? When? Yearly calculation for each resource
-
-```
-Future resources = 
-Current resources x (1 + normal growth + planned growth) + headroom
-Additional resources = future resources - current resources
-```
-
-* Normal growth (%)
-  * Without business or marketing events
-  * Calculated by observing historic data (more the better)
-* Planned growth (%)
-  * Events, campaign, product launch  
-* Headroom
-  * Short-time spikes (percentage of current capacity)
-  * Should be notified by monitoring 
-
-
---
-#### Capacity model
-
-* Capacity model shows the relationship between core driver and primary resource
-  * Try to show how changes in core drivers will affect primary resources
-  * Which core driver influence which resource and how strongly - By correlation 1 to -1
-  * Regression analysis (sv. Regressionsanalys) on time-series data
-* Changes in service will probably change the correlation, needs to be recalculated
-* Could be used for forecasting models
-
-![formula](images/values.png)
-
-<!-- {_class="center"} -->
-
-
---
-### Formula
-![formula](images/formula.png)
-
-<!-- {_class="center"} -->
-
-
-
---
-## Next time...
-
-![docker](images/docker.png)
-
-<!-- {_class="center"} -->
