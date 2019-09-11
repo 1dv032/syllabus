@@ -176,9 +176,9 @@ Source - [NIST (National Institute of Standards and Technology) [Definition](htt
 
 ---
 * Amazon Web Service ([https://aws.amazon.com/](https://aws.amazon.com/))
-  * 2002
+  * 2002 - to market 2006
   * IaaS, PaaS, SaaS, FaaS...
-  * 17 geographical regions, six more to come
+  * 19 geographical regions (eu-north-1 --> Stockholm)
     * Each region has multiple "Availability Zones"
     * Each region is completely independent. Each Availability Zone is isolated
     * Availability Zones in a region are connected through low-latency links.
@@ -191,10 +191,11 @@ Source - [NIST (National Institute of Standards and Technology) [Definition](htt
 * Microsoft Azure ([https://azure.microsoft.com](https://azure.microsoft.com))
   * 2010
   * IaaS, PaaS, SaaS, FaaS...
-  * 54 geographical regions, more to come
+  * 54 geographical regions
     * Some regions has multiple "Availability Zones"
 * Google Cloud ([https://cloud.google.com/](https://cloud.google.com/))
 * IBM Cloud ([https://www.ibm.com/cloud/](https://www.ibm.com/cloud/))
+* ...
 
 
 
