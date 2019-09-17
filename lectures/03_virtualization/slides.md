@@ -1,10 +1,12 @@
 <!-- Start -->
-# Today's lecture <!-- {_style="font-size:140%"} -->
-## Virtualization
+### Content
+
 * Virtual Machines
     * What is Virtual Machines?
     * Benefits of Virtual Machines
     * Understanding Virtual Machines
+* Virtualization of virtual machines
+  * What and how
 * Containers
     * What is a Container?
     * Virtual Machines vs. Containers
@@ -15,7 +17,7 @@ These are the topics for todays lecture.
 
 
 ---
-# Computer Architecture
+### Computer Architecture
 * Levels of abstraction
 * Simplified Interface for underlying resources
 * Example: Filesystem is an abstraction for hard drives
@@ -27,35 +29,41 @@ Source: Virtual Machines by Jim Smith & Ravi Nair, Edition 2005
 
 
 --
-## Components of operating systems
-### Operating System Architecture
+### Recap - Operating System Architecture
 ![Kernel architecture](images/operating-system-architecture-all.png)
+<!-- {_style="width: 120%"} -->
+
+
+---
+### What is virtualization
+
+<img src="./images/what_virt.jpeg" />
+
 
 
 --
 ## What is Virtual Machines?
 > Virtual machines are created when a physical machine is partitioned to run a separate operating system for each partition. 
 
-Source: The Practice of Cloud System Administration
+* Processes running in a VM have no awareness that they are not running on a physical machine <!-- {_class="fragment"} -->
+* Can not access the resources, disk, memory, of other VMs on the same physical machine <!-- {_class="fragment"} -->
 
-<!-- {_style="text-align: right; font-size:70%"} -->
-Note:
-Processes running in a VM have **no awareness** that they are nte running on a physical machine<br/>
-Can **not access the resources**, disk, memory, of other VMs on the same physical machine
 
 
 --
 ## Benefits of Virtual Machines
-* Share resources
-    * resource optimization, multiplexing
+*  Multiple instances of a variety of operating systems may share the virtualized hardware resources
+    * resource optimization, less idle time (stranded capacity)
     * dynamic workload balancing
-    * maximizing uptime
     * redundancy for server failure
-    * application isolation
-* Cost Benefit
+    * application isolation into VMs
+* Cost Benefit <!-- {_class="fragment"} -->
     * hardware independence
     * consolidating powerful machines
-    * run on legacy systems
+    * run legacy systems on virtulized modern hardware
+* Cons <!-- {_class="fragment"} -->
+  * Performance
+  * Overhead
 
 Source: [Oracle](https://docs.oracle.com/cd/E27300_01/E27309/html/vmusg-virtualization-reasons.html) 
 
@@ -68,73 +76,73 @@ Cons: performance and overhead
 
 
 --
-## Understanding Virtual Machines
-### Hypervisor
+### Understanding Virtual Machines
+#### Hypervisor
 
 ![Hypervisor](images/hypervisor.png)<!-- {_style="float: right"} -->
 
 * Originally Virtual Machine Monitor (VMM)
-* OS was called supervisors, code to supersede <br/> OS to allow programmer debugging
-* Properties for ideal VMM
+  * "Computer software, firmware or hardware that creates and runs virtual machines" 
+  * First VMM used for development and debugging of OS
+* Properties for ideal VMM<!-- {_class="fragment"} -->
     * Fidelity – identical environment
     * Isolation – complete control
     * Performance – same for VM vs physical
+* Host machine, guest machine<!-- {_class="fragment"} -->
 
-Source: Virtualization Essentials by Matthew Portnoy, Edition 2012
-<!-- {_style="text-align: right; font-size:70%"} -->
-Note:
-**First VMM** were used for the development abd debugging of OS.
 
 
 --
-# Type 1 Hypervisor
+### Type 1 Hypervisor
 
-![Type 1 Hypervisor](images/type-1-hypervisor.png)<!-- {_style="float: right"} -->
+![Type 1 Hypervisor](images/type-1-hypervisor.png)<!-- {_style="width: 40%"float: right"} -->
 
-* Runs on bare metal, direct communication with H/W 
-* Better performance
-* More secure and reliable
-* Examples: 
+* Runs direct on host's hardware
+  * native or bare metal
+* Examples: <!-- {_class="fragment"} -->
     * Xen
-    * MS Hyper-V
+    * MS Hyper-V (?)
     * VMWare ESX
 
-Source: Virtualization Essentials by Matthew Portnoy, Edition 2012
-<!-- {_style="text-align: right; font-size:70%"} -->
 Note:
 Less overhead<br/>
 Cost
 
 
 --
-# Type 2 Hypervisor
+### Type 2 Hypervisor
 
-![Type 2 Hypervisor](images/type-2-hypervisor.png)<!-- {_style="float: right"} -->
+![Type 2 Hypervisor](images/type-2-hypervisor.png)<!-- {_style="width: 40%"float: right"} -->
 
-* Runs on top of an OS, communicates with the OS 
-* Less efficient and low performance
-* Less reliable because of host OS
-* Examples: 
+* Runs on top of an OS, communicates through the OS 
+  * Less performance then type 1
+  * Less reliable then type 1
+* As an application, often on local machine not in the cloud 
     * VirtualBox
     * VMWare Station
     * Virtual Server
 
-Source: Virtualization Essentials by Matthew Portnoy, Edition 2012
-<!-- {_style="text-align: right; font-size:70%"} -->
+
+
 Note:
 The **first x86** offerings were Type 2, quickest path to market, the host OS already handled all the hardware communication.
 
 
+
+
 --
-## x86 without virtualization
+## Challanges of x86 Virtualization
 
 ![x86 privilege level architecture without virtualization](images/x86-privilege-level-architecture-without-virtualization.png)
 <!-- {_style="float: right"} -->
-
-* OS are designed to run on bare-metal
-* OS assumes that they own H/W
-* OS needs to run Privileged Instructions (PI’s) on H/W
-* Tricky bit was how to trap these PI’s
+* x86-architecture - "The CPU architecture"
+  * x86 OS are designed to run on bare-metal
+  * Assumes that they fully own H/W
+  * Needs to run Privileged Instructions (PI’s) on H/W
+* CPU implements four levels/rings of privileges  <!-- {_class="fragment"} -->
+  * OS need direct access to H/W (ring 0)
+  * User application (ring 3)
+* Tricky bit was how to trap these PI’s  <!-- {_class="fragment"} -->
 <br/><br/><br/><br/><br/><br/>
 
 Source: [VMware - Understanding Virtualization](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/techpaper/VMware_paravirtualization.pdf)
@@ -143,13 +151,12 @@ Source: [VMware - Understanding Virtualization](https://www.vmware.com/content/d
 
 
 --
-## Full virtualization
+### Full virtualization
 
 ![Full virtualization](images/full-virtualization.png)
 <!-- {_style="float: right"} -->
 
-* Translates kernel code to replace non-
-    <br />virtualizable instructions
+* Binary translation of instructions
 * Guest OS is not aware and not modified
 * OS instructions - translated on fly and cached
 * User instructions – run unmodified
@@ -161,16 +168,16 @@ Source: [VMware - Understanding Virtualization](https://www.vmware.com/content/d
 
 
 --
-## Paravirtualization
+### Paravirtualization
 
 ![Paravirtualization Virtualization](images/paravirtualization-virtualization.png)
 <!-- {_style="float: right"} -->
 
 * Guest OS kernel is aware and and modified
-* Replaces non- virtualizable instructions
-* Hypercalls – communicate directly with hypervisor
-* User instructions – run unmodified
+* Hypervisor is called by guest OS
+  * Hypercalls
 * also called "OS Assisted Virtualization"
+* Enable "near-native performance"
 <br/><br/><br/><br/><br/><br/>
 
 Source: [VMware - Understanding Virtualization](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/techpaper/VMware_paravirtualization.pdf)
@@ -179,17 +186,17 @@ Source: [VMware - Understanding Virtualization](https://www.vmware.com/content/d
 
 
 --
-## Hardware Assisted Virtualization
+### Hardware Assisted Virtualization
 
 ![Hardware Assisted Virtualization](images/hardware-assisted-virtualization.png)
 <!-- {_style="float: right"} -->
 
-* Needs special H/W
-* Intel VT-x , AMD-V
+* Needs special H/W (primary host CPUs)
+  * to help full virtualization
+* Added to x(6 - AIntel VT-x , AMD-V
 * PI’s automatically trapped and 
     <br />directly executed
 * No binary translation 
-* Dependent on VMM
 <br/><br/><br/><br/><br/><br/>
 
 Source: [VMware - Understanding Virtualization](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/techpaper/VMware_paravirtualization.pdf)
@@ -198,7 +205,20 @@ Source: [VMware - Understanding Virtualization](https://www.vmware.com/content/d
 
 
 ---
-# Containers
+### Different types of virtualization
+* Application virtualization
+  * Application not installed in traditional sense
+  * isolated process or sandboxed
+* Memory virtualization  <!-- {_class="fragment"} -->
+  *  virtualized memory pool available to any computer in the cluster
+* Storage virtualization  <!-- {_class="fragment"} -->
+  * treating all storage media (hard disk, optical disk, tape, etc.) in the enterprise as a single pool of storage."
+* Network virtualization  <!-- {_class="fragment"} -->
+  * combining hardware and software network resources and network functionality into a single, software-based administrative entity, a virtual network.
+
+
+---
+### Containers
 > A container is a group of processes running on an operating system that are isolated from other such groups of processes.
 
 Source: The Practice of Cloud System Administration
@@ -207,22 +227,28 @@ Source: The Practice of Cloud System Administration
 
 
 --
-# Containers
+### Containers
 * Containers are another virtualization technique
     * Not light-weight VM’s
 * Isolation at the process level instead of the machine level
-* Containers run under the same operating system/kernel
-* Provides a virtual operating system not a VM with own CPU, memory, I/O
+  * Containers run under the same operating system/kernel
+    * Provides a virtual operating system not a VM with own CPU, memory, I/O
 
+<div>
+![container](./images/containers.jpg) 
+<!-- {_class="center"} -->
+<!-- {_style="width:50%"} -->
+</div> <!-- {_class="fragment"} -->
 
 Note:
-The analogy we use here at Docker is comparing houses (virtual machines) to apartments (Docker containers).<br/>
-**Houses** (the VMs) are fully **self-contained and offer protection from unwanted guests**. They also each possess their **own infrastructure** – plumbing, heating, electrical, etc. Furthermore, in the vast majority of cases houses are all going to have at a **minimum a bedroom, living area, bathroom, and kitchen**. It’s incredibly difficult to ever find a “studio house” – even if one buys the smallest house they can find, they may end up buying more than they need because that’s just how houses are built.<br/>
-**Apartments** (Docker containers) also offer **protection from unwanted guests**, but they are built around **shared infrastructure**. The apartment building (the server running the Docker daemon, otherwise known as a Docker host) offers shared plumbing, heating, electrical, etc. to each apartment. Additionally apartments are offered in **several different sizes** – from studio to multi-bedroom penthouse. *You’re only renting exactly what you need.*
+Black boxex. Dont know whats in them, isolated processes<br>
+Dont care whats in them, know how to distribute them and ship them<br>
+Mitten av 50-talet<br>
+All vet hur man hanterar dem, hor man förvarar dem osv
 
 
 --
-## Virtual Machines vs. Containers
+### Virtual Machines vs. Containers
 
 ![Virtual Machines vs. Containers](images/vm-vs-containers.png)
 
@@ -232,7 +258,7 @@ Source: [Docker - What is Docker](https://www.docker.com/what-docker#/VM)
 
 
 --
-## Virtual Machines vs. Containers
+### Virtual Machines vs. Containers
 Containers and VMs Together
 ![Virtual Machines vs. Containers](images/containers-and-vm-together.png)
 
@@ -242,7 +268,7 @@ Source: [Docker for the Virtualization Admin](https://goto.docker.com/docker-vir
 
 
 --
-## Benefits of Containers
+### Benefits of Containers
 * Ease of Use – build once, run anywhere
 * Speed – lightweight, less resources, boot time
 * Distribution – make them publicly available
@@ -250,7 +276,7 @@ Source: [Docker for the Virtualization Admin](https://goto.docker.com/docker-vir
 
 
 --
-## Understanding Containers
+### Understanding Containers
 * Containers are isolated from each other
 * The processes all run under the same operating system
     * You can't have one process under Linux an another on Windows
