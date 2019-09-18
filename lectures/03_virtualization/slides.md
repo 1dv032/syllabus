@@ -1,12 +1,16 @@
 <!-- Start -->
+[https://coursepress.lnu.se/kurs/systemadministrationii/](https://coursepress.lnu.se/kurs/systemadministrationii/)
+
+
+
+---
 ### Content
 
-* Virtual Machines
+* Virtualization & Virtual Machines
+    * What is virtualization
     * What is Virtual Machines?
     * Benefits of Virtual Machines
     * Understanding Virtual Machines
-* Virtualization of virtual machines
-  * What and how
 * Containers
     * What is a Container?
     * Virtual Machines vs. Containers
@@ -17,27 +21,51 @@ These are the topics for todays lecture.
 
 
 ---
-### Computer Architecture
-* Levels of abstraction
-* Simplified Interface for underlying resources
-* Example: Filesystem is an abstraction for hard drives
-![Levels of abstraction](images/levels-of-abstraction.png)
+### Cloud computing and virtualization
+* Virtualization enables cloud computing
+  * Virtualization seperates OS from hardware
+  * Cloud computing seperates application/services from hardware
+* Virtualization is a component inside cloud computing
 
-Source: Virtual Machines by Jim Smith & Ravi Nair, Edition 2005
-
-<!-- {_style="text-align: right; font-size:70%"} -->
 
 
 --
-### Recap - Operating System Architecture
-![Kernel architecture](images/operating-system-architecture-all.png)
-<!-- {_style="width: 120%"} -->
+### Virtualization
+
+> "the process of changing something that exists in a real form into a virtual version (one that is created using a computer)"
+
+<p>
+From: https://dictionary.cambridge.org/dictionary/english/virtualization
+</p>
+<!-- {_style="text-align: right; font-size:30%"} -->
 
 
 ---
-### What is virtualization
+### Different types of virtualization
+* Server virtualization
+  * Virtual machines
+    * What we focus on in this lecture...
+* Application virtualization  <!-- {_class="fragment"} -->
+  * Application not installed in traditional sense
+  * isolated process or sandboxed
+* Memory virtualization  <!-- {_class="fragment"} -->
+  *  virtualized memory pool available to any computer in the cluster
+* Storage virtualization  <!-- {_class="fragment"} -->
+  * treating all storage media (hard disk, optical disk, tape, etc.) in the enterprise as a single pool of storage.
+* Network virtualization  <!-- {_class="fragment"} -->
+  * combining hardware and software network resources and network functionality into a single, software-based administrative entity, a virtual network.
+
+
+
+--
+### What is (server) virtualization?
 
 <img src="./images/what_virt.jpeg" />
+
+<p>
+Source: https://www.ibm.com/blogs/cloud-computing/2012/01/12/securing-virtual-machines-in-the-cloud/
+</p>
+<!-- {_style="text-align: right; font-size:30%"} -->
 
 
 
@@ -45,29 +73,30 @@ Source: Virtual Machines by Jim Smith & Ravi Nair, Edition 2005
 ## What is Virtual Machines?
 > Virtual machines are created when a physical machine is partitioned to run a separate operating system for each partition. 
 
-* Processes running in a VM have no awareness that they are not running on a physical machine <!-- {_class="fragment"} -->
+* Processes running in a VM have no awareness that they are not running on same physical machine <!-- {_class="fragment"} -->
 * Can not access the resources, disk, memory, of other VMs on the same physical machine <!-- {_class="fragment"} -->
 
 
 
 --
 ## Benefits of Virtual Machines
-*  Multiple instances of a variety of operating systems may share the virtualized hardware resources
-    * resource optimization, less idle time (stranded capacity)
-    * dynamic workload balancing
-    * redundancy for server failure
-    * application isolation into VMs
+*  Consolidation
+    * VMs sharing resources, less idle time (stranded capacity)
+      * dynamic workload balancing (over allocating)
+      * redundancy for server failure
+* Isolation into VMs <!-- {_class="fragment"} -->
+  * snapshots
+* Migration - Move instances between different hardware machines <!-- {_class="fragment"} -->
 * Cost Benefit <!-- {_class="fragment"} -->
-    * hardware independence
-    * consolidating powerful machines
-    * run legacy systems on virtulized modern hardware
+    * cheaper with on powerful machines (many instances on one server)
+    * create virtual versions of legacy systems on modern hardware
 * Cons <!-- {_class="fragment"} -->
   * Performance
   * Overhead
 
 Source: [Oracle](https://docs.oracle.com/cd/E27300_01/E27309/html/vmusg-virtualization-reasons.html) 
 
-<!-- {_style="text-align: right; font-size:70%"} -->
+<!-- {_style="text-align: right; font-size:30%"} -->
 Note:
 VMs can make computing more efficient. Physical machines today are very fast and powerful, applications don't use all the resources, this excess capacity is usually called **stranded capacity** <br/>
 VMs provide better **isolation** than simple multitasking <br/>
@@ -95,10 +124,13 @@ Cons: performance and overhead
 --
 ### Type 1 Hypervisor
 
-![Type 1 Hypervisor](images/type-1-hypervisor.png)<!-- {_style="width: 40%"float: right"} -->
+![Type 1 Hypervisor](images/type-1-hypervisor.png)<!-- {_style="width: 40%; float: right"} -->
 
 * Runs direct on host's hardware
   * native or bare metal
+  * Controlled by management console<!-- {_class="fragment"} -->
+    * Hypervisor free
+    * features on management console cost
 * Examples: <!-- {_class="fragment"} -->
     * Xen
     * MS Hyper-V (?)
@@ -112,15 +144,17 @@ Cost
 --
 ### Type 2 Hypervisor
 
-![Type 2 Hypervisor](images/type-2-hypervisor.png)<!-- {_style="width: 40%"float: right"} -->
+![Type 2 Hypervisor](images/type-2-hypervisor.png)<!-- {_style="width: 40%; float: right"} -->
 
-* Runs on top of an OS, communicates through the OS 
+* Runs on top of an OS 
+  * Hosted hypervisor 
   * Less performance then type 1
   * Less reliable then type 1
-* As an application, often on local machine not in the cloud 
+* Runs as an application <!-- {_class="fragment"} -->
     * VirtualBox
     * VMWare Station
     * Virtual Server
+* Allocate resources<!-- {_class="fragment"} -->
 
 
 
@@ -193,7 +227,7 @@ Source: [VMware - Understanding Virtualization](https://www.vmware.com/content/d
 
 * Needs special H/W (primary host CPUs)
   * to help full virtualization
-* Added to x(6 - AIntel VT-x , AMD-V
+* Added to x86 - AIntel VT-x , AMD-V
 * PI’s automatically trapped and 
     <br />directly executed
 * No binary translation 
@@ -205,21 +239,14 @@ Source: [VMware - Understanding Virtualization](https://www.vmware.com/content/d
 
 
 ---
-### Different types of virtualization
-* Application virtualization
-  * Application not installed in traditional sense
-  * isolated process or sandboxed
-* Memory virtualization  <!-- {_class="fragment"} -->
-  *  virtualized memory pool available to any computer in the cluster
-* Storage virtualization  <!-- {_class="fragment"} -->
-  * treating all storage media (hard disk, optical disk, tape, etc.) in the enterprise as a single pool of storage."
-* Network virtualization  <!-- {_class="fragment"} -->
-  * combining hardware and software network resources and network functionality into a single, software-based administrative entity, a virtual network.
-
-
----
 ### Containers
 > A container is a group of processes running on an operating system that are isolated from other such groups of processes.
+
+<div>
+![container](./images/containers.jpg) 
+<!-- {_class="center"} -->
+<!-- {_style="width:50%"} -->
+</div> <!-- {_class="fragment"} -->
 
 Source: The Practice of Cloud System Administration
 
@@ -230,15 +257,14 @@ Source: The Practice of Cloud System Administration
 ### Containers
 * Containers are another virtualization technique
     * Not light-weight VM’s
-* Isolation at the process level instead of the machine level
-  * Containers run under the same operating system/kernel
-    * Provides a virtual operating system not a VM with own CPU, memory, I/O
+* Isolation at the process level instead of the machine level <!-- {_class="fragment"} -->
+  * Containers share the same host OS kernel
+    * "multiple workloads can run on a single OS instance"
+    * Light and fast to handle
+    * more portable
+    * less management overhead
 
-<div>
-![container](./images/containers.jpg) 
-<!-- {_class="center"} -->
-<!-- {_style="width:50%"} -->
-</div> <!-- {_class="fragment"} -->
+
 
 Note:
 Black boxex. Dont know whats in them, isolated processes<br>
@@ -275,25 +301,6 @@ Source: [Docker for the Virtualization Admin](https://goto.docker.com/docker-vir
 * Modular and Scalable – a container for each service
 
 
---
-### Understanding Containers
-* Containers are isolated from each other
-* The processes all run under the same operating system
-    * You can't have one process under Linux an another on Windows
-* Do not allocate large chunk of RAM and disk
-* Processes in a container are:
-    * controlled as a group
-    * only allows to interact with processes within the container
-* Each container has its own copy of packages, shared libs and other required files
-
-
-Source: The Practice of Cloud System Administration
-
-<!-- {_style="text-align: right; font-size:70%"} -->
-
-Note:
-* Own Namespace, chroot (Subdir), network
-* Not as wasteful as VMs
-* If the container is configured to have a memory limit, the sum total of memory used by all processes in the container can't exceed that limit.
-* Processes that are not in a container can kill or interact with all processes.
-* Dependency hell is avoided
+---
+### Next time...
+![docker](./images/docker.png)
