@@ -3,7 +3,7 @@ This lecture tries to describe and define the term "virtualization". It also add
 
 ## Resources
 * [Presentation](https://gitcdn.link/repo/1dv032/syllabus/master/lectures/03_virtualization/index.html)
-* [Recording](#) - to come...
+* [Recording](https://youtu.be/6tryS__h138?t=879) 
 
 ## Reading
 In "The practice of cloud system administration"<br>
