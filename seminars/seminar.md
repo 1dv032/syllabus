@@ -14,7 +14,7 @@ As you understand cloud computing technologies now is part of your day-to-day li
   * How could we gain a better use of could computing in the future? Some innovations that not yet come to use?
 
 #### 2. The rise of the artificial intelligence
-  * How could cloud computing sustain the grows of AI technology? 
+  * How could cloud computing sustain the growth of AI technology? 
   * Could you find any threats of this? Have the cloud providers any ethical responsibilities regarding that they provide computing for more advanced AI services?
 
 #### 3. Cloud computing and the data - Privacy and personal integrity
