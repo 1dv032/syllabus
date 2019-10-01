@@ -37,6 +37,8 @@ The different services are using different platforms meaning that you must build
 #### Part 1 - Development environment with docker-compose
 In the first part you will build a development environment that runs all services on a local machine. You will start with trying to build docker images to all the different service. Then you will create a docker-compose-file that will create containers from the images and run the whole solution when the "developer" runs the command "docker-compose up".
 
+All your files should be pushed to a part1-folder in your examination repo (make it easy for the examiner to find). Your solution should be able to run with just one or two commands which you show in the folders README.md
+
 
 
 #### Part 2 - Production environment with Kubernetes
