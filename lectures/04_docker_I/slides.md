@@ -323,7 +323,7 @@ https://docs.docker.com/engine/reference/builder/
 --
 ```bash
 ## Example
-FROM node:8.5.0
+FROM node:alpine
 LABEL maintainer="thajo@lnu.se"
 # Expose a port from the container
 EXPOSE 8080
