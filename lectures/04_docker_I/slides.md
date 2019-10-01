@@ -4,16 +4,13 @@
 * Containers
     * Some history
     * From a software perspective
+      * Containers and microservices
 * Docker
   * What is Docker
   * Characteristics & basic concepts
 * Practical
   * Creating and running docker containers
   * Dockerfile
-  * Docker-compose (intro only)
-
-Note:
-These are the topics for todays lecture.
 
 
 ---
@@ -21,7 +18,7 @@ These are the topics for todays lecture.
 ![containers](./images/containers-and-vm-together.png)
 
 <!-- {_class="center"} -->
-> "Containers are an important technology that is not going away for a while"
+> Containers are an important technology that is not going away for a while
 
 Note:
 separated process<br>
@@ -46,10 +43,10 @@ All vet hur man hanterar dem, hor man förvarar dem osv
 
 * UNIX - "jail" - modified runtime preventing application accessing protected resources
   * jails, an early implementation of container technology, was added to FreeBSD, 2000
-* 2004, Solaris containers/**zones**
-* 2006-2008, Linux kernel got support for generic process containers, which were later renamed control groups, or **cgroups**
-* 2008 **Linux namespaces**, processes with own users and root account
-* [The Linux Containers project](https://linuxcontainers.org/), created by engineers from IBM around 2008
+* 2004, Solaris containers/zones
+* 2006-2008, Linux kernel got support for generic process containers, which were later renamed control groups, or cgroups<!-- {_class="fragment"} -->
+* 2008 Linux namespaces, processes with own users and root account<!-- {_class="fragment"} -->
+* The Linux Containers project, created by engineers from IBM around 2008<!-- {_class="fragment"} -->
   * Projects like **LXC** provided an improved user experience around containers
   * Most complete implementation of Linux container manager.
   * Combine namespace and cgroups
@@ -60,7 +57,7 @@ All vet hur man hanterar dem, hor man förvarar dem osv
 * [Docker](https://docker.com) tools to help developers pack their application/code
   * Used LXC in the beginning
   * Now using a own library, *libcontainer*/*opencontainer/runc*
-    * Implementation of the Open Container Format Specification (OCF)
+    * Implementation of the Open Container Format Specification (OCF) - 2015
     * [https://www.opencontainers.org/](https://www.opencontainers.org/)
 * 2016, CoreOS launches rkt / [Rocket 1.0](https://coreos.com/rkt/)
   * A lightweight Linux operating system designed for clustered deployments
@@ -73,29 +70,62 @@ All vet hur man hanterar dem, hor man förvarar dem osv
 --
 ### EVOLVING
 
-Development process | Application Architecture | Deployment & Packaging | Infrastructure
---- | --- | --- | ---
-Waterfall | Monolithic | Physical | Datacenter
-Agile | N-tier | Virtual machines | Hosted datacenter
-DevOps | Microservices | Containers | Cloud
+![evolve](./images/table.png)
 <!-- {_style="font-size:75%"} -->
 
 
+--
+## Monolitic architecture
+<img src="./images/monolith.png">
+
+* One monolithic code base
+  * Works fine on smaller applications
+* Become hard to work with when code base growing<!-- {_class="fragment"} -->
+  * Hard to change...
+* Hard to scale<!-- {_class="fragment"} -->
+
+
+--
+## n-tier architecture
+<img src="./images/n-tier.png">
+
+* Some isolation and separation of concerns
+  * More easy to change code in one layer without messing with the others
+* Better scalability<!-- {_class="fragment"} -->
+
+
+--
+## Microservice architecture
+
+<img src="./images/microservice.png">
+
+* Isolate different part of a more complex application into services
+  * Communicates with HTTP-APIs (REST APIs)
+  * Could use different technologies in different services
+  * https://microservices.io/
+* Better and more flexible scalability<!-- {_class="fragment"} -->
+* Containers very suitable!<!-- {_class="fragment"} -->
+
+
 ---
-<!-- {_style="width:65%"} -->
-<!-- {_class="center"} -->
-![docker](images/docker.png)
+
+<div>
+![docker](images/docker.png)<!-- {_class="center"} -->
+</div>
+<!-- {_style="width:75%"} -->
+
 
 
 --
 ### What is Docker?
 * Docker provides a platform and tooling to manage containers
-* Started in France as an internal project within dotCloud (now Docker inc.), a platform-as-a-service company
-* Focus on minimize the gap from development to deployment
-  * Developing, shipping and running
+  * At the beginning from developers point of view
+* Started in France as an internal project within dotCloud (now Docker inc.), a platform-as-a-service company <!-- {_class="fragment"} -->
+* Focus on minimize the gap from development to deployment <!-- {_class="fragment"} -->
+  * Developing, shipping and running - easy and portable
   * Minimize the diversion between development- and production environment
     * "It works on my machine"-syndrome
-* The Docker platform is "Open Source", Promoted by the Docker, Inc
+* The Docker platform is "Open Source", Promoted by the Docker, Inc <!-- {_class="fragment"} -->
   * https://www.docker.com/community/open-source
   * [Open Container Initiative (OCI)](https://www.opencontainers.org/)
 
@@ -126,37 +156,25 @@ https://docs.docker.com/engine/docker-overview/#docker-engine
     * Often an image is based on another image with extra "instructions"
     * Defined in a *Dockerfile*
     * Push to and pull from a *registry*
-* Containers
+* Containers <!-- {_class="fragment"} -->
   * A runnable instance of an image
-  * Relatively well isolated from other containers and its host machines
+  * Well isolated from other containers and its host machines
   * ``` docker run -i -t ubuntu /bin/bash ```
     * Using the "ubuntu" image - connects to /bin/bash
-* We build images, we run containers...
+* We build images, we run containers... <!-- {_class="fragment"} -->
 
 
 --
 ### Docker Registry
 
-* Stores *docker images* (Docker Hub...)
-* Public or Private
-* Docker store - Buy and sell application or services
+* Stores *docker images*
+* Public (https://hub.docker.com/) or Private (own server) 
+* Docker store - Buy and sell application or services <!-- {_class="fragment"} -->
 
-https://hub.docker.com/explore/
-<!-- {_style="text-align: right; font-size:60%"} -->
+
 
 ![docker registry](./images/docker-registry.png)
 <!-- {_style="width:50%"} -->
-
-Source: https://blog.octo.com/en/docker-registry-first-steps/
-<!-- {_style="text-align: right; font-size:60%"} -->
-
-
---
-### Docker architecture
-
-![docker overview](images/docker_overview.svg)
-<!-- {_class="center"} -->
-
 
 
 --
@@ -165,29 +183,30 @@ Source: https://blog.octo.com/en/docker-registry-first-steps/
 * Layers - Changes are done in layers, not the whole image
   * Uses a union filesystem (overlay, auFS)
   * A change to an original image is put in a new layer, not recreate the whole image
+    * be re-used by multiple images saving disk space and reducing time to build 
     * https://medium.com/@jessgreb01/digging-into-docker-layers-c22f948ed612
-* Single process - Best practice
+* One images - A single process --> Best practice  <!-- {_class="fragment"} -->
   * Application-centric
   * Application server, load balancer, reversed proxy, database server...
-* Portable
+* Portable  <!-- {_class="fragment"} -->
   * The application is separated from low level configurations.
   * Easy to move and run on other Docker engines  
     * Think of containers on a ship...
-* Stateless, read-only, "Immutable"
+* Stateless, read-only, "Immutable"  <!-- {_class="fragment"} -->
   * Using the image guarantee same containers in all environments
 
 
 --
 ###  Volumes
 * How to handle dynamic data in a read-only container?
-* Docker is using Volumes - Containers for storing persistent data
-* Using a volume does not increase the size of containers using it
-* A volume could be used/mounted by many containers
-* By default, not deleted when container is stopped
+* Docker is using Volumes - Containers for storing persistent data  <!-- {_class="fragment"} -->
+* Using a volume does not increase the size of containers using it  <!-- {_class="fragment"} -->
+* A volume could be used/mounted by many containers  <!-- {_class="fragment"} -->
+  * By default, not deleted when container is stopped
   * Recreate a server, still need the data
 
 
-https://docs.docker.com/engine/admin/volumes/volumes/
+https://docs.docker.com/engine/admin/volumes/volumes/<!-- {_class="fragment"} -->
 
 <!-- {_style="text-align: right; font-size:60%"} -->
 
@@ -238,7 +257,7 @@ Note: 'cat /etc/*release*
 --
 
 ```
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 LABEL "com.example.vendor"="LNU"
 LABEL version="1.0"
 LABEL description="This is just a demo"
@@ -326,11 +345,11 @@ CMD ["npm", "start"]
 
 ```bash
 # Running the build with a tag
-docker build . -t thajo/rails
+docker build . -t thajo/node
 # Starting a container
-docker run -p 8080:8080 -d thajo/rails
+docker run -p 8080:8080 -d thajo/node
 # Starting a container with a bash
-docker run -t -i  thajo/rails /bin/bash
+docker run -t -i  thajo/node /bin/bash
 # Stop all containers
 docker stop $(docker ps -a -q)
 # Remove all containers
@@ -353,40 +372,6 @@ docker run -t -i -v logs centos /bin/bash
 
 ## Delete most of the things...
 docker system prune -a
-```
-
-
----
-###Docker Compose
-
-> Compose is a tool for defining and running multi-container Docker applications
-
-* Uses a YAML-file to configure an applications services
-* Structure is shown through indentation (one or more spaces - NOT tabs).
-* List items are denoted by a dash
-* Key value pairs within a map are separated by a colon.
-
-http://www.yaml.org/
-
-
---
-```
-version: '3'
-services:
-  web:
-    build: .
-    depends_on:
-      - mongodb
-    ports:
-      - "8080:5000"
-  mongodb:
-    image: mongo:3.4
-    expose:
-      - "27017"
-    volumes:
-      - mongodbdata:/data/db
-volumes:
-  mongodbdata:
 ```
 
 
