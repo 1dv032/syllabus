@@ -74,7 +74,9 @@ There are more: https://docs.docker.com/engine/reference/builder/
 ### Best practice building images
 
 * Prefer minimal base images
-* Install dependencies, security updates<!-- {_class="fragment"} -->
+* Study the platform the application runs on<!-- {_class="fragment"} -->
+  * How to run the application  
+  * Install dependencies, security updates<!-- {_class="fragment"} -->
 * Do not install unnecessary packages...<!-- {_class="fragment"} -->
 * Update the base image if needed<!-- {_class="fragment"} -->
   * apt update, apt upgrade...
@@ -95,14 +97,12 @@ https://snyk.io/blog/10-docker-image-security-best-practices/
 ## Commands to use
 
 ```bash
-# Running the build with a tag
-docker build . -t thajo/node
-
-# Starting a container
-docker run -p 8080:8080 -d thajo/node
-
 # Starting a container with a bash
 docker run -t -i  thajo/node /bin/bash
+
+# Execute a command on a container
+docker exec <name_of_running_container> npm test
+
 ```
 
 ```bash
