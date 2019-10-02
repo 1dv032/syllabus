@@ -58,8 +58,9 @@ In this part ju should try to put the microservice in production on a Kubernetes
 2. Create a private docker image repository on your cscloud-project from which you will pull the images
 3. Run the production the microservice in the Kubernetes cluster.
 
-More information to come....
-Information about your Kubernetes cluster account goes here...
+<br>
+More information to come....<br>
+Information about your Kubernetes cluster account goes here...<br>
 
 All your files should be pushed to a part2-folder in your examination repo (make it easy for the examiner to find). The README.md of this folder should have a URL where the micoservice could be tested.
 
