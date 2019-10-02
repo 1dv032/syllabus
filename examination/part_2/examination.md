@@ -22,7 +22,7 @@ The second part is a practical examination. You will set up a new development an
 ### The problem to solve
 In this assignment you will get access to some public Github repositories holding different services that together will form a very simplified microservice architecture. Your task is to dockerize these code projects. An overview of the simplified microservice look like this:
 
-![overview ms](./ms-overview.png)
+![overview ms](https://github.com/1dv032/syllabus/blob/master/examination/part_2/ms-overview.png)
 
 
 The different services are using different platforms (as their name suggests) meaning that you must build images for different languages or services including Node.js, Go, Python(flask framework) etc. Here follows a short description of each service or part of the microservice application.
