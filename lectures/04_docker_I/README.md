@@ -7,3 +7,4 @@ What is containers? What is docker? Some core definitions and som practical demo
 
 ## Reading
 https://docs.docker.com/get-started/
+https://docs.docker.com/develop/develop-images/dockerfile_best-practices/
