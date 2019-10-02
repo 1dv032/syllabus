@@ -43,14 +43,15 @@ The different services are using different platforms (as their name suggests) me
   * This is a node.js-service. The service should have a database (redis) attached from where it reads the message the service response with on request to its root-url. For this assignment part1 (creating a docker-compose solution) you should also set up this service so you could work on it locally. Think of it as you are part of the team responsible for this service
   * GitHub repository: to come...
 
-#### Part 1 - Development environment with docker-compose
+<br>
+### Part 1 - Development environment with docker-compose
 In the first part you will build a development environment that runs all services on a local machine. You will start with trying to build docker images to all the different service. Then you will create a docker-compose-file that will create containers from the images and run the whole solution when the "developer" runs the command "docker-compose up". The goal will be to run the frontend-application, press all the buttons that will connect through the API-gateway to the different services.
 
 To show the examiner your solutions you, continuous, push all files needed to your examination repository on Github. The files should be pushed to a part1-folder in your examination repo (make it easy for the examiner to find). Write a readme-file with instructions how to try your solution. Of course we should use as few commands as possible when running the solution.
 
 
 
-#### Part 2 - Production environment with Kubernetes
+### Part 2 - Production environment with Kubernetes
 In this part ju should try to put the microservice in production on a Kubernetes cluster (will be provided for you). This part should be divided into three parts:
 
 1. Create production ready docker images (the images could differs from your images used by docker-compose in part 1)
