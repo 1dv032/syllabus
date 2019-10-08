@@ -172,8 +172,4 @@ Handling Sensitive Information and Container Configurations
   * Load balancer
 
 
----
-## Goodbye
-![docker](images/cat-jump-fail.gif)
-
 <!-- {_class="center"} -->
