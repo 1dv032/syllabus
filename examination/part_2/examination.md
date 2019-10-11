@@ -74,9 +74,9 @@ All files you have created to solve the problem must be in your private examinat
 This examination is graded U / G / VG
 
 * U 
-  * The student haven't fulfil the requirement of the practical assignment and/or have fail on the oral hearing. 4
+  * The student haven't fulfil the requirement of the practical assignment and/or have fail on the oral hearing. 
 * G
-  * The student have fulfilled the requirement for the assignment and also passed on the oral hearing
+  * The student have fulfilled the requirement for the assignment and also passed on the oral hearing.
 * VG
   * The same as above and the student also showing deep understanding of the theoretical parts of the course
   * The student have done a good implementation of the assignment showing that the student have gain extra knowledge outside the lecture and demo material. The focus from the examiner will be on ease of testing and running your solution, optimization of the build (like the images etc.) and also on security.
