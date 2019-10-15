@@ -4,7 +4,9 @@ In this video I give some information about the created cluster and how it diffe
 - [Recording (Youtube)](https://youtu.be/jU7LVYsQrJM)
 
 ### Deploying an application from Docker Hub
-To come...
+In this video we create an Docker Image and push it to a public Docker hub repository. The we use a deployment and a service to get the image running on our Kubernetes cluster.
+
+- [Recording (Youtube)](https://youtu.be/yw4j0bp1Bsk)
 
 ### Creating a private image repository
 To come...
