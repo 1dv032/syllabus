@@ -55,7 +55,7 @@ To show the examiner your solutions you, continuous, push all files needed to yo
 In this part ju should try to put the microservice in production on a Kubernetes cluster (will be provided for you). This part should be divided into three parts:
 
 1. Create production ready docker images (the images could differs from your images used by docker-compose in part 1)
-2. Create a private docker image repository on your cscloud-project from which you will pull the images
+2. Create a private docker image repository on your cscloud-project (or create an account on Docker hub to use their service) from which you will pull the images
 3. Run the microservice in a production environment in the Kubernetes cluster.
 
 All your files should be pushed to a part2-folder in your examination repo (make it easy for the examiner to find). The README.md of this folder should have a URL where the micoservice should answer on request (serving the front-end and work with the other services).
