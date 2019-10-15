@@ -1,5 +1,6 @@
 About Kubernetes - recorded 2018.
-Notice: In the video we talk about Ruby applications, this year we don have any Ruby application in the project.
+
+Notice: Ignore the stuff about the image registry created for you. This year you have to create on for yourself or use Docker Hub. In the video we also talk about Ruby applications, this year we don have any Ruby application in the project.
 
 ## Resources
 * [Presentation](https://gitcdn.link/repo/1dv032/syllabus/master/lectures/06_kubernetes/index.html)
