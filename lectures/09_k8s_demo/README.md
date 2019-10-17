@@ -19,4 +19,6 @@ Links:
 
 
 ### Deploying services
-To come...
+A video showing how to deploy some parts of the microservcie described in the assignment
+
+- [Recording (Youtube)](https://youtu.be/tGi0ijVxWis)
